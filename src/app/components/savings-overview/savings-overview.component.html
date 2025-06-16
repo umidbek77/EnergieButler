@@ -25,7 +25,7 @@
             *ngFor="let item of savings; let last = last"
             [class.total]="last"
           >
-            <td>{{ item.energyType }}</td>
+            <td class="strom">{{ item.energyType }}</td>
             <td class="highlight">{{ item.householdOfFour }}</td>
             <td class="highlight">{{ item.singleHousehold }}</td>
           </tr>

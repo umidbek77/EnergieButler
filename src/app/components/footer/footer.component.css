@@ -1,12 +1,13 @@
 .footer {
   background-color: #0e1624;
   color: #99cce0;
-  padding: 2rem 1.5rem;
+  padding: 48px 0;
   font-size: 14px;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1368px;
+  height: 56px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,12 +28,18 @@
 }
 
 .logo-text {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
+  font-weight: 600;
 }
 
 .footer-right {
   text-align: right;
+}
+
+.footer-right span {
+  color: #9ca3af;
+  font-size: 16px;
 }
 
 .footer-links {
@@ -40,13 +47,15 @@
 }
 
 .footer-links a {
-  color: #99cce0;
+  color: #9ca3af;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 8px 0 0;
+  font-size: 16px;
 }
 
 .footer-links span {
-  color: #99cce0;
+  color: #768387;
+  margin: 0 10px;
 }
 
 @media (max-width: 768px) {

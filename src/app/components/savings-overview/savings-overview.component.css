@@ -1,25 +1,26 @@
 .savings-section {
-  padding: 60px 20px;
+  padding: 64px 16px;
+  margin: 0 38px;
   background-color: #f7fbfe;
   text-align: center;
   font-family: "Segoe UI", sans-serif;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 896px;
   margin: 0 auto;
 }
 
 .savings-section h2 {
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 0 0 16px;
 }
 
 .savings-section p {
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
 }
 
 .table-wrapper {
@@ -32,18 +33,19 @@
 .table-header {
   background: linear-gradient(to right, #245de8, #15a24a);
   color: white;
-  padding: 25px 10px;
+  padding: 24px;
 }
 
 .table-header h3 {
   margin: 0;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .table-header p {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
+  margin: 6px 0 0;
+  font-size: 16px;
+  color: #dbeafe;
 }
 
 table {
@@ -55,8 +57,8 @@ thead th {
   background-color: #f9fafb;
   color: #333;
   font-weight: 600;
-  padding: 15px;
-  text-align: left;
+  padding: 16px 24px;
+  text-align: center;
 }
 
 tbody td {
@@ -64,8 +66,12 @@ tbody td {
   border-top: 1px solid #eee;
 }
 
-tbody td.highlight {
-  color: #0d9d4f;
+.strom {
+  font-weight: 500;
+}
+
+.highlight {
+  color: #15803d;
   font-weight: 600;
 }
 

@@ -1,7 +1,7 @@
 .cta-wrapper {
-  background: linear-gradient(to right, #2563eb, #10b981);
+  background: linear-gradient(to right, #2563eb, #069e2f);
   color: white;
-  padding: 4rem 1rem;
+  padding: 64px 16px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -9,28 +9,32 @@
 }
 
 .cta-content {
-  max-width: 700px;
+  max-width: 1400px;
+  margin: 0 38px;
+  padding: 0 16px;
 }
 
 .cta-content h2 {
-  font-size: 2rem;
+  width: 1336px;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 0 0 16px;
 }
 
 .cta-content p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
+  width: 1336px;
+  font-size: 20px;
+  margin: 0 0 38px;
 }
 
 .cta-button {
   background-color: white;
   color: #2563eb;
-  padding: 0.75rem 1.5rem;
+  padding: 12px 32px;
   border: none;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 550;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
