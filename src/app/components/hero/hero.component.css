@@ -1,0 +1,58 @@
+.hero {
+  padding: 64px 16px;
+  margin: 0 38px;
+  text-align: center;
+  background-color: #f6fafd;
+}
+
+.hero-container {
+  margin: 0 236px;
+}
+
+.tagline {
+  background-color: #dcfce7;
+  color: #065f46;
+  padding: 0.3rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 24px 0 24px;
+}
+
+.highlight {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+p {
+  color: #4b5563;
+  max-width: 672px;
+  margin: 0 122px 32px;
+  font-size: 20px;
+}
+
+.cta {
+  background-color: white;
+  padding: 12px 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 18px;
+}
+
+.cta:hover {
+  background-color: aliceblue;
+}
+
+.stats {
+  margin: 48px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #6b7280;
+}

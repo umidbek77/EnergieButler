@@ -1,0 +1,36 @@
+<section class="savings-section">
+  <div class="container">
+    <h2>Ihr Einsparpotenzial im Überblick</h2>
+    <p>
+      Sehen Sie, wie viel Sie je nach Energieart und Haushaltsgröße sparen
+      können
+    </p>
+
+    <div class="table-wrapper">
+      <div class="table-header">
+        <h3>{{ tableHeader.title }}</h3>
+        <p>{{ tableHeader.subtitle }}</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Energieart</th>
+            <th>Vierköpfiger Haushalt</th>
+            <th>Single-Haushalt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of savings; let last = last"
+            [class.total]="last"
+          >
+            <td>{{ item.energyType }}</td>
+            <td class="highlight">{{ item.householdOfFour }}</td>
+            <td class="highlight">{{ item.singleHousehold }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
