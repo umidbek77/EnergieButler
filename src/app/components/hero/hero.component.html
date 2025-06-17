@@ -10,7 +10,8 @@
       Optimieren Sie Ihre Strom- und Gaskosten automatisch. Unsere KI analysiert
       Ihre Verträge und findet die besten Tarife.
     </p>
-    <button class="cta">Einsparung berechnen</button>
+    <button (click)="openModal()" class="cta">Einsparung berechnen</button>
+     <app-modal *ngIf="showModal" (close)="closeModal()"></app-modal>
     <div class="stats">
       <span>
         <svg

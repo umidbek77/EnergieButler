@@ -1,6 +1,5 @@
 .cta-wrapper {
   background: linear-gradient(to right, #2563eb, #069e2f);
-  color: white;
   padding: 64px 16px;
   text-align: center;
   display: flex;
@@ -14,17 +13,19 @@
   padding: 0 16px;
 }
 
-.cta-content h2 {
+.cta-content-title {
   width: 1336px;
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 16px;
+  color: white;
 }
 
-.cta-content p {
+.cta-content-subtitle{
   width: 1336px;
   font-size: 20px;
   margin: 0 0 38px;
+  color: white;
 }
 
 .cta-button {
