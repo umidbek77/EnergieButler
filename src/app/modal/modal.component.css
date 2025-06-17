@@ -28,6 +28,15 @@
   background: none;
   cursor: pointer;
 }
+
+.left-box:hover{
+ border: 1px solid #2563eb
+}
+
+.right-box:hover{
+  border: 1px solid #04a104;
+}
+
 .calc-icon {
 width: 30px;
 height: 30px;
@@ -76,9 +85,9 @@ color: #2563eb;
 }
 
 .box:hover{
-     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px) scale(1.01);
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .box .icon {
@@ -96,14 +105,15 @@ color: #2563eb;
 
 .box p{
     text-align: center;
-}
-
-.box ul {
-    font-weight: 300;
+  }
+  
+  .box ul {
+  font-weight: 300;
   list-style: disc;
   padding-left: 5px;
   margin-bottom: 8px;
-  color: #828181;
+  color: #5f5f5f;
+  font-size: 14px;
 }
 
 
@@ -151,4 +161,5 @@ height: 30px;
 .right-first-icon{
     width: 20px;
     margin-bottom: -5px;
+    color: #5f5f5f;
 }
