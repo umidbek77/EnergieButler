@@ -1,10 +1,9 @@
 <section class="cta-wrapper">
   <div class="cta-content">
-    <h2>Bereit für günstigere Energiekosten?</h2>
-    <p>Starten Sie jetzt und sparen Sie bereits ab dem nächsten Monat.</p>
-    <button class="cta-button">
-      Jetzt kostenlose Analyse starten
-      <span class="arrow">→</span>
-    </button>
+    <h2 class="cta-content-title" >Bereit für günstigere Energiekosten?</h2>
+    <p class="cta-content-subtitle">Starten Sie jetzt und sparen Sie bereits ab dem nächsten Monat.</p>
+   
+    <button (click)="openModal()" class="cta-button">Jetzt kostenlose Analyse starten <span class="arrow">→</span> </button>
+     <app-modal *ngIf="showModal" (close)="closeModal()"></app-modal>
   </div>
 </section>
