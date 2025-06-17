@@ -1,0 +1,18 @@
+.angebote{
+    margin-top: 100px;
+}
+
+
+.angebote-container h1{
+     font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #40424c;
+}
+
+.angebote-container p{
+    font-size: 16px;
+    margin-bottom: 32px;
+    max-width: 630px;
+    color: #40424c;
+}

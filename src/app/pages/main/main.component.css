@@ -1,0 +1,89 @@
+.main-wrapper {
+  padding: 2rem;
+  margin-top: 80px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #40424c;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: #40424c;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card-box {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  flex: 1 1 300px;
+}
+
+.card-box h2 {
+  font-size: 27px;
+  margin-bottom: 2.5rem;
+  color: #40424c;
+}
+
+.card-box p {
+  color: #40424c;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  color: #40424c;
+}
+
+.count span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  color: #40424c;
+}
+
+.recommend {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn.green {
+  background-color: #28a745;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.green:hover {
+  background-color: #218838;
+}
