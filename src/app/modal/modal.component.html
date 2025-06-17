@@ -1,0 +1,38 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-btn" (click)="closeModal()">×</button>
+
+    <h2>Wie möchten Sie Ihre Einsparung berechnen?</h2>
+    <p>Wählen Sie die für Sie passende Methode zur Berechnung Ihres Einsparpotenzials</p>
+
+    <div class="modal-boxes">
+      <!-- Left Box -->
+      <div class="box">
+        <div class="icon"><svg class="calc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path></svg></div>
+        <h3>Manuelle Eingabe</h3>
+        <p>Geben Sie Ihre aktuellen Energiekosten manuell ein. Schnell und einfach in wenigen Schritten.</p>
+        <ul>
+          <ul><svg  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24"  stroke-width="2.5" stroke="currentColor" class="right-first-icon" > <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"  /> </svg> Stromkosten eingeben</ul>
+          <ul> <svg class="right-first-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8ZM19 9H14V4H5V20H19V9ZM8 7H11V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z"></path></svg> Gaskosten eingeben</ul>
+          <ul> <svg class="right-first-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path></svg> Sofortige Berechnung</ul>
+        </ul>
+        <button class="white-button">Manuell berechnen</button>
+      </div>
+
+      <!-- Right Box -->
+      <div class="box  ">
+        <div class="icon green"><svg class="green-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"></path></svg></div>
+       <div>
+         <h3>KI-Upload & Analyse</h3>
+        <p>Laden Sie Ihre Energierechnung hoch und lassen Sie unsere KI die Daten automatisch auslesen und analysieren.</p>
+       </div>
+        <ul class="icons-ul">
+          <ul> <svg class="right-first-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"></path></svg> Rechnung hochladen</ul>
+          <ul> <svg class="right-first-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8ZM19 9H14V4H5V20H19V9ZM8 7H11V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z"></path></svg> KI-Analyse der Daten</ul>
+          <ul> <svg class="right-first-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path></svg> Automatische Berechnung</ul>
+        </ul>
+        <button class="black-button">Mit KI analysieren</button>
+      </div>
+    </div>
+  </div>
+</div>
