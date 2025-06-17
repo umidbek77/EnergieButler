@@ -22,7 +22,7 @@
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 40px;
   margin: 0 172px;
 }
 
