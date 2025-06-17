@@ -14,8 +14,8 @@ export class HeroComponent implements OnInit {
   customersCount: number = 0;
 
   ngOnInit(): void {
-    this.animateValue('fromAmount', 100, 237, 100); // 2 sekundda 0 dan 237 gacha
-    this.animateValue('toAmount', 1600, 1800, 30); // 2.5 sekundda 0 dan 1800 gacha
+    this.animateValue('fromAmount', 100, 237, 100); // 1 sekundda 0 dan 237 gacha
+    this.animateValue('toAmount', 1600, 1800, 30);
     this.animateValue('customersCount', 14850, 15000, 100);
   }
 
