@@ -1,0 +1,52 @@
+/* Panelni soyasiz, yon borderlarsiz, lekin pastki chiziq bilan qilish */
+::ng-deep mat-expansion-panel {
+  box-shadow: none !important;
+  border: none !important;
+  background-color: #f6fafd;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* faqat pastki chiziq */
+  position: relative;
+}
+
+/* Panel ostiga chiziq qo‘shish */
+::ng-deep mat-expansion-panel:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Oxirgi panel ostida chiziq bo‘lmasin */
+::ng-deep mat-expansion-panel:last-child {
+  border-bottom: none;
+}
+
+/* Angular Material default oldingi chiziqni olib tashlash */
+::ng-deep mat-expansion-panel::before {
+  display: none !important;
+}
+
+/* Panel header — fon rangini yo‘qotish */
+::ng-deep mat-expansion-panel-header {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  padding: 16px;
+}
+
+/* Panel ochilganda orqa fon */
+::ng-deep mat-expansion-panel.mat-expanded {
+  background-color: #f6fafd; /* och moviy */
+}
+
+/* Hover holatidagi fon */
+::ng-deep mat-expansion-panel-header:hover {
+  background-color: #e0e0e0; /* kulrang fon */
+}
+
+/* Kontent padding */
+::ng-deep mat-expansion-panel-content {
+  padding: 0 16px 16px !important;
+}

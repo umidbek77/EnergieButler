@@ -15,6 +15,25 @@
   padding: 0.3rem 1rem;
   border-radius: 9999px;
   font-size: 0.85rem;
+  animation: pulse-hover 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-hover {
+  0% {
+    background-color: #dcfce7;
+    color: #06402f;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #bbf7d0;
+    color: #093e2f;
+    transform: scale(1.03);
+  }
+  100% {
+    background-color: #dcfce7;
+    color: #093d2f;
+    transform: scale(1);
+  }
 }
 
 h1 {
@@ -53,7 +72,29 @@ p {
   margin: 48px 0 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
   color: #6b7280;
+}
+
+.group-icon {
+  width: 24px;
+  height: 24px;
+  color: #2563eb;
+  margin-bottom: -5px;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+  color: #ebe825;
+  margin-bottom: -5px;
+}
+
+.badge-icon {
+  width: 24px;
+  height: 24px;
+  color: #198d1b;
+  margin-bottom: -5px;
 }
