@@ -6,6 +6,7 @@ import { AngeboteComponent } from './pages/angebote/angebote.component';
 import { WechselservicesComponent } from './pages/wechselservices/wechselservices.component';
 import { TariffSelectorComponent } from './pages/tariff-selector/tariff-selector.component';
 import { ObjectUsageComponent } from './pages/object-usage/object-usage.component';
+import { ConsumptionStepComponent } from './pages/consumption-step/consumption-step.component';
 import { ObjectUsegeGaswechselComponent } from './pages/object-usege-gaswechsel/object-usege-gaswechsel.component';
 import { ObjectUsegeHeizstromwechselComponent } from './pages/object-usege-heizstromwechsel/object-usege-heizstromwechsel.component';
 
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'wechselservice', component: WechselservicesComponent },
   { path: 'tariff-selector', component: TariffSelectorComponent },
   { path: 'object-usege', component: ObjectUsageComponent },
-  {path:'gaswechsel', component:ObjectUsegeGaswechselComponent},
-  {path:'heizstromwechsel', component:ObjectUsegeHeizstromwechselComponent}
+  { path: 'consumption-stage', component: ConsumptionStepComponent },
+  { path: 'gaswechsel', component: ObjectUsegeGaswechselComponent },
+  { path: 'heizstromwechsel', component: ObjectUsegeHeizstromwechselComponent },
 ];

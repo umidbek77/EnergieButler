@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.card-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: #4caf50;
+}
+
+.card.selected {
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background: white;
+  color: #4caf50;
+  padding: 10px 20px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+}

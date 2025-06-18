@@ -1,0 +1,49 @@
+<div class="container">
+  <h3>Wie hoch ist Ihr aktueller Jahresverbrauch?</h3>
+
+  <div class="card-group">
+    <div
+      *ngFor="let option of consumptionOptions"
+      class="card"
+      [class.selected]="selectedSize === option.size"
+      (click)="selectSize(option.size, option.value)"
+    >
+      <div class="card-icon">🏠</div>
+      <div class="card-label">{{ option.label }}</div>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <input type="number" [(ngModel)]="consumptionValue" />
+    <span>kWh</span>
+  </div>
+
+  <h4>Wo befindet sich Ihr Gasanschluss?</h4>
+
+  <div class="input-group">
+    <label>PLZ</label>
+    <input
+      type="text"
+      maxlength="5"
+      [(ngModel)]="plz"
+      placeholder="z.B. 10115"
+    />
+  </div>
+
+  <div class="input-group">
+    <label>Ort</label>
+    <select [(ngModel)]="ort">
+      <option value="">z. B. Berlin</option>
+      <option *ngFor="let option of ortOptions" [value]="option">
+        {{ option }}
+      </option>
+    </select>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn-secondary" (click)="onBack()">Zurück</button>
+    <button class="btn-primary" [disabled]="!formValid()" (click)="onNext()">
+      Weiter
+    </button>
+  </div>
+</div>
