@@ -1,45 +1,47 @@
 <app-header></app-header>
 <main>
   <div class="main-wrapper">
-  <!-- Title and Subtitle -->
-  <div class="page-header">
-    <h1>Willkommen in Ihrer Übersicht, "Username"</h1>
-    <p>Hier finden Sie alle wichtigen Informationen auf einen Blick</p>
-  </div>
-
-  <!-- Cardlar -->
-  <div class="dashboard-container">
-    <!-- Left Card -->
-    <div class="card-box">
-      <h2>Sparen auch Sie!</h2>
-      <p>
-        Wir finden die größte Ersparnis aus über 1.000 Anbietern und 12.000 teils exklusiven Tarifen.
-      </p>
-      <div class="count"> 0 <span>angeforderte Angebote</span></div>
-      <p class="recommend">Jetzt Sparempfehlung einholen</p>
-      <div class="button-group">
-        <button class="btn green">Strom →</button>
-        <button class="btn green">Gas →</button>
-      </div>
+    <!-- Title and Subtitle -->
+    <div class="page-header">
+      <h1>Willkommen in Ihrer Übersicht, "Username"</h1>
+      <p>Hier finden Sie alle wichtigen Informationen auf einen Blick</p>
     </div>
 
-    <!-- Right Card -->
-    <div class="card-box">
-      <h2>Ihre Wechselservices</h2>
-      <p>
-        In wenigen Schritten wechseln wir Sie in den günstigsten und für Sie passendsten Tarif – ob Gas, Strom oder beides.
-      </p>
-      <div class="count">0 <span>aktive Wechselservices</span></div>
-      <p class="recommend">Neuen Wechselservice abschließen:</p>
-      <div class="button-group">
-        <button class="btn green">Strom →</button>
-        <button class="btn green">Gas →</button>
+    <!-- Cardlar -->
+    <div class="dashboard-container">
+      <!-- Left Card -->
+      <div class="card-box">
+        <h2>Sparen auch Sie!</h2>
+        <p>
+          Wir finden die größte Ersparnis aus über 1.000 Anbietern und 12.000
+          teils exklusiven Tarifen.
+        </p>
+        <div class="count">0 <span>angeforderte Angebote</span></div>
+        <p class="recommend">Jetzt Sparempfehlung einholen</p>
+        <div class="button-group">
+          <button class="btn green" routerLink="/tariff-selector">
+            Strom →
+          </button>
+          <button class="btn green" routerLink="/tariff-selector">Gas →</button>
+        </div>
+      </div>
+
+      <!-- Right Card -->
+      <div class="card-box">
+        <h2>Ihre Wechselservices</h2>
+        <p>
+          In wenigen Schritten wechseln wir Sie in den günstigsten und für Sie
+          passendsten Tarif – ob Gas, Strom oder beides.
+        </p>
+        <div class="count">0 <span>aktive Wechselservices</span></div>
+        <p class="recommend">Neuen Wechselservice abschließen:</p>
+        <div class="button-group">
+          <button class="btn green" routerLink="/object-usege">Strom →</button>
+          <button class="btn green" routerLink="/object-usege">Gas →</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </main>
 
 <app-footer></app-footer>
-
