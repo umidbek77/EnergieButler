@@ -2,12 +2,14 @@
   <div class="modal-content">
     <button class="close-btn" (click)="closeModal()">×</button>
 
-    <h2>Wie möchten Sie Ihre Einsparung berechnen?</h2>
-    <p>Wählen Sie die für Sie passende Methode zur Berechnung Ihres Einsparpotenzials</p>
+    <!-- BOSQICH 1: Tanlash -->
+    <div *ngIf="step === 1">
+      <h2>Wie möchten Sie Ihre Einsparung berechnen?</h2>
+      <p>Wählen Sie die für Sie passende Methode zur Berechnung Ihres Einsparpotenzials</p>
 
-    <div class="modal-boxes">
+  <div class="modal-boxes">
       <!-- Left Box -->
-      <div class="box left-box">
+      <div class="box left-box" (click)="goToStep2('manual')">
         <div class="icon"><svg class="calc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path></svg></div>
         <h3>Manuelle Eingabe</h3>
         <p>Geben Sie Ihre aktuellen Energiekosten manuell ein. Schnell und einfach in wenigen Schritten.</p>
@@ -20,7 +22,7 @@
       </div>
 
       <!-- Right Box -->
-      <div class="box right-box  ">
+      <div class="box right-box" (click)="goToStep2('ki') ">
         <div class="icon green"><svg class="green-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"></path></svg></div>
        <div>
          <h3>KI-Upload & Analyse</h3>
@@ -33,6 +35,76 @@
         </ul>
         <button class="black-button">Mit KI analysieren</button>
       </div>
+  </div>
     </div>
+
+    <!-- BOSQICH 2: Hisoblash formasi -->
+    <div *ngIf="step === 2" class="step-2-container">
+  <button class="white-button back-btn" (click)="backToStep1()">← Zurück zur Methodenauswahl</button>
+
+  <h2 class="title">Einsparpotenzial berechnen</h2>
+  <p class="subtitle">Ermitteln Sie Ihr persönliches Sparpotenzial bei Strom und Gas</p>
+
+  <div class="form-card">
+    <h3 class="section-title">
+  <svg class="sec-sec-calc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2ZM5 4V20H19V4H5ZM7 6H17V10H7V6ZM7 12H9V14H7V12ZM7 16H9V18H7V16ZM11 12H13V14H11V12ZM11 16H13V18H11V16ZM15 12H17V18H15V12Z"></path></svg>
+      Ihre aktuellen Energiekosten
+    </h3>
+
+    <form class="energy-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>⚡ Monatliche Stromkosten (€)</label>
+          <input type="number" class="input" value="0" min="0" />
+        </div>
+        <div class="form-group">
+          <label>🔥 Monatliche Gaskosten (€)</label>
+          <input type="number" class="input" value="0" min="0" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Haushaltsgröße (Personen)</label>
+          <input type="number" class="input" value="0" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Aktueller Anbieter (optional)</label>
+          <input type="text" class="input" placeholder="z.B. Stadtwerke" min="0" />
+        </div>
+      </div>
+
+      <button type="submit" class="calculate-button">
+        ⇨ Einsparpotenzial berechnen
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- BOSQICH 3: KI-Upload & Analyse -->
+<div *ngIf="step === 3" class="step-3-container">
+  <h2 class="title">KI-Analyse Ihrer Energierechnung</h2>
+  <p class="subtitle">
+    Laden Sie Ihre aktuellen Strom- oder Gasrechnungen hoch und lassen Sie unsere KI die Daten automatisch extrahieren
+  </p>
+
+  <div class="upload-card">
+    <h3 class="upload-title"><svg class="upload-title-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 19H20V12H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"></path></svg> Dokumente hochladen</h3>
+
+    <div class="upload-box">
+      <div class="upload-icon">
+       <svg class="upload-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8ZM19 9H14V4H5V20H19V9ZM8 7H11V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z"></path></svg>
+      </div>
+      <p class="upload-desc">Energierechnungen hochladen</p>
+      <p class="upload-sub">Unterstützte Formate: JPG, PNG, GIF, PDF (max. 10MB pro Datei)</p>
+      <p class="upload-hint">Hinweis: Mehrere Dateien können gleichzeitig ausgewählt werden</p>
+      <button class=" upload-box-button">Dateien auswählen</button>
+    </div>
+
+    <button class="upload-white-button back-btn" (click)="backToStep1()">Zurück zur Methodenauswahl</button>
+  </div>
+</div>
+
+
   </div>
 </div>

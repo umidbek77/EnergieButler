@@ -6,52 +6,19 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
+   overflow: auto;
 }
 
 .modal-content {
   background: white;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 10px;
   max-width: 1100px;
   width: 90%;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
-}
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.left-box:hover{
- border: 1px solid #2563eb
-}
-
-.right-box:hover{
-  border: 1px solid #04a104;
-}
-
-.calc-icon {
-width: 30px;
-height: 30px;
-color: #2563eb;
-}
-
-.icon{
-    width: 60px;
-    height: 60px;
-    background-color: #e8f1ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; 
+  /* overflow-y: auto; */
 }
 
 .modal-content h2 {
@@ -63,6 +30,17 @@ color: #2563eb;
 .modal-content p {
   color: #555;
   margin-bottom: 25px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  cursor: pointer;
+   border: 1px solid #888;
+   border-radius: 5px;
 }
 
 .modal-boxes {
@@ -82,18 +60,6 @@ color: #2563eb;
   flex: 1 1 55%;
   text-align: left;
   cursor: pointer;
-}
-
-.box:hover{
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px) scale(1.01);
-  transition: 0.4s;
-}
-
-.box .icon {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .box h3 {
@@ -117,15 +83,64 @@ color: #2563eb;
 }
 
 
+.box:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.01);
+  transition: 0.4s;
+}
+
+.left-box:hover {
+  border: 1px solid #2563eb;
+}
+
+.right-box:hover {
+  border: 1px solid #04a104;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e8f1ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+}
+
+.green {
+  background: #c6f9da;
+}
+
+.green-svg {
+   color: #04a104;
+    width: 30px;
+height: 30px;
+}
+
+
+.calc-icon {
+width: 30px;
+height: 30px;
+color: #2563eb;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
 .white-button {
   width: 100%;
-  padding: 12px 10px;
+  padding: 12px 10px ;
   background: white;
   border: 1px solid #ccc;
-  cursor: pointer;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 23px;
+  cursor: pointer;
 }
 
 .white-button:hover {
@@ -139,27 +154,230 @@ color: #2563eb;
   color: white;
   border: none;
   border-radius: 5px;
+  margin-top: 23px;
   cursor: pointer;
-  margin-top: 30px;
 }
 
 .black-button:hover {
   opacity: 0.9;
 }
 
-
-.green-svg {
-    color: #04a104;
-    width: 30px;
-height: 30px;
-}
-
-.green{
-    background: #c6f9da;
-}
-
 .right-first-icon{
     width: 20px;
     margin-bottom: -5px;
     color: #5f5f5f;
+}
+
+.form-card{
+    border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  padding-top: 8px;
+  padding-inline: 10px;
+  width: 100%;
+  max-width: 900px;
+  flex: 1 1 55%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+
+.step-2-container {
+  text-align: center;
+  padding: 15px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  --tw-text-opacity: 1;
+  font-size: 16px;
+  color:rgb(75 85 99 / var(--tw-text-opacity, 1));
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.energy-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input {
+box-sizing: border-box; 
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  width: 100%;
+}
+.sec-sec-calc-icon{
+  width: 24px;
+height: 30px;
+color: #2563eb;
+}
+
+.calculate-button {
+  width: 100%;
+  background-color: #6b7280;
+  color: white;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 0px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.calculate-button-svg{
+  width: 30px !important;
+}
+
+.calculate-button:hover {
+  background-color: #4b5563;
+}
+
+.back-btn {
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  width: 400px;
+}
+
+
+.step-3-container {
+  text-align: center;
+  padding: 15px 10px;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.upload-card {
+  border-radius: 10px;
+  padding: 10px 10px;
+  max-width: 100%;
+  margin: 0 auto;
+   border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.upload-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.upload-box:hover{
+  border-color: #3b82f6;
+  transition: 0.7s ;
+}
+
+.upload-icon {
+  margin-bottom: 20px;
+    width: 70px;
+  height: 70px;
+  background-color: #e8f1ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; 
+}
+
+.upload-svg {
+  width: 48px;
+  height: 48px;
+  color: #3b82f6;
+}
+
+.upload-desc {
+  font-size: 17px;
+  font-weight: 700;
+  color: black !important;
+  margin-bottom: 0 !important;
+}
+
+.upload-sub {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0 !important;
+}
+
+.upload-hint {
+  font-size: 14px;
+  color: #888;
+  color: #3b82f6 !important;
+  font-weight: 300 !important;
+  margin-bottom: 0 !important;
+}
+
+.upload-title-svg{
+  width: 30px;
+height: 30px;
+color: #2563eb;
+margin-bottom: -5px;
+text-align: left;
+}
+
+.upload-box-button{
+    width: 300px;
+  padding: 12px 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.upload-white-button {
+    width: 100%;
+  padding: 12px 10px ;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
 }
