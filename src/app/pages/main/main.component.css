@@ -3,6 +3,10 @@
   margin-top: 80px;
 }
 
+main {
+  margin-bottom: 50px;
+}
+
 .page-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -33,6 +37,7 @@
   box-shadow: 0 12px 8px rgba(0, 0, 0, 0.05);
   max-width: 500px;
   flex: 1 1 300px;
+  margin-bottom: 50px;
 }
 
 .card-box h2 {
@@ -62,7 +67,6 @@
   margin-left: 0.5rem;
   color: #40424c;
 }
-
 
 .recommend {
   font-weight: bold;
