@@ -6,8 +6,8 @@
   margin-bottom: 50px;
 }
 
-.strom-flash-svg{
-  width: 24px;
+.gas-fire-svg{
+    width: 24px;
 }
 
 .main-form-object-svg{
@@ -21,8 +21,8 @@
 }
 
 
-.strom-top-div{
-   background-color: rgb(218, 242, 203);
+.gaswechsel-top-div{
+    background-color: rgb(218, 242, 203);
     color: rgb(142, 144, 153);
     display: flex;
     font-family: Roboto, Roboto-fallback, Arial, Helvetica, sans-serif;
@@ -36,6 +36,7 @@
     text-transform: uppercase;
     width: 100vw;
     -webkit-font-smoothing: antialiased;
+    
 }
 
 .step-indicator {
@@ -86,7 +87,7 @@
 
 .object-buttons button,
 .people-buttons button {
-  flex: 1;
+   flex: 1;
   display: flex;
   padding: 10px;
   border: 1px solid #ccc;
