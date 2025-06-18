@@ -1,4 +1,6 @@
-<div class="background-overlay">
+<app-header></app-header>
+<main>
+  <div class="background-overlay">
   <div class="form-card">
     <div class="progress-line">
       <div class="step active"></div>
@@ -55,9 +57,7 @@
           (click)="selectEnergy('Heizstrom')"
         >
           <!-- Heizstrom Icon -->
-          <svg width="32" height="32" fill="#4caf50" viewBox="0 0 24 24">
-            <path d="M6 2v20h2V2H6zm10 0v20h2V2h-2zM11 6v12h2V6h-2z" />
-          </svg>
+         <svg class="heizstrom-icon" xmlns="http://www.w3.org/2000/svg" id="Calque_1" viewBox="0 0 101.91 101.91"><circle cx="67.15" cy="49.97" r="23.48" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></circle><circle cx="67.15" cy="49.97" r="3.55" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></circle><path d="M67.16,46.43l.1-17.41,2.44,1.31c2.39,1.29,4.2,3.44,5.08,6.01.38,1.13.57,2.29.57,3.44,0,2.8-1.1,5.55-3.15,7.6l-1.06,1.06" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M70.7,49.98l17.41.1-1.31,2.44c-1.29,2.39-3.44,4.2-6.01,5.08-1.13.38-2.29.57-3.44.57-2.8,0-5.55-1.1-7.6-3.15l-1.06-1.06" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M63.17,51.51l-1.06,1.06c-2.05,2.05-3.15,4.8-3.15,7.6,0,1.15.19,2.31.57,3.44.87,2.57,2.68,4.72,5.08,6.01l2.44,1.31.1-17.41" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M63.6,49.97l-17.41-.1,1.31-2.44c1.29-2.39,3.44-4.2,6.01-5.08,1.13-.38,2.29-.57,3.44-.57,2.8,0,5.55,1.1,7.6,3.15l1.06,1.06" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><rect x="4.38" y="19.4" width="93.16" height="61.15" rx="6.39" ry="6.39" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect><line x1="36.26" y1="19.83" x2="36.26" y2="80.12" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="55.32" x2="28.22" y2="55.32" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="46" x2="28.22" y2="46" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="36.68" x2="28.22" y2="36.68" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="27.35" x2="28.22" y2="27.35" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="64.64" x2="28.22" y2="64.64" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><rect x="9.76" y="80.55" width="11.11" height="4.26" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect><rect x="80.65" y="80.55" width="11.11" height="4.26" style="fill:none; stroke:#4caf50; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect></svg> 
           <span>Heizstrom</span>
         </div>
       </div>
@@ -132,3 +132,8 @@
     <p class="footer-note">100% kostenlos und transparent</p>
   </div>
 </div>
+
+</main>
+<app-steps></app-steps>
+
+<app-footer></app-footer>

@@ -1,8 +1,9 @@
 <app-header></app-header>
 
 <main>
-<div class="strom-top-div">Strom-Wechselservice erstellen</div>
-
+    <div class="gaswechsel-top-div">
+       Gas-Wechselservice erstellen
+    </div>
   <div class="form-container">
     <div class="step-indicator">
       <div class="step active">1 Objektart und Verbrauch</div>
@@ -16,10 +17,10 @@
     </div>
 
     <div class="main-form">
-      <h2><svg class="strom-flash-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.97308 18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM14 20H10V21H14V20ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992ZM13 10.0048H15.5L11 16.0048V12.0048H8.5L13 6V10.0048Z"></path></svg> Objektart und Verbrauch</h2>
+      <h2> <svg class="gas-fire-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 23C7.85786 23 4.5 19.6421 4.5 15.5C4.5 13.3462 5.40786 11.4045 6.86179 10.0366C8.20403 8.77375 11.5 6.49951 11 1.5C17 5.5 20 9.5 14 15.5C15 15.5 16.5 15.5 19 13.0296C19.2697 13.8032 19.5 14.6345 19.5 15.5C19.5 19.6421 16.1421 23 12 23Z"></path></svg> Objektart und Verbrauch</h2>
 
       <label>Für welches Objekt wollen Sie sparen?</label>
-     <div class="object-buttons">
+    <div class="object-buttons">
         <button
           [class.active]="selectedObjectType === 'Wohnung'"
           (click)="setObjectType('Wohnung')"
@@ -68,7 +69,7 @@
       </div>
 
       <label>Wie hoch ist Ihr aktueller Jahresverbrauch?</label>
-    <div class="people-buttons">
+      <div class="people-buttons">
         <button [class.active]="selectedPeople === 1" (click)="setPeople(1)">
           <svg class="people-buttons-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"></path></svg>
         </button>

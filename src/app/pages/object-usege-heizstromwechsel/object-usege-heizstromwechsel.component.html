@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <main>
-<div class="strom-top-div">Strom-Wechselservice erstellen</div>
+<div class="strom-top-div">HEIZSTROM-WECHSELSERVICE</div>
 
   <div class="form-container">
     <div class="step-indicator">
@@ -16,10 +16,10 @@
     </div>
 
     <div class="main-form">
-      <h2><svg class="strom-flash-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.97308 18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM14 20H10V21H14V20ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992ZM13 10.0048H15.5L11 16.0048V12.0048H8.5L13 6V10.0048Z"></path></svg> Objektart und Verbrauch</h2>
+      <h2> <svg class="pomp-svg" xmlns="http://www.w3.org/2000/svg" id="Calque_1" viewBox="0 0 101.91 101.91"><circle cx="67.15" cy="49.97" r="23.48" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></circle><circle cx="67.15" cy="49.97" r="3.55" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></circle><path d="M67.16,46.43l.1-17.41,2.44,1.31c2.39,1.29,4.2,3.44,5.08,6.01.38,1.13.57,2.29.57,3.44,0,2.8-1.1,5.55-3.15,7.6l-1.06,1.06" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M70.7,49.98l17.41.1-1.31,2.44c-1.29,2.39-3.44,4.2-6.01,5.08-1.13.38-2.29.57-3.44.57-2.8,0-5.55-1.1-7.6-3.15l-1.06-1.06" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M63.17,51.51l-1.06,1.06c-2.05,2.05-3.15,4.8-3.15,7.6,0,1.15.19,2.31.57,3.44.87,2.57,2.68,4.72,5.08,6.01l2.44,1.31.1-17.41" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><path d="M63.6,49.97l-17.41-.1,1.31-2.44c1.29-2.39,3.44-4.2,6.01-5.08,1.13-.38,2.29-.57,3.44-.57,2.8,0,5.55,1.1,7.6,3.15l1.06,1.06" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></path><rect x="4.38" y="19.4" width="93.16" height="61.15" rx="6.39" ry="6.39" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect><line x1="36.26" y1="19.83" x2="36.26" y2="80.12" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="55.32" x2="28.22" y2="55.32" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="46" x2="28.22" y2="46" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="36.68" x2="28.22" y2="36.68" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="27.35" x2="28.22" y2="27.35" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><line x1="10.85" y1="64.64" x2="28.22" y2="64.64" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></line><rect x="9.76" y="80.55" width="11.11" height="4.26" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect><rect x="80.65" y="80.55" width="11.11" height="4.26" style="fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round; stroke-width:3px;"></rect></svg>  Objektart und Verbrauch</h2>
 
       <label>Für welches Objekt wollen Sie sparen?</label>
-     <div class="object-buttons">
+      <div class="object-buttons">
         <button
           [class.active]="selectedObjectType === 'Wohnung'"
           (click)="setObjectType('Wohnung')"
@@ -68,7 +68,7 @@
       </div>
 
       <label>Wie hoch ist Ihr aktueller Jahresverbrauch?</label>
-    <div class="people-buttons">
+      <div class="people-buttons">
         <button [class.active]="selectedPeople === 1" (click)="setPeople(1)">
           <svg class="people-buttons-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"></path></svg>
         </button>

@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { StepsComponent } from '../steps/steps.component';
 
 @Component({
   selector: 'app-tariff-selector',
   templateUrl: './tariff-selector.component.html',
   styleUrls: ['./tariff-selector.component.css'],
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    FooterComponent,
+    StepsComponent,
+    RouterModule,
+  ],
 })
 export class TariffSelectorComponent {
   selectedEnergy: string | null = null;
