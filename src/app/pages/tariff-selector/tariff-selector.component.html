@@ -1,0 +1,133 @@
+<div class="background-overlay">
+  <div class="form-card">
+    <div class="progress-line">
+      <div class="step active"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+    </div>
+
+    <h2 class="form-title">WILLKOMMEN BEI IHRER TARIFOPTIMIERUNG</h2>
+    <p class="form-subtitle">
+      Wir finden die größte Ersparnis aus über 1.000 Anbietern und 12.000 teils
+      exklusiven Tarifen.
+    </p>
+
+    <div class="card-group">
+      <p class="card-group-label">Wofür möchten Sie einen günstigeren Preis?</p>
+      <div class="card-row">
+        <div
+          class="select-card"
+          [class.active]="selectedEnergy === 'Strom'"
+          (click)="selectEnergy('Strom')"
+        >
+          <!-- Strom Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M9.97308 18H14.0269C14.1589 16.7984 14.7721 15.8065 15.7676 14.7226C15.8797 14.6006 16.5988 13.8564 16.6841 13.7501C17.5318 12.6931 18 11.385 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 11.3843 6.46774 12.6917 7.31462 13.7484C7.40004 13.855 8.12081 14.6012 8.23154 14.7218C9.22766 15.8064 9.84103 16.7984 9.97308 18ZM14 20H10V21H14V20ZM5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.624 15.7748 16 17 16 18.5V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V18.5C8 17 6.37458 15.7736 5.75395 14.9992ZM13 10.0048H15.5L11 16.0048V12.0048H8.5L13 6V10.0048Z"
+            ></path>
+          </svg>
+          <span>Strom</span>
+        </div>
+        <div
+          class="select-card"
+          [class.active]="selectedEnergy === 'Gas'"
+          (click)="selectEnergy('Gas')"
+        >
+          <!-- Gas Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 23C16.1421 23 19.5 19.6421 19.5 15.5C19.5 14.6345 19.2697 13.8032 19 13.0296C17.3333 14.6765 16.0667 15.5 15.2 15.5C19.1954 8.5 17 5.5 11 1.5C11.5 6.49951 8.20403 8.77375 6.86179 10.0366C5.40786 11.4045 4.5 13.3462 4.5 15.5C4.5 19.6421 7.85786 23 12 23ZM12.7094 5.23498C15.9511 7.98528 15.9666 10.1223 13.463 14.5086C12.702 15.8419 13.6648 17.5 15.2 17.5C15.8884 17.5 16.5841 17.2992 17.3189 16.9051C16.6979 19.262 14.5519 21 12 21C8.96243 21 6.5 18.5376 6.5 15.5C6.5 13.9608 7.13279 12.5276 8.23225 11.4932C8.35826 11.3747 8.99749 10.8081 9.02477 10.7836C9.44862 10.4021 9.7978 10.0663 10.1429 9.69677C11.3733 8.37932 12.2571 6.91631 12.7094 5.23498Z"
+            ></path>
+          </svg>
+          <span>Gas</span>
+        </div>
+        <div
+          class="select-card"
+          [class.active]="selectedEnergy === 'Heizstrom'"
+          (click)="selectEnergy('Heizstrom')"
+        >
+          <!-- Heizstrom Icon -->
+          <svg width="32" height="32" fill="#4caf50" viewBox="0 0 24 24">
+            <path d="M6 2v20h2V2H6zm10 0v20h2V2h-2zM11 6v12h2V6h-2z" />
+          </svg>
+          <span>Heizstrom</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <p class="card-group-label">Für welches Objekt wollen Sie sparen?</p>
+      <div class="card-row">
+        <div
+          class="select-card"
+          [class.active]="selectedProperty === 'Haus'"
+          (click)="selectProperty('Haus')"
+        >
+          <!-- Haus Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM9 9.99998H15V16H9V9.99998ZM11 12V14H13V12H11Z"
+            ></path>
+          </svg>
+          <span>Haus</span>
+        </div>
+        <div
+          class="select-card"
+          [class.active]="selectedProperty === 'Wohnung'"
+          (click)="selectProperty('Wohnung')"
+        >
+          <!-- Wohnung Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M22 21H2V19H3V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V9H21V19H22V21ZM17 19H19V11H13V19H15V13H17V19ZM17 9V5H5V19H11V9H17ZM7 11H9V13H7V11ZM7 15H9V17H7V15ZM7 7H9V9H7V7Z"
+            ></path>
+          </svg>
+          <span>Wohnung</span>
+        </div>
+        <div
+          class="select-card"
+          *ngIf="selectedEnergy !== 'Heizstrom'"
+          [class.active]="selectedProperty === 'Gewerbe'"
+          (click)="selectProperty('Gewerbe')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M10 10.1111V1L21 7V21H3V7L10 10.1111ZM12 4.36908V13.1886L5 10.0775V19H19V8.18727L12 4.36908Z"
+            ></path>
+          </svg>
+          <span>Gewerbe</span>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="submit-btn"
+      [disabled]="!selectedEnergy || !selectedProperty"
+      (click)="submit()"
+    >
+      Jetzt Sparpotential prüfen
+    </button>
+
+    <p class="footer-note">100% kostenlos und transparent</p>
+  </div>
+</div>
