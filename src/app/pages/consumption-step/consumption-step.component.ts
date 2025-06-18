@@ -2,11 +2,19 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-consumption-step',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    HeaderComponent,
+    FooterComponent,
+  ],
   templateUrl: './consumption-step.component.html',
   styleUrls: ['./consumption-step.component.css'],
 })
@@ -38,11 +46,13 @@ export class ConsumptionStepComponent {
 
   onNext() {
     if (this.formValid()) {
-      this.router.navigate(['/step-two']);
+      this.router.navigate(['/provider-step']);
     }
   }
 
   onBack() {
+    this.router.navigate(['/consumption-stage']);
+
     console.log('Back pressed');
   }
 }
