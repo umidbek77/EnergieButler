@@ -5,21 +5,17 @@
   background-color: #f9fafb;
   margin-bottom: 50px;
 }
-
-.strom-flash-svg{
-  width: 24px;
+.main-form-object-top-svg{
+    width: 24px;
 }
-
+.pomp-svg{
+    width: 27px;
+    margin-bottom: -5px;
+}
 .main-form-object-svg{
     width: 24px;
     color: rgb(83, 183, 65);
 }
-
-.people-buttons-svg{
-    width: 20px;
-    color: rgb(83, 183, 65);
-}
-
 
 .strom-top-div{
    background-color: rgb(218, 242, 203);
@@ -84,6 +80,11 @@
   margin: 10px 0;
 }
 
+.people-buttons-svg{
+    width: 20px;
+    color: rgb(83, 183, 65);
+}
+
 .object-buttons button,
 .people-buttons button {
   flex: 1;
@@ -110,6 +111,7 @@
   border-color: #28a745;
   background-color: #e9f9ee;
 }
+
 
 .input-group {
   display: flex;
