@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<main>
+  <div class="form-container">
+    <div class="step-indicator">
+      <div class="step active">1 Objektart und Verbrauch</div>
+      <div class="step">2 Ihr Anschluss</div>
+      <div class="step">3 Aktueller Vertrag</div>
+      <div class="step">4 Lieferstelle</div>
+      <div class="step">5 Kundendaten</div>
+      <div class="step">6 Bankdaten</div>
+      <div class="step">7 Unterschrift</div>
+      <div class="step">8 Daten überprüfen</div>
+    </div>
+
+    <div class="main-form">
+      <h2>💡 Objektart und Verbrauch</h2>
+
+      <label>Für welches Objekt wollen Sie sparen?</label>
+      <div class="object-buttons">
+        <button
+          [class.active]="selectedObjectType === 'Wohnung'"
+          (click)="setObjectType('Wohnung')"
+        >
+          🏢 Wohnung
+        </button>
+        <button
+          [class.active]="selectedObjectType === 'Haus'"
+          (click)="setObjectType('Haus')"
+        >
+          🏠 Haus
+        </button>
+        <button
+          [class.active]="selectedObjectType === 'Gewerbe'"
+          (click)="setObjectType('Gewerbe')"
+        >
+          🏭 Gewerbe
+        </button>
+      </div>
+
+      <label>Wie hoch ist Ihr aktueller Jahresverbrauch?</label>
+      <div class="people-buttons">
+        <button [class.active]="selectedPeople === 1" (click)="setPeople(1)">
+          👤
+        </button>
+        <button [class.active]="selectedPeople === 2" (click)="setPeople(2)">
+          👤👤
+        </button>
+        <button [class.active]="selectedPeople === 3" (click)="setPeople(3)">
+          👤👤👤
+        </button>
+        <button [class.active]="selectedPeople >= 4" (click)="setPeople(4)">
+          👤👤👤➕
+        </button>
+      </div>
+
+      <div class="input-group">
+        <input type="number" [(ngModel)]="annualConsumption" />
+        <span>kWh</span>
+      </div>
+
+      <button class="start-button">Starten ➜</button>
+    </div>
+
+    <div class="info-box">
+      <h3>NÜTZLICHE INFORMATION</h3>
+      <strong>Objektart und Verbrauch</strong>
+      <p>
+        Bitte wählen Sie die Art des Objekts aus, für das Sie sparen möchten.
+        Geben Sie anschließend Ihren
+        <strong>aktuellen Jahresverbrauch in Kilowattstunden (kWh)</strong> an.
+        Diese Informationen helfen uns, die besten Tarife zu finden.
+        <br /><br />
+        Um den Verbrauch zu bestimmen, können Sie sich
+        <strong>an der Anzahl der Personen im Haushalt</strong> orientieren oder
+        die letzte Rechnung verwenden.
+      </p>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

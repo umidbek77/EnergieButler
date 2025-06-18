@@ -1,0 +1,122 @@
+.form-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9fafb;
+  margin-top: 100px;
+}
+
+.step-indicator {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-indicator .step {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+.step-indicator .step.active {
+  background-color: #e5f5e0;
+  border: 1px solid #4caf50;
+  font-weight: bold;
+  color: #000;
+}
+
+.main-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-form h2 {
+  margin-bottom: 20px;
+}
+
+.main-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.object-buttons,
+.people-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.object-buttons button,
+.people-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.object-buttons button.active,
+.people-buttons button.active {
+  border-color: #28a745;
+  background-color: #e9f9ee;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.input-group input {
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-group span {
+  margin-left: 10px;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.info-box {
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.info-box h3 {
+  font-size: 16px;
+  color: #888;
+}
+
+.info-box strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.info-box p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
