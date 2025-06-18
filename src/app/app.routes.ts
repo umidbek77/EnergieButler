@@ -6,6 +6,7 @@ import { AngeboteComponent } from './pages/angebote/angebote.component';
 import { WechselservicesComponent } from './pages/wechselservices/wechselservices.component';
 import { TariffSelectorComponent } from './pages/tariff-selector/tariff-selector.component';
 import { ObjectUsageComponent } from './pages/object-usage/object-usage.component';
+import { ConsumptionStepComponent } from './pages/consumption-step/consumption-step.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'wechselservice', component: WechselservicesComponent },
   { path: 'tariff-selector', component: TariffSelectorComponent },
   { path: 'object-usege', component: ObjectUsageComponent },
+  { path: 'consumption-stage', component: ConsumptionStepComponent },
 ];
