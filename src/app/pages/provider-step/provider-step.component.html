@@ -1,0 +1,40 @@
+<div class="step-container">
+  <h2>Wer ist Ihr bisheriger Anbieter?</h2>
+
+  <select [(ngModel)]="selectedProvider">
+    <option *ngFor="let provider of providers" [value]="provider">
+      {{ provider }}
+    </option>
+  </select>
+
+  <h3>Welche Tarife sollen wir vergleichen?</h3>
+
+  <div class="radio-group">
+    <label>
+      <input
+        type="radio"
+        name="tariff"
+        value="all"
+        [(ngModel)]="selectedTariff"
+      />
+      Alle Tarife
+    </label>
+
+    <label>
+      <input
+        type="radio"
+        name="tariff"
+        value="eco"
+        [(ngModel)]="selectedTariff"
+      />
+      Nur Ökotarife
+    </label>
+  </div>
+
+  <div class="button-group">
+    <button class="btn-secondary" (click)="onBack()">Zurück</button>
+    <button class="btn-primary" [disabled]="!formValid()" (click)="onNext()">
+      Weiter
+    </button>
+  </div>
+</div>

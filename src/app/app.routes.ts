@@ -9,6 +9,7 @@ import { ObjectUsageComponent } from './pages/object-usage/object-usage.componen
 import { ConsumptionStepComponent } from './pages/consumption-step/consumption-step.component';
 import { ObjectUsegeGaswechselComponent } from './pages/object-usege-gaswechsel/object-usege-gaswechsel.component';
 import { ObjectUsegeHeizstromwechselComponent } from './pages/object-usege-heizstromwechsel/object-usege-heizstromwechsel.component';
+import { ProviderStepComponent } from './pages/provider-step/provider-step.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,4 +22,5 @@ export const routes: Routes = [
   { path: 'consumption-stage', component: ConsumptionStepComponent },
   { path: 'gaswechsel', component: ObjectUsegeGaswechselComponent },
   { path: 'heizstromwechsel', component: ObjectUsegeHeizstromwechselComponent },
+  { path: 'provider-step', component: ProviderStepComponent },
 ];
