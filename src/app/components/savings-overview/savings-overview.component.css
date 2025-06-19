@@ -81,18 +81,219 @@ tbody tr.total {
 }
 
 /* 📱 Responsive */
-@media (max-width: 768px) {
-  .table-header h3 {
-    font-size: 1.1rem;
+
+@media (max-width: 480px) {
+  .savings-section {
+    padding: 54px 12px;
   }
 
-  .table-header p,
+  .container {
+    padding: 0;
+  }
+
+  .savings-section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
   .savings-section p {
-    font-size: 0.9rem;
+    font-size: 17px;
+    margin: 0px 0 20px;
   }
 
-  thead th,
-  tbody td {
-    font-size: 0.95rem;
+  .table-header {
+    padding: 18px;
+  }
+
+  .table-header h3 {
+    font-size: 20px;
+  }
+
+  .table-header p {
+    font-size: 16px;
+    margin: 10px 18px;
+  }
+
+  table th {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  table td {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .savings-section {
+    padding: 53px 12px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .savings-section h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .savings-section p {
+    font-size: 16px;
+    margin: 0px 0 30px;
+  }
+
+  .table-header {
+    padding: 18px;
+  }
+
+  .table-header h3 {
+    font-size: 22px;
+  }
+
+  .table-header p {
+    font-size: 16px;
+    margin: 10px 18px;
+  }
+
+  table th {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  table td {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .savings-section {
+    padding: 60px 16px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .savings-section h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .savings-section p {
+    font-size: 18px;
+    margin: 0px 0 35px;
+  }
+
+  .table-header {
+    padding: 22px;
+  }
+
+  .table-header h3 {
+    font-size: 26px;
+  }
+
+  .table-header p {
+    font-size: 18px;
+    margin: 14px 18px;
+  }
+
+  table th {
+    font-size: 17px;
+    padding: 16px 22px;
+  }
+
+  table td {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .savings-section {
+    padding: 60px 24px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .savings-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .savings-section p {
+    font-size: 18px;
+    margin: 0 0 34px;
+  }
+
+  .table-header {
+    padding: 26px;
+  }
+
+  .table-header h3 {
+    font-size: 28px;
+  }
+
+  .table-header p {
+    font-size: 18px;
+    margin: 16px 20px;
+  }
+
+  table th {
+    font-size: 18px;
+    padding: 18px 24px;
+  }
+
+  table td {
+    font-size: 18px;
+    padding: 18px 22px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .savings-section {
+    padding: 70px 30px; /* Katta bo‘shliq berildi */
+  }
+
+  .container {
+    padding: 0;
+    max-width: 960px;
+  }
+
+  .savings-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .savings-section p {
+    font-size: 20px;
+    margin: 0 0 40px;
+  }
+
+  .table-header {
+    padding: 32px;
+  }
+
+  .table-header h3 {
+    font-size: 30px;
+  }
+
+  .table-header p {
+    font-size: 20px;
+    margin: 16px 20px;
+  }
+
+  table th {
+    font-size: 20px;
+    padding: 20px 28px;
+  }
+
+  table td {
+    font-size: 20px;
+    padding: 20px 24px;
   }
 }

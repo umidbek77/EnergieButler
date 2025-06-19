@@ -1,5 +1,4 @@
 .warum-container {
-  /* width: 100%; */
   padding: 64px 16px;
   margin: 0 auto;
   text-align: center;
@@ -57,4 +56,151 @@ p {
   font-size: 16px;
   margin: 0;
   color: #4b5563;
+}
+
+/* Responsive code */
+
+@media (max-width: 480px) {
+  .warum-container {
+    padding: 54px 24px;
+  }
+
+  .warum-title {
+    font-size: 26px;
+    margin: 0 0 26px;
+  }
+
+  .warum-grid {
+    margin: 0 20px;
+  }
+
+  .warum-card {
+    max-width: 456px;
+  }
+
+  .warum-card h3 {
+    font-size: 26px;
+  }
+
+  .warum-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .warum-container {
+    padding: 64px 12px;
+  }
+
+  .warum-title {
+    font-size: 28px;
+    margin: 0 0 32px;
+  }
+
+  .warum-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 24px;
+  }
+
+  .warum-card {
+    max-width: 100%;
+  }
+
+  .warum-card h3 {
+    font-size: 18px;
+  }
+
+  .warum-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .warum-container {
+    padding: 72px 40px;
+  }
+
+  .warum-title {
+    font-size: 32px;
+    margin: 0 0 36px;
+  }
+
+  .warum-grid {
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .warum-card {
+    max-width: 100%;
+  }
+
+  .warum-card h3 {
+    font-size: 22px;
+  }
+
+  .warum-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .warum-container {
+    padding: 80px 48px;
+  }
+
+  .warum-title {
+    font-size: 34px;
+    margin: 0 0 40px;
+  }
+
+  .warum-grid {
+    margin: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+
+  .warum-card {
+    max-width: 100%;
+  }
+
+  .warum-card h3 {
+    font-size: 26px;
+  }
+
+  .warum-card p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .warum-container {
+    padding: 90px 50px;
+  }
+
+  .warum-title {
+    font-size: 38px;
+    margin: 0 0 48px;
+  }
+
+  .warum-grid {
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  .warum-card {
+    max-width: 100%;
+  }
+
+  .warum-card h3 {
+    font-size: 30px;
+  }
+
+  .warum-card p {
+    font-size: 22px;
+  }
 }
