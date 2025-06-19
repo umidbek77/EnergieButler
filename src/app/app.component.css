@@ -38,3 +38,14 @@ text-decoration: underline;
 ::ng-deep mat-expansion-panel-content {
   padding: 0 16px 16px !important;
 }
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.main-content {
+    flex-grow: 1; /* Asosiy kontent bo‘sh joyni egallaydi */
+}

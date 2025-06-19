@@ -11,9 +11,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule,
-    HeaderComponent,
-    FooterComponent,
+    RouterModule
   ],
   templateUrl: './consumption-step.component.html',
   styleUrls: ['./consumption-step.component.css'],

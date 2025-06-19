@@ -11,8 +11,6 @@ import { StepsComponent } from '../steps/steps.component';
   styleUrls: ['./tariff-selector.component.css'],
   imports: [
     CommonModule,
-    HeaderComponent,
-    FooterComponent,
     StepsComponent,
     RouterModule,
   ],

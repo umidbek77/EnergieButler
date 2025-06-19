@@ -8,7 +8,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
   selector: 'app-provider-step',
   templateUrl: './provider-step.component.html',
   styleUrls: ['./provider-step.component.css'],
-  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, FormsModule],
 })
 export class ProviderStepComponent {
   providers: string[] = [
