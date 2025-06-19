@@ -14,9 +14,8 @@
 
 .warum-grid {
   display: grid;
-  margin: 0 236px;
+  margin: 0 20;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .warum-card {
@@ -59,27 +58,99 @@ p {
 }
 
 /* Responsive code */
-
-@media (max-width: 480px) {
+@media (min-width: 1200px) {
   .warum-container {
-    padding: 54px 24px;
+    padding: 64px 0px;
   }
 
   .warum-title {
-    font-size: 26px;
-    margin: 0 0 26px;
+    font-size: 30px;
+    margin: 0 0 16px;
   }
 
   .warum-grid {
-    margin: 0 20px;
+    margin: 0 136.8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
   }
 
   .warum-card {
-    max-width: 456px;
+    max-width: 100%;
+    padding: 22px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   }
 
   .warum-card h3 {
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  .warum-card p {
+    font-size: 17px;
+  }
+
+  .icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .warum-container {
+    padding: 64px 0px;
+    margin: 0;
+  }
+
+  .warum-title {
+    font-size: 28px;
+    margin: 0 0 16px;
+  }
+
+  .warum-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 136px;
+    gap: 1.5rem;
+  }
+
+  .warum-card {
+    max-width: 100%;
+    padding: 18px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .warum-card h3 {
+    font-size: 19px;
+  }
+
+  .warum-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .warum-container {
+    padding: 64px 0px;
+  }
+
+  .warum-title {
+    font-size: 28px;
+    margin: 0 0 16px;
+  }
+
+  .warum-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 0 31px;
+  }
+
+  .warum-card {
+    max-width: 100%;
+    padding: 18px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .warum-card h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
   }
 
   .warum-card p {
@@ -89,22 +160,21 @@ p {
 
 @media (max-width: 767px) {
   .warum-container {
-    padding: 64px 12px;
+    padding: 64px 0px;
   }
 
   .warum-title {
     font-size: 28px;
-    margin: 0 0 32px;
+    margin: 0 0 16px;
   }
 
   .warum-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 24px;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .warum-card {
-    max-width: 100%;
+    padding: 18px;
   }
 
   .warum-card h3 {
@@ -116,91 +186,53 @@ p {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 480px) {
   .warum-container {
-    padding: 72px 40px;
+    padding: 64px 0px;
   }
 
   .warum-title {
-    font-size: 32px;
-    margin: 0 0 36px;
+    font-size: 22px;
+    margin: 0 0 16px;
   }
 
   .warum-grid {
-    margin: 0 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 
   .warum-card {
-    max-width: 100%;
+    padding: 16px;
   }
 
   .warum-card h3 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .warum-card p {
     font-size: 16px;
   }
-}
 
-@media (max-width: 1199px) {
-  .warum-container {
-    padding: 80px 48px;
-  }
-
-  .warum-title {
-    font-size: 34px;
-    margin: 0 0 40px;
-  }
-
-  .warum-grid {
-    margin: 0 48px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-  }
-
-  .warum-card {
-    max-width: 100%;
-  }
-
-  .warum-card h3 {
-    font-size: 26px;
-  }
-
-  .warum-card p {
-    font-size: 18px;
+  .icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
-@media (min-width: 1200px) {
-  .warum-container {
-    padding: 90px 50px;
-  }
-
+@media (max-width: 320px) {
   .warum-title {
-    font-size: 38px;
-    margin: 0 0 48px;
-  }
-
-  .warum-grid {
-    margin: 0 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-  }
-
-  .warum-card {
-    max-width: 100%;
+    font-size: 20px;
   }
 
   .warum-card h3 {
-    font-size: 30px;
+    font-size: 16px;
   }
 
   .warum-card p {
-    font-size: 22px;
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
   }
 }

@@ -19,14 +19,16 @@
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  margin: 0 172px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .card {
-  max-width: 318px;
+  width: 318px;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
   padding: 32px 24px 24px;
@@ -84,248 +86,75 @@
 
 @media (max-width: 480px) {
   .energy-container {
-    padding: 54px 10px;
+    padding: 64px 0;
+  }
+
+  .text-center {
+    margin: 0 0 48px;
   }
 
   .main-heading {
-    font-size: 26px;
-    margin: 0 0 14px;
+    font-size: 30px;
   }
 
   .subtitle {
-    margin: 0 0 28px;
-    font-size: 15px;
+    font-size: 16px;
+    margin: 0;
   }
 
   .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 0px;
-    padding: 0 67px;
-    gap: 25px;
   }
 
   .card {
-    max-width: 300px;
-    padding: 30px 22px 22px;
   }
 
   .card-title {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0 0 10px;
   }
 
   .card-text {
-    font-size: 14px;
-    letter-spacing: 0.2px;
   }
 
   .icon-wrapper {
-    padding: 16px;
-    margin: 0 93px 12px;
   }
 
   .icon {
-    width: 30px;
-    height: 30px;
   }
 }
 
 @media (max-width: 767px) {
-  .energy-container {
-    padding: 54px 0px;
-  }
-
-  .main-heading {
-    font-size: 30px;
-    margin: 0 0 18px;
-  }
-
-  .subtitle {
-    margin: 0 0 30px;
-    font-size: 18px;
-  }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 0px;
-    padding: 0 47px;
-    gap: 25px;
-  }
-
-  .card {
-    padding: 32px 24px;
-    max-width: 730px;
-  }
-
-  .card-title {
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0 0 0px;
-  }
-
-  .card-text {
-    font-size: 18px;
-    letter-spacing: 0.3px;
-  }
-
-  .icon-wrapper {
-    padding: 16px;
-    margin: 0 93px 12px;
-  }
-
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 @media (max-width: 991px) {
   .energy-container {
-    padding: 64px 14px;
   }
 
   .main-heading {
-    font-size: 32px;
-    margin: 0 0 18px;
   }
 
   .subtitle {
-    margin: 0 0 44px;
-    font-size: 18px;
   }
 
   .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0;
-    padding: 0 130px;
-    gap: 20px;
   }
 
   .card {
-    padding: 16px 10px;
-    max-width: 200px;
   }
 
   .card-title {
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0;
   }
 
   .card-text {
-    font-size: 18px;
-    letter-spacing: 0.3px;
   }
 
   .icon-wrapper {
-    padding: 16px;
-    margin: 0 68px 12px;
   }
 
   .icon {
-    width: 28px;
-    height: 28px;
   }
 }
 
 @media (max-width: 1199px) {
-  .energy-container {
-    padding: 64px 14px;
-  }
-
-  .main-heading {
-    font-size: 30px;
-    margin: 0 0 18px;
-  }
-
-  .subtitle {
-    margin: 0 0 48px;
-    font-size: 16px;
-  }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 70px;
-    gap: 25px;
-  }
-
-  .card {
-    padding: 32px 24px;
-  }
-
-  .card-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 12px;
-  }
-
-  .card-text {
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    margin: 0;
-  }
-
-  .icon-wrapper {
-    padding: 16px;
-    margin: 0 103px 12px;
-  }
-
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 @media (min-width: 1200px) {
-  .energy-container {
-    padding: 80px 40px;
-  }
-
-  .main-heading {
-    font-size: 36px;
-    margin: 0 0 24px;
-  }
-
-  .subtitle {
-    margin: 0 0 56px;
-    font-size: 18px;
-  }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 40px;
-    gap: 30px;
-  }
-
-  .card {
-    padding: 40px 32px;
-  }
-
-  .card-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0 0 16px;
-  }
-
-  .card-text {
-    font-size: 18px;
-    letter-spacing: 0.4px;
-    margin: 0;
-  }
-
-  .icon-wrapper {
-    padding: 20px;
-    margin: 0 auto 16px;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
 }
