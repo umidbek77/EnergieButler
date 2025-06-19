@@ -84,7 +84,7 @@ tbody tr.total {
 
 @media (max-width: 480px) {
   .savings-section {
-    padding: 54px 12px;
+    padding: 64px 0px;
   }
 
   .container {
@@ -127,7 +127,7 @@ tbody tr.total {
 
 @media (max-width: 767px) {
   .savings-section {
-    padding: 53px 12px;
+    padding: 60px 0px;
   }
 
   .container {
@@ -159,7 +159,7 @@ tbody tr.total {
 
   table th {
     font-size: 16px;
-    padding: 14px 18px;
+    padding: 14px 16px;
   }
 
   table td {
@@ -170,7 +170,7 @@ tbody tr.total {
 
 @media (max-width: 991px) {
   .savings-section {
-    padding: 60px 16px;
+    padding: 60px 0px;
   }
 
   .container {
@@ -213,21 +213,21 @@ tbody tr.total {
 
 @media (max-width: 1199px) {
   .savings-section {
-    padding: 60px 24px;
+    padding: 60px 0px;
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 0px;
   }
 
   .savings-section h2 {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .savings-section p {
     font-size: 18px;
-    margin: 0 0 34px;
+    margin: 0 0 28px;
   }
 
   .table-header {
@@ -244,19 +244,19 @@ tbody tr.total {
   }
 
   table th {
-    font-size: 18px;
-    padding: 18px 24px;
+    font-size: 16px;
+    padding: 16px 20px;
   }
 
   table td {
-    font-size: 18px;
-    padding: 18px 22px;
+    font-size: 16px;
+    padding: 16px 14px;
   }
 }
 
 @media (min-width: 1201px) {
   .savings-section {
-    padding: 70px 30px; /* Katta bo‘shliq berildi */
+    padding: 60px 0px;
   }
 
   .container {
