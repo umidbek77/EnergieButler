@@ -1,76 +1,103 @@
-.header {
-  position: fixed;
+.page-header {
+  position: sticky;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 0px 38px;
-  background-color: white;
-  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  /* Boshqa elementlardan ustun turishi uchun */
 }
 
-.logo-and-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+.my-icon{
+    color: blue;
+  width: 25px;
+  height: 25px;
+}
+
+.sidenav {
+  width: 200px;
+  background: whitesmoke;
 }
 
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  margin-bottom: -5px;
+
+.mat-toolbar{
+  margin-bottom: -10px;
+  margin-top: 13px;
+  
+  
+}
+.side-name,
+.nav-link {
+  color: white;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #2563eb;
-}
-
-.logo {
-  display: flex;
+.logo-div{
+    display: flex;
   justify-content: center;
   align-items: center;
+   gap: 8px;
 }
 
-.logo-desc{
-    text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
+
+.logo {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.logo-img {
+  width: 80%;
+  clip-path: circle(50%);
+  object-fit: cover;
+  margin: 5px;
+
+}
+
+.logo_desc {
+  text-decoration: none;
+  color: black !important;
+  font-weight: 400 !important;
+  font-size: 32px;
   transition: 0.4s;
   margin: 0;
-  cursor: pointer;
 }
 
-.my-icon {
-  color: blue;
-  width: 32px;
-  height: 32px;
+.link-container {
+  display: flex;
+  align-items: center;
+
 }
 
-.logo h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
+.mat-nav-list_link{
+  display: flex;
+  flex-direction: column;
+  color: #44474E;
+  gap: 10px;
+  padding-inline: 10px;
+  margin-top: 10px;
 }
 
-.login-btn {
-  background: white;
+.sidenav_link{
+  color: #44474E;
+}
+ 
+.sidenav_link:hover{
+  text-decoration: underline;
+}
+
+.header-nav_link {
+  color: black ;
+  font-size: 20px ;
+  font-weight: 400;
+  padding: 13px 14px ;
+  transition: 0.4s ;
+  text-decoration: none;
+}
+.login-btn{
+    background: white;
   font-weight: 600;
   border: 1px solid #ccc;
   padding: 0.65rem 1.4rem;
@@ -79,24 +106,93 @@
    margin-left: 2rem;
 }
 
-.login-btn:hover {
-  background-color: aliceblue;
+.logo_desc:hover {
+  color: #C6AD69;
 }
 
-.nav-links {
+.active-link {
+  text-decoration: underline !important;
+  text-decoration-color: #C6AD69 !important;
+}
+
+.toolbar {
+
   display: flex;
-  gap: 1.5rem;
   align-items: center;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out;
+
+
+:host ::ng-deep .mat-mdc-list-item-unscoped-content {
+  color:rgba(30, 58, 138) !important;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #2563eb;
+
+
+
+.mat-sidenav-content .mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
+
+#toggle-button {
+  display: none;
+}
+
+.space {
+  flex: 1;
+}
+
+@media (max-width: 1560px) {
+  .mat-toolbar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #toggle-button {
+    display: inline-block;
+  }
+
+  .burger-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+      width: 100%;
+  }
+ 
+  .link-container {
+    display: none !important;
+  }
+
+  .logo {
+    width: 65px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  
+  }
+  
+  .logo-img {
+    width: 80%;
+    clip-path: circle(50%);
+    object-fit: cover;
+    margin: 5px;
+  
+  }
+  
+  .logo_desc {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.4s;
+    margin: 0;
+  }
+
+
+ 
+}
+
+

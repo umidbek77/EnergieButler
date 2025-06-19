@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-object-usege-gaswechsel',
-  imports: [FooterComponent, HeaderComponent, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './object-usege-gaswechsel.component.html',
   styleUrl: './object-usege-gaswechsel.component.css'
 })

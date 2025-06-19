@@ -3,7 +3,6 @@
   gap: 20px;
   padding: 20px;
   background-color: #f9fafb;
-  margin-bottom: 50px;
 }
 
 .strom-flash-svg{
@@ -18,6 +17,7 @@
 .people-buttons-svg{
     width: 20px;
     color: rgb(83, 183, 65);
+
 }
 
 
@@ -31,7 +31,6 @@
     justify-content: center;
     letter-spacing: 1px;
     line-height: 24px;
-    margin-top: 90px;
     padding: 28px 0px 16px;
     text-transform: uppercase;
     width: 100vw;

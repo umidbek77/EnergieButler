@@ -11,14 +11,12 @@ import { FooterComponent } from '../components/footer/footer.component';
 @Component({
   selector: 'app-home',
   imports: [
-    HeaderComponent,
     HeroComponent,
     SavingsOverviewComponent,
     EnergySavingStepsComponent,
     FaqSectionComponent,
     WarumEnergiebutlerComponent,
     CtaSectionComponent,
-    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

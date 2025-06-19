@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main',
-  imports: [HeaderComponent, StepsComponent, FooterComponent, RouterModule],
+  imports: [StepsComponent,  RouterModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })

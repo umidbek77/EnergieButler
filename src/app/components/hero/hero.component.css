@@ -1,13 +1,8 @@
 .hero {
-  padding: 64px 16px;
+  padding: 64px 5px;
   margin: 0 auto;
   text-align: center;
   background-color: #f6fafd;
-  margin-top: 70px;
-}
-
-.hero-container {
-  margin: 0 236px;
 }
 
 .tagline {

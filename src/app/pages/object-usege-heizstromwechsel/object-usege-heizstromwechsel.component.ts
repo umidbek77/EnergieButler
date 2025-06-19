@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-object-usege-heizstromwechsel',
-  imports: [FooterComponent, HeaderComponent, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './object-usege-heizstromwechsel.component.html',
   styleUrl: './object-usege-heizstromwechsel.component.css'
 })

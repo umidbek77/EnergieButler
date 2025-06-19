@@ -2,7 +2,6 @@
   background: url("../../../../public/housebg.jpg") no-repeat center center / cover;
   position: relative;
   min-height: 90vh;
-  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;

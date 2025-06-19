@@ -8,7 +8,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
   selector: 'app-object-usage',
   templateUrl: './object-usage.component.html',
   styleUrls: ['./object-usage.component.css'],
-  imports: [RouterModule, FormsModule, HeaderComponent, FooterComponent],
+  imports: [RouterModule, FormsModule],
 })
 export class ObjectUsageComponent {
   selectedObjectType: string = 'Wohnung';

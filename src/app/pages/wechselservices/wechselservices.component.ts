@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-wechselservices',
-  imports: [HeaderComponent, FooterComponent, RouterModule  ],
+  imports: [ RouterModule  ],
   templateUrl: './wechselservices.component.html',
   styleUrl: './wechselservices.component.css'
 })

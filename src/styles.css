@@ -1,3 +1,7 @@
+*{
+  text-decoration: none;
+}
+
 body {
   font-family: Roboto, sans-serif;
     display: flex;
@@ -14,7 +18,14 @@ body.modal-open {
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+
 }
+
+
+.main-content {
+    flex-grow: 1; /* Asosiy kontent bo‘sh joyni egallaydi */
+}
+
 
 html, body {
   height: 100%;
@@ -22,9 +33,9 @@ html, body {
   padding: 0;
 }
 
-main{
+/* main{
     height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
