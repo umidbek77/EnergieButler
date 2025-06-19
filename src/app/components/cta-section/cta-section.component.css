@@ -21,7 +21,7 @@
   color: white;
 }
 
-.cta-content-subtitle{
+.cta-content-subtitle {
   width: 1336px;
   font-size: 20px;
   margin: 0 0 38px;
@@ -49,4 +49,177 @@
 
 .arrow {
   font-size: 1.2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .cta-wrapper {
+    padding: 48px 12px;
+    flex-direction: column;
+  }
+
+  .cta-content {
+    margin: 0;
+    padding: 0 8px;
+  }
+
+  .cta-content-title,
+  .cta-content-subtitle {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .cta-content-subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .arrow {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-wrapper {
+    padding: 56px 16px;
+    flex-direction: column;
+  }
+
+  .cta-content {
+    margin: 0;
+    padding: 0 12px;
+  }
+
+  .cta-content-title,
+  .cta-content-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-content-title {
+    font-size: 28px;
+  }
+
+  .cta-content-subtitle {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .cta-button {
+    font-size: 17px;
+    padding: 11px 28px;
+  }
+
+  .arrow {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .cta-wrapper {
+    padding: 64px 24px;
+  }
+
+  .cta-content {
+    padding: 0 16px;
+  }
+
+  .cta-content-title,
+  .cta-content-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-content-title {
+    font-size: 32px;
+  }
+
+  .cta-content-subtitle {
+    font-size: 19px;
+    margin-bottom: 34px;
+  }
+
+  .cta-button {
+    font-size: 17px;
+  }
+
+  .arrow {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cta-wrapper {
+    padding: 72px 32px;
+  }
+
+  .cta-content {
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .cta-content-title,
+  .cta-content-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-content-title {
+    font-size: 34px;
+  }
+
+  .cta-content-subtitle {
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta-wrapper {
+    padding: 96px 64px;
+  }
+
+  .cta-content {
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .cta-content-title,
+  .cta-content-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-content-title {
+    font-size: 38px;
+  }
+
+  .cta-content-subtitle {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .cta-button {
+    font-size: 19px;
+    padding: 14px 36px;
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+  }
 }

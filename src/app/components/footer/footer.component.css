@@ -60,17 +60,168 @@
   margin: 0 10px;
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+
+@media (max-width: 320px) {
+  .footer-content {
+    padding: 0 8px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .footer-right span,
+  .footer-links a {
+    font-size: 11px;
+  }
+
+  .footer-links span {
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 32px 0;
+  }
+
+  .footer-left {
+    gap: 4px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .footer-right span,
+  .footer-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 502px) {
+  .footer-content {
+    padding: 0 12px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    padding: 0 16px;
+  }
+
+  .footer-left {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .footer-right span,
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-links span {
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 991px) {
   .footer-content {
     flex-direction: column;
-    text-align: center;
+    height: auto;
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .footer-left {
+    margin-bottom: 12px;
   }
 
   .footer-right {
     text-align: center;
   }
 
+  .footer-links {
+    margin-top: 6px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .footer-right span,
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer-content {
+    padding: 0 32px;
+    height: auto;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer-right span,
+  .footer-links a {
+    font-size: 15px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding: 64px 0;
+    font-size: 15px;
+  }
+
+  .footer-content {
+    max-width: 1368px;
+    padding: 0 64px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
   .footer-left {
-    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .logo-text {
+    font-size: 22px;
+  }
+
+  .footer-right span {
+    font-size: 17px;
+  }
+
+  .footer-links {
+    margin-top: 6px;
+  }
+
+  .footer-links a {
+    font-size: 17px;
+  }
+
+  .footer-links span {
+    margin: 0 12px;
+  }
+
+  .my-icon {
+    width: 26px;
+    height: 26px;
   }
 }
