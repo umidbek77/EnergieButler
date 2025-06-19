@@ -92,13 +92,13 @@ tbody tr.total {
   }
 
   .savings-section h2 {
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 12px;
   }
 
   .savings-section p {
-    font-size: 17px;
-    margin: 0px 0 20px;
+    font-size: 12px;
+
   }
 
   .table-header {
@@ -135,12 +135,12 @@ tbody tr.total {
   }
 
   .savings-section h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 12px;
   }
 
   .savings-section p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0px 0 30px;
   }
 
@@ -175,18 +175,18 @@ tbody tr.total {
 
   .container {
     padding: 0;
+    width: 100%;
   }
 
   .savings-section h2 {
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 16px;
   }
 
   .savings-section p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0px 0 35px;
   }
-
   .table-header {
     padding: 22px;
   }
@@ -221,7 +221,7 @@ tbody tr.total {
   }
 
   .savings-section h2 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 16px;
   }
 
@@ -235,11 +235,11 @@ tbody tr.total {
   }
 
   .table-header h3 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .table-header p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 16px 20px;
   }
 
