@@ -1,7 +1,7 @@
 .faq-container {
   max-width: 800px;
   margin: 80px auto;
-  padding: 0 16px;
+  padding: 0 5px;
   text-align: center;
 }
 
@@ -18,7 +18,11 @@
 }
 
 ::ng-deep mat-accordion {
-  width: 100%;
+  width: 100% !important;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+  align-items: center;
 }
 
 ::ng-deep mat-expansion-panel {
@@ -26,6 +30,7 @@
   box-shadow: none;
   border-bottom: 1px solid #e0e0e0 !important;
   border-radius: 0;
+  width: 90% !important;
 }
 
 ::ng-deep mat-expansion-panel p {
@@ -37,9 +42,44 @@
 ::ng-deep mat-expansion-panel-header {
   padding-left: 0;
   padding-right: 0;
+  width: 90% !important;
 }
 
 ::ng-deep mat-panel-title {
   font-weight: 500;
   font-size: 16px;
+}
+
+
+/* Responsivlik */
+
+@media (max-width:620px) {
+  .faq-title{
+  font-size: 28px;
+  }
+
+  .faq-subtitle {
+  font-size: 13px;
+}
+.mat-expansion-panel-header-title{
+  font-size: 15px;
+}
+}
+
+
+@media (max-width:380px) {
+  .faq-title{
+  font-size: 25px;
+  }
+
+  .faq-subtitle {
+  font-size: 12px;
+}
+.mat-expansion-panel-header-title{
+  font-size: 13px;
+}
+
+::ng-deep mat-expansion-panel p{
+ font-size: 11.4px;
+}
 }
