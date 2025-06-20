@@ -75,9 +75,21 @@ tbody td {
   font-weight: 600;
 }
 
+tbody tr:hover {
+  background-color: #d8f6e4;
+}
+
+thead tr:hover {
+  background-color: #d8f6e4;
+}
+
 tbody tr.total {
   background-color: #eaffe6;
   font-weight: bold;
+}
+
+tbody tr.total:hover {
+  background-color: #d8f6e4;
 }
 
 /* 📱 Responsive */
@@ -98,7 +110,6 @@ tbody tr.total {
 
   .savings-section p {
     font-size: 12px;
-
   }
 
   .table-header {

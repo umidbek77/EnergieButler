@@ -41,10 +41,13 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  transition: transform 0.24s ease;
 }
 
 .cta-button:hover {
-  background-color: #e0e7ff;
+  background-color: #456ae3;
+  color: rgb(245, 246, 247);
+  transform: scale(0.94);
 }
 
 .arrow {
