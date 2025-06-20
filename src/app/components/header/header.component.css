@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
+  background: linear-gradient(rgba(173, 255, 188, 0.9), rgba(233, 255, 243, 1));
   z-index: 1;
   /* Boshqa elementlardan ustun turishi uchun */
 }
@@ -24,6 +24,7 @@
 .mat-toolbar{
   margin-bottom: -10px;
   margin-top: 13px;
+  background: linear-gradient(rgba(173, 255, 188, 0.9), rgba(233, 255, 243, 1));
   
   
 }
@@ -97,13 +98,14 @@
   text-decoration: none;
 }
 .login-btn{
-    background: white;
+    background:   rgb(0, 165, 81);
   font-weight: 600;
   border: 1px solid #ccc;
   padding: 0.65rem 1.4rem;
   border-radius: 6px;
   cursor: pointer;
    margin-left: 2rem;
+   color: white;
 }
 
 .logo_desc:hover {
