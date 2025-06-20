@@ -1,5 +1,6 @@
 .background-overlay {
-  background: url("../../../../public/housebg.jpg") no-repeat center center / cover;
+  background: url("../../../../public/housebg.jpg") no-repeat center center /
+    cover;
   position: relative;
   min-height: 90vh;
   display: flex;
@@ -46,9 +47,8 @@
 }
 
 .step.active {
-  background: #4caf50;
+  background: #3868eb;
 }
-
 
 .form-title {
   font-size: 20px;
@@ -90,25 +90,25 @@
 }
 
 .select-card:hover {
-  border-color: #4caf50;
-  outline: 1.5px solid #4caf50;
+  border-color: #3868eb;
+  outline: 1.5px solid #3868eb;
 }
 
 .select-card.active {
-  border-color: #4caf50;
-  background-color: #f0fff4;
-  outline: 1.5px solid #4caf50;
+  border-color: #3868eb;
+  background-color: #e7f0f8;
+  outline: 1.5px solid #3868eb;
 }
 
 .select-card svg {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-bottom: 8px;
-  fill: #4caf50;
+  fill: #3868eb;
 }
 
 .submit-btn {
-  background-color: #4caf50;
+  background-color: #3868eb;
   color: white;
   padding: 14px 24px;
   font-size: 16px;
@@ -121,7 +121,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #388e3c;
+  background-color: #6086ef;
 }
 
 .submit-btn:disabled {

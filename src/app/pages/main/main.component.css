@@ -1,9 +1,6 @@
 .main-wrapper {
   padding: 2rem;
-}
-
-main {
-  margin-bottom: 50px;
+  background-color: #f2f2f2;
 }
 
 .page-header {
@@ -33,7 +30,7 @@ main {
 .card-box {
   background-color: white;
   padding: 2rem;
-  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.05);
   max-width: 500px;
   flex: 1 1 300px;
   margin-bottom: 50px;
@@ -78,16 +75,17 @@ main {
 }
 
 .btn.green {
-  background-color: #28a745;
+  background-color: #4473e1;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 14px 36px;
   border-radius: 4px;
   color: white;
   font-weight: 600;
+  font-size: 21px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn.green:hover {
-  background-color: #218838;
+  background-color: #6495f1;
 }
