@@ -5,11 +5,10 @@
   width: 100%;
   background: linear-gradient(rgba(173, 255, 188, 0.9), rgba(233, 255, 243, 1));
   z-index: 1;
-  /* Boshqa elementlardan ustun turishi uchun */
 }
 
-.my-icon{
-    color: blue;
+.my-icon {
+  color: blue;
   width: 25px;
   height: 25px;
 }
@@ -19,13 +18,11 @@
   background: whitesmoke;
 }
 
-
-
-.mat-toolbar{
+.mat-toolbar {
   margin-bottom: -10px;
   margin-top: 13px;
+
   background: linear-gradient(rgba(173, 255, 188, 0.9), rgba(233, 255, 243, 1));
-  
   
 }
 .side-name,
@@ -33,20 +30,18 @@
   color: white;
 }
 
-.logo-div{
-    display: flex;
+.logo-div {
+  display: flex;
   justify-content: center;
   align-items: center;
-   gap: 8px;
+  gap: 8px;
 }
-
 
 .logo {
   width: 100px;
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
 
 .logo-img {
@@ -54,7 +49,6 @@
   clip-path: circle(50%);
   object-fit: cover;
   margin: 5px;
-
 }
 
 .logo_desc {
@@ -69,34 +63,30 @@
 .link-container {
   display: flex;
   align-items: center;
-
 }
 
-.mat-nav-list_link{
+.mat-nav-list_link {
   display: flex;
   flex-direction: column;
-  color: #44474E;
+  color: #44474e;
   gap: 10px;
   padding-inline: 10px;
   margin-top: 10px;
 }
 
-.sidenav_link{
-  color: #44474E;
-}
- 
-.sidenav_link:hover{
-  text-decoration: underline;
+.sidenav_link {
+  color: #44474e;
 }
 
 .header-nav_link {
-  color: black ;
-  font-size: 20px ;
+  color: black;
+  font-size: 20px;
   font-weight: 400;
-  padding: 13px 14px ;
-  transition: 0.4s ;
+  padding: 13px 14px;
   text-decoration: none;
+  transition: transform 0.24s ease;
 }
+
 .login-btn{
     background:   rgb(0, 165, 81);
   font-weight: 600;
@@ -106,31 +96,26 @@
   cursor: pointer;
    margin-left: 2rem;
    color: white;
+
 }
 
 .logo_desc:hover {
-  color: #C6AD69;
+  color: #c6ad69;
 }
 
 .active-link {
   text-decoration: underline !important;
-  text-decoration-color: #C6AD69 !important;
+  text-decoration-color: #c6ad69 !important;
 }
 
 .toolbar {
-
   display: flex;
   align-items: center;
 }
 
-
-
 :host ::ng-deep .mat-mdc-list-item-unscoped-content {
-  color:rgba(30, 58, 138) !important;
+  color: rgba(30, 58, 138) !important;
 }
-
-
-
 
 .mat-sidenav-content .mat-primary {
   position: sticky;
@@ -157,13 +142,13 @@
     display: inline-block;
   }
 
-  .burger-header{
+  .burger-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-      width: 100%;
+    width: 100%;
   }
- 
+
   .link-container {
     display: none !important;
   }
@@ -173,17 +158,15 @@
     display: flex;
     align-items: center;
     gap: 5px;
-  
   }
-  
+
   .logo-img {
     width: 80%;
     clip-path: circle(50%);
     object-fit: cover;
     margin: 5px;
-  
   }
-  
+
   .logo_desc {
     text-decoration: none;
     color: white;
@@ -192,9 +175,4 @@
     transition: 0.4s;
     margin: 0;
   }
-
-
- 
 }
-
-
