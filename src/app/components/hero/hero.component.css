@@ -69,10 +69,13 @@
   cursor: pointer;
   font-weight: 550;
   font-size: 18px;
+  transition: transform 0.24s ease;
 }
 
 .cta:hover {
   background-color: aliceblue;
+  color: rgb(18, 143, 245);
+  transform: scale(0.94);
 }
 
 .stats {
@@ -85,11 +88,22 @@
   color: #6b7280;
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .group-icon {
   width: 24px;
   height: 24px;
   color: #2563eb;
   margin-bottom: -5px;
+  animation: pulse 4s ease-in-out infinite;
 }
 
 .star-icon {
@@ -97,6 +111,7 @@
   height: 24px;
   color: #ebe825;
   margin-bottom: -5px;
+  animation: pulse 4s ease-in-out infinite;
 }
 
 .badge-icon {
@@ -104,6 +119,7 @@
   height: 24px;
   color: #198d1b;
   margin-bottom: -5px;
+  animation: pulse 4s ease-in-out infinite;
 }
 
 /* Responsive code */
