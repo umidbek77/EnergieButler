@@ -1,9 +1,19 @@
+.wechselservice{
+    width: 100%;
+}
 
+.wechselservice-container-content{
+    padding: 30px 13px;
+}
+.wechselservice-container{
+ max-width: 630px;
+ width: 100%;
+}
 
 .wechselservice-container p{
 font-size: 16px;
     margin-bottom: 32px;
-    max-width: 630px;
+   
     color: #40424c;
 }
 
@@ -17,7 +27,6 @@ font-size: 16px;
 .button-div{
     width: 100%;
     display: flex;
-    justify-content:space-between;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
@@ -49,4 +58,32 @@ font-size: 16px;
  background-color: #53b741 !important;
     color: #fff !important;
     transition: background-color .3s;
+}
+
+
+@media (max-width:900px) {
+.button-div button{
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 32px;
+    
+}
+
+.wechselservice-container-content{
+    padding: 25px 13px;
+}
+    
+}
+
+@media (max-width:780px) {
+.button-div button{
+    padding: 9px 28px;
+    height: 45px;
+    
+}
+
+.wechselservice-container-content{
+    padding: 18px 10px;
+}
+    
 }
