@@ -64,7 +64,7 @@ input::placeholder {
 }
 
 .login-card form .login-btn {
-  background: #4caf50;
+  background: linear-gradient(to right, #245de8, #15a24a);
   color: white;
   padding: 12px;
   margin-top: 15px;
@@ -73,15 +73,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-.login-button {
-  background: #4caf50;
-  color: white;
-  padding: 12px 20px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
 
 .login-card form .verify-link {
   background: white;
@@ -148,4 +139,46 @@ input::placeholder {
   max-width: 100%;
   outline: 0;
   padding: 14px 36px;
+}
+
+
+
+/* responsive */
+
+@media (max-width:768px) {
+  .login-card {
+    padding: 26px;
+    border-radius: 7px;
+  }
+
+
+}
+
+
+@media (max-width:568px) {
+
+  .google-btn,
+  .facebook-btn {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px !important;
+  }
+
+  .facebook-svg, .google-svg {
+    width: 27px;
+    height: 27px;
+}
+ .divider {
+  margin: 17px 0px !important;
+}
+
+h2 {
+    font-size: 17px !important;
+}
+
+.login-card-subtitle{
+  font-size: 14px;
+}
+
+
 }
