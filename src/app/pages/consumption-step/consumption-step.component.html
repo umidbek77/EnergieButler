@@ -26,8 +26,13 @@
     </div>
 
     <div class="input-group">
-      <input type="number" [(ngModel)]="consumptionValue" style="width: 90%" />
-      <span>kWh</span>
+      <input
+        type="number"
+        class="consp"
+        [(ngModel)]="consumptionValue"
+        style="width: 83%"
+      />
+      <span class="item">kWh</span>
     </div>
 
     <h4>Wo befindet sich Ihr Gasanschluss?</h4>
@@ -35,7 +40,7 @@
     <div class="input-group">
       <label>PLZ</label>
       <input
-        style="width: 96%"
+        style="width: 95%"
         type="text"
         maxlength="5"
         [(ngModel)]="plz"

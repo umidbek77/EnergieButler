@@ -40,7 +40,7 @@ export class ConsumptionStepComponent {
 
   onNext() {
     if (this.formValid()) {
-      this.router.navigate(['/provider-step']);
+      this.router.navigate(['/tariff-compare']);
     }
   }
 
