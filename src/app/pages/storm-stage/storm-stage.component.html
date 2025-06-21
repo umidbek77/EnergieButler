@@ -1,0 +1,58 @@
+<div class="wizard-card">
+  <div class="progress-line">
+    <div class="step active"></div>
+    <div class="step active"></div>
+    <div class="step"></div>
+  </div>
+
+  <h3>Wie hoch ist Ihr aktueller Jahresverbrauch?</h3>
+
+  <!-- Person tanlash -->
+  <div class="people-selection-input">
+    <select
+      class="active"
+      id="size"
+      [(ngModel)]="selectedSize"
+      (change)="updateConsumptionBySize($event)"
+    >
+      <option value="" disabled selected>
+        Haushaltgröße (Anzahl der Personen):
+      </option>
+      <option value="1">1 Person (2000 kWh)</option>
+      <option value="2">2 Person (2500 kWh)</option>
+      <option value="3">3 Person (3500 kWh)</option>
+      <option value="4+">4+ Person (4500 kWh)</option>
+    </select>
+  </div>
+
+  <!-- Sarf qiymati -->
+  <div class="consumption-input">
+    <input type="number" [(ngModel)]="consumption" />
+    <span>kWh</span>
+  </div>
+
+  <!-- Manzil -->
+  <h4>Wo befindet sich Ihr Stromanschluss?</h4>
+  <div class="address-fields">
+    <label for="text">PLZ</label>
+    <input
+      type="text"
+      class="address-code"
+      placeholder="z. B. 10115"
+      [(ngModel)]="plz"
+    />
+    <label for="text">Ort</label>
+    <select [(ngModel)]="city">
+      <option value="" disabled selected>z. B. Berlin</option>
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+  </div>
+
+  <!-- Tugmalar -->
+  <div class="action-buttons">
+    <button class="btn" (click)="goBack()">Zurück</button>
+    <button class="btn green" [disabled]="!canContinue()" (click)="goNext()">
+      Weiter
+    </button>
+  </div>
+</div>

@@ -10,6 +10,8 @@ import { ConsumptionStepComponent } from './pages/consumption-step/consumption-s
 import { ObjectUsegeGaswechselComponent } from './pages/object-usege-gaswechsel/object-usege-gaswechsel.component';
 import { ObjectUsegeHeizstromwechselComponent } from './pages/object-usege-heizstromwechsel/object-usege-heizstromwechsel.component';
 import { ProviderStepComponent } from './pages/provider-step/provider-step.component';
+import { StormStageComponent } from './pages/storm-stage/storm-stage.component';
+import { OfferReadyComponent } from './pages/offer-ready/offer-ready.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,4 +25,20 @@ export const routes: Routes = [
   { path: 'gaswechsel', component: ObjectUsegeGaswechselComponent },
   { path: 'heizstromwechsel', component: ObjectUsegeHeizstromwechselComponent },
   { path: 'provider-step', component: ProviderStepComponent },
+  { path: 'storm-stage', component: StormStageComponent },
+  { path: 'offer-ready', component: OfferReadyComponent },
+  {
+    path: 'offer-ready',
+    loadComponent: () =>
+      import('./pages/offer-ready/offer-ready.component').then(
+        (m) => m.OfferReadyComponent
+      ),
+  },
+  {
+    path: 'tariff-compare',
+    loadComponent: () =>
+      import('./pages/tariff-compare/tariff-compare.component').then(
+        (m) => m.TariffCompareComponent
+      ),
+  },
 ];

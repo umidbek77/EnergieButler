@@ -1,0 +1,130 @@
+.wizard-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+h3,
+h4 {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  margin: 15px;
+}
+
+.progress-line {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 20px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+.step.active {
+  background: #3868eb;
+}
+
+.people-selection-input {
+  margin: 16px 0;
+}
+
+.people-selection-input label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.people-selection-input select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3868eb;
+}
+
+.consumption-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.consumption-input input {
+  flex: 1;
+  padding: 15.5px;
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #ccc;
+  border-right: none;
+  font-size: 16px;
+}
+
+.consumption-input span {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0 6px 6px 0;
+  font-size: 16px;
+}
+
+.address-fields input,
+.address-fields select {
+  width: 92%;
+  padding: 15px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.address-fields select {
+  width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 17px 70px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 2px solid #3868eb;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3868eb;
+  color: aliceblue;
+  transition: 0.4s;
+}
+
+.btn.green {
+  background: #3868eb;
+  color: white;
+  border: 2px solid #3868eb;
+  font-size: 18px;
+}
+
+.btn.green:hover {
+  border: none;
+  background-color: white;
+  color: #3868eb;
+  border: 2px solid #3868eb;
+  transition: 0.4s;
+}

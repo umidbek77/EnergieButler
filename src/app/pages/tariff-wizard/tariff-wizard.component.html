@@ -1,0 +1,27 @@
+<div class="modal-container">
+  <div class="modal-content">
+    <div class="progress-line">
+      <button (click)="onClose()">✖</button>
+      <div class="step" [class.active]="currentStep >= 1"></div>
+      <div class="step" [class.active]="currentStep >= 2"></div>
+      <div class="step" [class.active]="currentStep === 3"></div>
+    </div>
+
+    <ng-container [ngSwitch]="currentStep">
+      <app-tariff-selector
+        *ngSwitchCase="1"
+        (submit)="goNext()"
+      ></app-tariff-selector>
+      <app-consumption-step
+        *ngSwitchCase="2"
+        (back)="goBack()"
+        (next)="goNext()"
+      ></app-consumption-step>
+      <app-provider-step
+        *ngSwitchCase="3"
+        (back)="goBack()"
+        (next)="goNext()"
+      ></app-provider-step>
+    </ng-container>
+  </div>
+</div>
