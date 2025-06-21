@@ -21,11 +21,10 @@
   text-align: center;
 }
 
-
 input::placeholder {
   color: #888;
   font-size: 16px;
-  font-style:italic ;
+  font-style: italic;
 }
 
 .login-card form {
@@ -130,22 +129,23 @@ input::placeholder {
   color: #388e3c;
 }
 
-.facebook-svg, .google-svg{
-width: 30px;
-height: 30px;
+.facebook-svg,
+.google-svg {
+  width: 30px;
+  height: 30px;
 }
 
-.google-btn, .facebook-btn{
-      align-items: center;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    font-size: 18px;
-    font-weight: 500;
-    justify-content: center;
-    max-width: 100%;
-    outline: 0;
-    padding: 14px 36px;
-
+.google-btn,
+.facebook-btn {
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  justify-content: center;
+  max-width: 100%;
+  outline: 0;
+  padding: 14px 36px;
 }

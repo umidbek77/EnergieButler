@@ -8,11 +8,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 @Component({
   selector: 'app-consumption-step',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule
-  ],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './consumption-step.component.html',
   styleUrls: ['./consumption-step.component.css'],
 })
