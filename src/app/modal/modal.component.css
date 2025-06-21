@@ -473,6 +473,15 @@ label{
   font-size: 13px;
 }
 
+.upload-box {
+    border-radius: 7px;
+    padding: 20px 10px;
+}
+.upload-box-button{
+    width: 100%;
+    padding: 10px 8.5px;
+
+}
 }
 
 @media (max-width:540px) {
@@ -487,6 +496,28 @@ label{
   .subtitle{
     font-size: 14px;
   }
+}
+
+@media (max-width:450px) {
+  
+.step-2-container {
+  padding:15px 0px;
+}
+
+.upload-title {
+    font-size: 18px;
+    margin-top: 10px ;
+}
+
+.upload-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.upload-svg {
+    width: 44px;
+    height: 44px;
+}
 }
 
 @media (max-width: 425px) {
@@ -511,6 +542,10 @@ label{
 
 .box p{
   font-size: 14px;
+}
+
+.section-title{
+  font-size: 18px;
 }
 
 
