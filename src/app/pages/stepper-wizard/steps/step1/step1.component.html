@@ -1,0 +1,62 @@
+<div class="step-container">
+  <!-- Form qismi -->
+  <div class="step-form">
+    <h2>1. Objektart und Verbrauch</h2>
+
+    <form [formGroup]="form" (ngSubmit)="start()">
+      <!-- Objekt turi tanlovi -->
+      <label class="form-label">Für welches Objekt wollen Sie sparen?</label>
+      <div class="object-selection">
+        <button
+          type="button"
+          *ngFor="let obj of objectTypes"
+          [class.selected]="isSelectedObject(obj.value)"
+          (click)="selectObjectType(obj.value)"
+        >
+          {{ obj.icon }} {{ obj.label }}
+        </button>
+      </div>
+
+      <!-- Sarf presetlari -->
+      <label class="form-label"
+        >Wie hoch ist Ihr aktueller Jahresverbrauch?</label
+      >
+      <div class="consumption-selection">
+        <button
+          type="button"
+          *ngFor="let preset of consumptionPresets"
+          [class.selected]="isSelectedConsumption(preset.value)"
+          (click)="selectConsumption(preset.value)"
+        >
+          <ng-container *ngFor="let _ of [].constructor(preset.iconCount)">
+            <span>🏠</span>
+          </ng-container>
+        </button>
+      </div>
+
+      <!-- Sarf qiymati qo‘l bilan -->
+      <input
+        type="number"
+        formControlName="consumption"
+        placeholder="z.B. 12000 kWh"
+      />
+
+      <!-- Keyingi stepga -->
+      <div class="start-button">
+        <button type="submit" [disabled]="!form.valid">
+          Starten <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- O‘ng panel -->
+  <div class="info-panel">
+    <h4>Nützliche Information</h4>
+    <p>
+      Bitte wählen Sie, ob Sie in einer Wohnung, einem Haus oder einem
+      Gewerbeobjekt wohnen. Geben Sie zusätzlich Ihren aktuellen Jahresverbrauch
+      ein, um passende Angebote zu erhalten.
+    </p>
+  </div>
+</div>

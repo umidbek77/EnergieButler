@@ -99,11 +99,19 @@
   cursor: pointer;
   margin-left: 2rem;
   color: white;
+  transition: transform 0.24s ease;
+}
+
+.header-nav_link.active {
+  color: rgb(98, 250, 64);
+  font-weight: 500;
+  transform: scale(1.05);
 }
 
 .login-btn:hover {
   color: rgb(98, 250, 64);
   background-color: #15a24a;
+  transform: scale(0.94);
 }
 
 .logo_desc:hover {

@@ -1,68 +1,102 @@
 <mat-sidenav-container class="page-header">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'navigation'" [mode]="'push'" [opened]="false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="'navigation'"
+    [mode]="'push'"
+    [opened]="false"
+  >
     <mat-toolbar class="toolbar-header">
-          <a class="logo">
-      <h1 class="logo_desc">EnergieButler</h1>
-    </a>
+      <a class="logo">
+        <h1 class="logo_desc">EnergieButler</h1>
+      </a>
     </mat-toolbar>
-    <mat-nav-list class="mat-nav-list_link" >
-    <a class="sidenav_link" mat-list-item routerLink="/main" routerLinkActive="active">Main</a>
-      <a class="sidenav_link" mat-list-item routerLink="/angebote" routerLinkActive="active">Angebote</a>
-      <a class="sidenav_link" mat-list-item routerLink="/wechselservice" routerLinkActive="active"
+    <mat-nav-list class="mat-nav-list_link">
+      <a
+        class="sidenav_link"
+        mat-list-item
+        routerLink="/main"
+        routerLinkActive="active"
+        >Main</a
+      >
+      <a
+        class="sidenav_link"
+        mat-list-item
+        routerLink="/angebote"
+        routerLinkActive="active"
+        >Angebote</a
+      >
+      <a
+        class="sidenav_link"
+        mat-list-item
+        routerLink="/wechselservice"
+        routerLinkActive="active"
         >Wechselservice</a
       >
-         <a class="sidenav_link" (click)="goToLogin()" >Anmelden</a>
+      <a class="sidenav_link" (click)="goToLogin()">Anmelden</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="toolbar">
-
-     <div class="burger-header">
-
+      <div class="burger-header">
         <div class="logo-div">
           <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 22 22"
-        stroke-width="2.5"
-        stroke="currentColor"
-        class="my-icon"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-        />
-      </svg>
-           <a routerLink="/" class="logo_desc" >   <h1>EnergieButler</h1>  </a>
-    </div>
-
-    <button type="button" id="toggle-button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-
-        <mat-icon class="burger-menu">menu</mat-icon>
-      </button>
-     </div>
-      
-      <div class="space"></div>
-      
-      <div class="link-container">
-          <a  class="header-nav_link" routerLink="/main" routerLinkActive="active">Main</a>
-      <a  class="header-nav_link" routerLink="/angebote" routerLinkActive="active">Angebote</a>
-      <a  class="header-nav_link" routerLink="/wechselservice" routerLinkActive="active"
-        >Wechselservice</a
-      >
-
-       <button  class="sidenav_button" (click)="goToLogin()" class="login-btn">Anmelden</button>
-
-
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 22 22"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="my-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+            />
+          </svg>
+          <a routerLink="/" class="logo_desc"> <h1>EnergieButler</h1> </a>
         </div>
 
-    </mat-toolbar>
-    <br>
-    <ng-content></ng-content>
+        <button
+          type="button"
+          id="toggle-button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+        >
+          <mat-icon class="burger-menu">menu</mat-icon>
+        </button>
+      </div>
 
+      <div class="space"></div>
+
+      <div class="link-container">
+        <a class="header-nav_link" routerLink="/main" routerLinkActive="active"
+          >Main</a
+        >
+        <a
+          class="header-nav_link"
+          routerLink="/angebote"
+          routerLinkActive="active"
+          >Angebote</a
+        >
+        <a
+          class="header-nav_link"
+          routerLink="/wechselservice"
+          routerLinkActive="active"
+          >Wechselservice</a
+        >
+
+        <button class="sidenav_button" (click)="goToLogin()" class="login-btn">
+          Anmelden
+        </button>
+      </div>
+    </mat-toolbar>
+    <br />
+    <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
 <div class="main-content">
-  <router-outlet></router-outlet> 
+  <router-outlet></router-outlet>
 </div>
