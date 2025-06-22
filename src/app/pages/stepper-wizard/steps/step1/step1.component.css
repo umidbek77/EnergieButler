@@ -1,0 +1,83 @@
+.step-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.step-form {
+  flex: 1;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  min-width: 320px;
+}
+
+.info-panel {
+  width: 280px;
+  background: #e8f5e9;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  font-size: 14px;
+  color: #2e7d32;
+  min-width: 250px;
+}
+
+.object-selection,
+.consumption-selection {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.object-selection button,
+.consumption-selection button {
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.object-selection button.selected,
+.consumption-selection button.selected {
+  border-color: #4caf50;
+  background: #dcedc8;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input[type="number"]:focus {
+  border-color: #3868eb;
+  outline: none;
+}
+
+.start-button {
+  margin-top: 20px;
+}
+
+.start-button button {
+  padding: 12px 24px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.start-button button:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}

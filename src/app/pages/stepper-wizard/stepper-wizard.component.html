@@ -1,0 +1,51 @@
+<!-- Stepper liniya (faqat navigatsiya uchun) -->
+<mat-horizontal-stepper
+  [selectedIndex]="currentStepIndex"
+  class="custom-stepper"
+  [disableRipple]="true"
+>
+  <mat-step
+    *ngFor="let label of stepLabels; let i = index"
+    [completed]="i < currentStepIndex"
+  >
+    <ng-template matStepLabel>{{ label }}</ng-template>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<!-- Har bir bosqich alohida component sifatida yuklanadi -->
+<div class="step-body">
+  <ng-container [ngSwitch]="currentStepIndex">
+    <app-step1 *ngSwitchCase="0" (next)="nextStep()"></app-step1>
+    <app-step2
+      *ngSwitchCase="1"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step2>
+    <app-step3
+      *ngSwitchCase="2"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step3>
+    <app-step4
+      *ngSwitchCase="3"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step4>
+    <app-step5
+      *ngSwitchCase="4"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step5>
+    <app-step6
+      *ngSwitchCase="5"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step6>
+    <app-step7
+      *ngSwitchCase="6"
+      (next)="nextStep()"
+      (back)="prevStep()"
+    ></app-step7>
+    <app-step8 *ngSwitchCase="7" (back)="prevStep()"></app-step8>
+  </ng-container>
+</div>

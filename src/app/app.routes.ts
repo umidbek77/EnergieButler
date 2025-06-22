@@ -41,4 +41,12 @@ export const routes: Routes = [
         (m) => m.TariffCompareComponent
       ),
   },
+
+  {
+    path: 'wizard',
+    loadChildren: () =>
+      import('./pages/stepper-wizard/stepper.routes').then(
+        (m) => m.STEP_ROUTER
+      ),
+  },
 ];
