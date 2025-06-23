@@ -146,6 +146,10 @@
   flex: 1;
 }
 
+.mat-icon {
+  color: white;
+}
+
 @media (max-width: 1560px) {
   .mat-toolbar {
     width: 100%;
@@ -190,8 +194,4 @@
     transition: 0.4s;
     margin: 0;
   }
-}
-
-.mat-icon {
-  color: white;
 }
