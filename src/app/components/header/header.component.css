@@ -145,10 +145,10 @@
 .space {
   flex: 1;
 }
-
+/* 
 .mat-icon {
   color: white;
-}
+} */
 
 @media (max-width: 1560px) {
   .mat-toolbar {
