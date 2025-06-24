@@ -1,1 +1,101 @@
-<p>step6 works!</p>
+<form [formGroup]="form" (ngSubmit)="onNext()">
+  <!-- Bankdaten -->
+  <div class="section">
+    <h3>🏦 Bankdaten</h3>
+    <p>
+      Wie lautet Ihre <strong>IBAN?</strong> Wir werden diese Ihrem neuen
+      Anbieter mitteilen.
+    </p>
+
+    <input
+      type="text"
+      formControlName="iban"
+      placeholder="IBAN"
+      [class.invalid]="form.get('iban')?.invalid && form.get('iban')?.touched"
+    />
+
+    <div
+      class="error"
+      *ngIf="
+        form.get('iban')?.hasError('required') && form.get('iban')?.touched
+      "
+    >
+      Bitte geben Sie Ihre IBAN ein.
+    </div>
+    <div
+      class="error"
+      *ngIf="form.get('iban')?.hasError('pattern') && form.get('iban')?.touched"
+    >
+      Bitte geben Sie eine gültige IBAN ein (z.B. DE27 5001 0517 5948 5398 41).
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          formControlName="showContact"
+          formControlName="showContact"
+        />
+        Anderer Kontoinhaber als Lieferanschrift?
+      </label>
+    </div>
+  </div>
+
+  <!-- Kontaktinformationen (faqat checkbox bosilganda) -->
+  <div class="section" *ngIf="showContactForm">
+    <h3>👤 Kontaktdaten des Kontoinhabers</h3>
+
+    <div class="radio-group">
+      <label
+        ><input type="radio" formControlName="salutation" value="Frau" />
+        Frau</label
+      >
+      <label
+        ><input type="radio" formControlName="salutation" value="Herr" />
+        Herr</label
+      >
+    </div>
+
+    <div class="grid">
+      <input type="text" formControlName="firstName" placeholder="Vorname" />
+      <input type="text" formControlName="lastName" placeholder="Nachname" />
+    </div>
+
+    <div class="grid">
+      <input type="text" formControlName="birthDate" placeholder="TT.MM.JJJJ" />
+      <input
+        type="text"
+        formControlName="phone"
+        placeholder="(+49) Telefonnummer (Optional)"
+      />
+    </div>
+
+    <div class="grid">
+      <input type="text" formControlName="plz" placeholder="PLZ" />
+      <input type="text" formControlName="city" placeholder="Ort" />
+    </div>
+
+    <div class="grid">
+      <input type="text" formControlName="street" placeholder="Straße" />
+      <input
+        type="text"
+        formControlName="houseNumber"
+        placeholder="Hausnummer"
+      />
+    </div>
+  </div>
+
+  <!-- Tugmalar -->
+  <div class="form-footer">
+    <button type="button" class="back-btn" (click)="onBack()">Zurück</button>
+    <button
+      type="submit"
+      class="next-btn"
+      (click)="onNext()"
+      [disabled]="!form.valid"
+      [ngClass]="{ 'btn-disabled': !form.valid, 'btn-active': form.valid }"
+    >
+      Weiter
+    </button>
+  </div>
+</form>

@@ -16,7 +16,7 @@
 .step-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -26,48 +26,127 @@
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
+  margin-top: 14px;
 }
 
-.location-fields input,
+form .form-label {
+  margin-bottom: 14px;
+}
+
+.location-input {
+  flex: 1;
+  padding: 15px;
+  font-size: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  max-width: 25%;
+}
+
 .location-fields select,
 input[type="text"] {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   font-size: 15px;
   border: 1.5px solid #ccc;
-  border-radius: 8px;
+  border-radius: 14px;
+}
+
+.provider-input {
+  width: 94.7%;
+  padding: 15px;
+  margin: 14px 0;
 }
 
 input:focus,
 select:focus {
-  border-color: #4caf50;
+  border-color: #3868eb;
   outline: none;
 }
 
 .tariff-buttons {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   margin: 16px 0;
 }
 
 .tariff-btn {
-  flex: 1;
-  padding: 10px 16px;
+  padding: 9px 21px;
   border: 2px solid transparent;
-  background: #f1f1f1;
-  border-radius: 8px;
+  background: #fefdfd;
+  border-radius: 18px;
+  box-shadow: #f3f2f2 4px 4px;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .tariff-btn.selected {
-  border-color: #4caf50;
+  border-color: #3868eb;
   background: #e8f5e9;
 }
 
 .step-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 24px;
+}
+
+.step-buttons button {
+  padding: 12px 36px;
+  background: #3868eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.step-buttons button:disabled {
+  background: #a5bfd6;
+  cursor: not-allowed;
+}
+
+/* --- RESPONSIVE --- */
+
+/* Planshetlar uchun */
+@media (max-width: 768px) {
+  .location-fields {
+    flex-direction: column;
+  }
+
+  .step-buttons {
+    justify-content: center;
+  }
+
+  .step-buttons button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobil ekranlar uchun */
+@media (max-width: 480px) {
+  .step2-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+
+  .tariff-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .step-buttons button {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
 }

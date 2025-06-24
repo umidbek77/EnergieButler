@@ -1,0 +1,125 @@
+/* Asosiy karta konteyner */
+.summary-card {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+}
+
+/* Sarlavha */
+.summary-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Har bir qatorda ma'lumot */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.value {
+  font-weight: 400;
+  color: #111827;
+  text-align: right;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+/* Imzo blok */
+.signature-block {
+  margin-top: 32px;
+}
+
+.signature-preview {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Qo‘shimcha ma’lumot */
+.info-box {
+  background: #f3f4f6;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 32px;
+}
+
+/* Tugmalar guruhi */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.back-btn,
+.confirm-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Orqaga tugmasi */
+.back-btn {
+  background-color: white;
+  border: 1.5px solid #3868eb;
+  color: #3c42b5;
+}
+
+.back-btn:hover {
+  background-color: #f0fdf4;
+}
+
+/* Tasdiqlash tugmasi */
+.confirm-btn {
+  background-color: #3868eb;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #3868eb;
+}
+
+/* Responsivlik */
+@media (max-width: 768px) {
+  .summary-card {
+    padding: 16px;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .back-btn,
+  .confirm-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

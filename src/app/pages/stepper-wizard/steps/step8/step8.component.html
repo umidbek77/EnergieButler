@@ -1,1 +1,34 @@
-<p>step8 works!</p>
+<div class="summary-card">
+  <h2><i class="icon"></i> Daten überprüfen</h2>
+  <div class="summary-row" *ngFor="let item of summaryData">
+    <div class="label">{{ item.label }}</div>
+    <div class="value">{{ item.value }}</div>
+  </div>
+
+  <div class="signature-block">
+    <div class="label">Hinterlegte Unterschrift</div>
+    <img
+      *ngIf="signatureUrl"
+      [src]="signatureUrl"
+      alt="Signature"
+      class="signature-preview"
+    />
+  </div>
+
+  <div class="info-box">
+    <h3>Wir kümmern uns um Ihren Wechsel</h3>
+    <p>
+      Die Nutzung des remind.me-Wechselservices ist kostenlos. Ihre Vorteile:
+      Wir wechseln und kümmern uns zuverlässig um alle Angelegenheiten und um
+      Ihren neuen Stromvertrag. Mit der Aktivierung sichern Sie Ihre sofortige
+      Ersparnis. ...
+    </p>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="back-btn" (click)="onBack()">Zurück</button>
+    <button type="button" class="confirm-btn" (click)="onConfirm()">
+      Bestätigen
+    </button>
+  </div>
+</div>

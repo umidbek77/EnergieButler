@@ -19,19 +19,6 @@ export class Step1Component {
 
   form: FormGroup;
 
-  objectTypes = [
-    { label: 'Wohnung', value: 'wohnung', icon: '🏢' },
-    { label: 'Haus', value: 'haus', icon: '🏠' },
-    { label: 'Gewerbe', value: 'gewerbe', icon: '🏭' },
-  ];
-
-  consumptionPresets = [
-    { iconCount: 1, value: 5000 },
-    { iconCount: 2, value: 10000 },
-    { iconCount: 3, value: 15000 },
-    { iconCount: 4, value: 20000 },
-  ];
-
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       objectType: ['', Validators.required],

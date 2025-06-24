@@ -1,0 +1,166 @@
+.step5-form {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Kartalar */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Sarlavha */
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* Matn */
+.card p {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #3868eb;
+}
+
+/* Inputlar */
+input[type="text"],
+input[type="date"] {
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #ef4444;
+}
+
+/* Fokus */
+input:focus {
+  outline: 2px solid #3868eb;
+  outline-offset: 2px;
+}
+
+/* Radial tanlanganlar */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  font-weight: 500;
+}
+
+/* Flex qatorlar */
+.flex {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.flex > div {
+  flex: 1;
+}
+
+/* Tugma bloki */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+button[type="button"] {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+button[type="button"]:hover {
+  background-color: #e5e7eb;
+}
+
+button[type="submit"] {
+  background-color: #3868eb;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #3868eb;
+}
+
+/* Aktiv / disabled tugmalar */
+.btn-disabled {
+  background-color: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.btn-active {
+  background-color: #3868eb;
+  color: white;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .step5-form {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-group {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+}

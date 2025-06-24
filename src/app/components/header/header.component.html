@@ -15,8 +15,9 @@
 
     <mat-nav-list class="mat-nav-list_link">
       <a
-        class="sidenav_link"
         mat-list-item
+        class="sidenav_link"
+        (click)="drawer.close()"
         routerLink="/main"
         routerLinkActive="active"
         >Main</a
@@ -25,6 +26,7 @@
         class="sidenav_link"
         mat-list-item
         routerLink="/angebote"
+        (click)="drawer.close()"
         routerLinkActive="active"
         >Angebote</a
       >
@@ -32,18 +34,11 @@
         class="sidenav_link"
         mat-list-item
         routerLink="/wechselservice"
+        (click)="drawer.close()"
         routerLinkActive="active"
         >Wechselservice</a
       >
-      <a class="sidenav_link" (click)="goToLogin()">Anmelden</a>
-
-    <mat-nav-list class="mat-nav-list_link" >
-    <a  mat-list-item class="sidenav_link" (click)="drawer.close()" routerLink="/main" routerLinkActive="active">Main</a>
-    <a class="sidenav_link" mat-list-item routerLink="/angebote" (click)="drawer.close()" routerLinkActive="active">Angebote</a>
-    <a class="sidenav_link" mat-list-item routerLink="/wechselservice" (click)="drawer.close()" routerLinkActive="active" >Wechselservice</a
-      >
-         <a class="sidenav_link" (click)="drawer.close(); goToLogin()" >Anmelden</a>
-
+      <a class="sidenav_link" (click)="drawer.close(); goToLogin()">Anmelden</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

@@ -1,61 +1,86 @@
+/* Umumiy konteyner */
 .step-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
+/* Form kartasi */
 .step-form {
   flex: 1;
   background: #fff;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  min-width: 320px;
+  max-width: 580px;
+  box-sizing: border-box;
 }
 
-.info-panel {
-  width: 280px;
-  background: #e8f5e9;
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px solid #c8e6c9;
-  font-size: 14px;
-  color: #2e7d32;
-  min-width: 250px;
+/* Sarlavha */
+.step-form h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 4px 0 20px 2px;
 }
 
+/* Tugmalar guruhlari */
 .object-selection,
 .consumption-selection {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex-wrap: wrap;
   margin: 16px 0;
 }
 
+/* Iconlar */
+.object-selection svg,
+.consumption-selection svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  stroke: #4b5563;
+  color: #3868eb;
+}
+
+/* Tanlangan tugmalar */
+button.selected .icon {
+  stroke: #22c55e;
+}
+
 .object-selection button,
 .consumption-selection button {
-  padding: 10px 16px;
+  padding: 12px 26px;
   border: 2px solid transparent;
-  border-radius: 8px;
-  background: #f9f9f9;
+  border-radius: 20px;
+  background: #f2efef;
   cursor: pointer;
   font-size: 14px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .object-selection button.selected,
 .consumption-selection button.selected {
-  border-color: #4caf50;
-  background: #dcedc8;
+  border-color: #3868eb;
+  background: #d7d9ee;
+  color: #3868eb;
+  font-weight: 600;
 }
 
+/* Raqamli input */
 input[type="number"] {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   border: 1.5px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 input[type="number"]:focus {
@@ -63,21 +88,51 @@ input[type="number"]:focus {
   outline: none;
 }
 
+/* Submit tugmasi */
 .start-button {
   margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .start-button button {
-  padding: 12px 24px;
-  background: #4caf50;
+  padding: 12px 36px;
+  background: #3868eb;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 7px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .start-button button:disabled {
-  background: #a5d6a7;
+  background: #a5bfd6;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .step-form {
+    padding: 20px;
+  }
+
+  .start-button {
+    justify-content: center;
+  }
+
+  .start-button button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .object-selection button,
+  .consumption-selection button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
 }
