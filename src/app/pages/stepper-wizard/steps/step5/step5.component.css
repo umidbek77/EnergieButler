@@ -1,21 +1,27 @@
-/* step5.component.css */
-
 .step5-form {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 24px;
-  font-family: "Inter", sans-serif;
-}
-
-.card {
   background-color: #fff;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5e7eb;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Inter", sans-serif;
 }
 
+/* Kartalar */
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Sarlavha */
 .card h3 {
   font-size: 18px;
   margin-bottom: 16px;
@@ -25,6 +31,7 @@
   font-weight: 600;
 }
 
+/* Matn */
 .card p {
   margin-bottom: 16px;
   font-weight: 500;
@@ -42,20 +49,38 @@ label {
 
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: #22c55e;
+  accent-color: #3868eb;
 }
 
+/* Inputlar */
 input[type="text"],
 input[type="date"] {
-  padding: 10px 12px;
-  font-size: 14px;
-  border: 1px solid #d1d5db;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid #d1d5db;
   border-radius: 8px;
   width: 100%;
   margin-top: 4px;
   box-sizing: border-box;
 }
 
+input.ng-invalid.ng-touched {
+  border-color: #ef4444;
+}
+
+/* Fokus */
+input:focus {
+  outline: 2px solid #3868eb;
+  outline-offset: 2px;
+}
+
+/* Radial tanlanganlar */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  font-weight: 500;
+}
+
+/* Flex qatorlar */
 .flex {
   display: flex;
   gap: 16px;
@@ -66,6 +91,7 @@ input[type="date"] {
   flex: 1;
 }
 
+/* Tugma bloki */
 .btn-group {
   display: flex;
   justify-content: space-between;
@@ -73,12 +99,13 @@ input[type="date"] {
 }
 
 button {
-  padding: 10px 24px;
-  font-size: 14px;
+  padding: 12px 28px;
+  font-size: 15px;
   border-radius: 8px;
   cursor: pointer;
   border: none;
   transition: background-color 0.2s ease;
+  font-weight: 500;
 }
 
 button[type="button"] {
@@ -91,14 +118,15 @@ button[type="button"]:hover {
 }
 
 button[type="submit"] {
-  background-color: #22c55e;
+  background-color: #3868eb;
   color: white;
 }
 
 button[type="submit"]:hover {
-  background-color: #16a34a;
+  background-color: #3868eb;
 }
 
+/* Aktiv / disabled tugmalar */
 .btn-disabled {
   background-color: #d1d5db;
   color: #6b7280;
@@ -106,22 +134,33 @@ button[type="submit"]:hover {
 }
 
 .btn-active {
-  background-color: #22c55e;
+  background-color: #3868eb;
   color: white;
 }
 
-input.ng-invalid.ng-touched {
-  border-color: #ef4444; /* qizil */
-  outline: none;
-}
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .step5-form {
+    padding: 16px;
+    border-radius: 12px;
+  }
 
-/* Optional hover and checked state styles */
-input[type="radio"]:checked + label,
-input[type="checkbox"]:checked + label {
-  font-weight: 500;
-}
+  .flex {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-input:focus {
-  outline: 2px solid #22c55e;
-  outline-offset: 2px;
+  .btn-group {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
 }

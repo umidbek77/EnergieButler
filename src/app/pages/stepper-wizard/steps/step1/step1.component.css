@@ -1,10 +1,14 @@
+/* Umumiy konteyner */
 .step-container {
   display: flex;
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
+/* Form kartasi */
 .step-form {
   flex: 1;
   background: #fff;
@@ -12,14 +16,17 @@
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   max-width: 580px;
+  box-sizing: border-box;
 }
 
+/* Sarlavha */
 .step-form h2 {
   font-size: 20px;
   font-weight: 500;
   margin: 4px 0 20px 2px;
 }
 
+/* Tugmalar guruhlari */
 .object-selection,
 .consumption-selection {
   display: flex;
@@ -28,36 +35,24 @@
   margin: 16px 0;
 }
 
-.object-selection svg {
-  width: 26px;
-  height: 26px;
+/* Iconlar */
+.object-selection svg,
+.consumption-selection svg {
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
   vertical-align: middle;
   stroke: #4b5563;
   color: #3868eb;
 }
 
+/* Tanlangan tugmalar */
 button.selected .icon {
   stroke: #22c55e;
 }
 
-.object-selection button {
-  padding: 12px 36px;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  background: #f2efef;
-  color: cornflowerblue;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
+.object-selection button,
 .consumption-selection button {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
   padding: 12px 26px;
   border: 2px solid transparent;
   border-radius: 20px;
@@ -65,16 +60,9 @@ button.selected .icon {
   cursor: pointer;
   font-size: 14px;
   transition: 0.3s;
-}
-
-.consumption-selection svg {
-  color: #3868eb;
-  border: none;
-  width: 21px;
-  height: 21px;
-  margin-right: 6px;
-  vertical-align: middle;
-  stroke: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .object-selection button.selected,
@@ -85,12 +73,14 @@ button.selected .icon {
   font-weight: 600;
 }
 
+/* Raqamli input */
 input[type="number"] {
-  width: 95.1%;
+  width: 100%;
   padding: 14px;
   border: 1.5px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 input[type="number"]:focus {
@@ -98,12 +88,14 @@ input[type="number"]:focus {
   outline: none;
 }
 
+/* Submit tugmasi */
 .start-button {
   margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .start-button button {
-  margin-left: 454px;
   padding: 12px 36px;
   background: #3868eb;
   color: white;
@@ -112,9 +104,35 @@ input[type="number"]:focus {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .start-button button:disabled {
   background: #a5bfd6;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .step-form {
+    padding: 20px;
+  }
+
+  .start-button {
+    justify-content: center;
+  }
+
+  .start-button button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .object-selection button,
+  .consumption-selection button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  input[type="number"] {
+    width: 100%;
+  }
 }

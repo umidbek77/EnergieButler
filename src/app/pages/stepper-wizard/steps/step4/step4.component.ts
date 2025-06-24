@@ -23,37 +23,57 @@ export class Step4Component {
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       delivery: this.fb.group({
+        plz: ['', [Validators.required]],
+        city: ['', [Validators.required]],
+        street: ['', [Validators.required]],
+        houseNumber: ['', [Validators.required]],
+      }),
+      changeOption: ['wechseln', Validators.required],
+      differentBilling: [false],
+      billing: this.fb.group({
+        salutation: ['', Validators.required],
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        birthDate: ['', Validators.required],
+        phone: [
+          '',
+          [Validators.required, Validators.pattern(/^(\+49|0)[1-9]\d{9,}$/)],
+        ],
         plz: ['', Validators.required],
         city: ['', Validators.required],
         street: ['', Validators.required],
         houseNumber: ['', Validators.required],
       }),
-      differentBilling: [false],
-      billing: this.fb.group({
-        salutation: [''],
-        firstName: [''],
-        lastName: [''],
-        birthDate: [''],
-        phone: [''],
-        plz: [''],
-        city: [''],
-        street: [''],
-        houseNumber: [''],
-      }),
-      changeOption: ['wechseln', Validators.required],
+    });
+
+    // Dastlab billing formni disable qilib qo‘yamiz
+    this.billingForm.disable();
+
+    // Checkbox holatiga qarab billing formni yoqamiz yoki o‘chiramiz
+    this.form.get('differentBilling')?.valueChanges.subscribe((checked) => {
+      if (checked) {
+        this.billingForm.enable();
+      } else {
+        this.billingForm.reset();
+        this.billingForm.disable();
+      }
     });
   }
 
-  get billingForm() {
+  get billingForm(): FormGroup {
     return this.form.get('billing') as FormGroup;
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid) {
       console.log('Step4 Data:', this.form.value);
       this.next.emit();
     } else {
       this.form.markAllAsTouched();
     }
+  }
+
+  onBack(): void {
+    this.back.emit();
   }
 }

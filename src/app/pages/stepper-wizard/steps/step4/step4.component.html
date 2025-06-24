@@ -1,43 +1,39 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="step4-form">
-  <section class="card">
-    <h3>Liefer- und Rechnungsanschrift</h3>
-    <div class="flex-row">
-      <input
-        type="text"
-        formControlName="plz"
-        placeholder="PLZ"
-        formGroupName="delivery"
-      />
-      <input
-        type="text"
-        formControlName="city"
-        placeholder="Ort"
-        formGroupName="delivery"
-      />
+  <fieldset formGroupName="delivery" class="section">
+    <legend><i class="icon-home"></i> Liefer- und Rechnungsanschrift</legend>
+
+    <div class="form-row">
+      <input type="text" formControlName="plz" placeholder="PLZ" />
+      <input type="text" formControlName="city" placeholder="Ort" />
     </div>
-    <div class="flex-row">
-      <input
-        type="text"
-        formControlName="street"
-        placeholder="Straße"
-        formGroupName="delivery"
-      />
+
+    <div class="form-row">
+      <input type="text" formControlName="street" placeholder="Straße" />
       <input
         type="text"
         formControlName="houseNumber"
         placeholder="Hausnummer"
-        formGroupName="delivery"
       />
     </div>
-    <label>
-      <input type="checkbox" formControlName="differentBilling" />
-      Abweichende Rechnungsanschrift
-    </label>
-  </section>
+  </fieldset>
 
-  <section class="card" *ngIf="form.get('differentBilling')?.value">
-    <h3>Wer bezahlt die Rechnung?</h3>
-    <div formGroupName="billing">
+  <div class="checkbox-row">
+    <input
+      type="checkbox"
+      id="diffBilling"
+      formControlName="differentBilling"
+    />
+    <label for="diffBilling">Abweichende Rechnungsanschrift</label>
+  </div>
+
+  <fieldset
+    *ngIf="form.get('differentBilling')?.value"
+    formGroupName="billing"
+    class="section"
+  >
+    <legend><i class="icon-user"></i> Wer bezahlt die Rechnung?</legend>
+
+    <div class="form-row radio-group">
       <label>Anrede</label>
       <label
         ><input type="radio" formControlName="salutation" value="frau" />
@@ -47,52 +43,55 @@
         ><input type="radio" formControlName="salutation" value="herr" />
         Herr</label
       >
-
-      <div class="flex-row">
-        <input type="text" formControlName="firstName" placeholder="Vorname" />
-        <input type="text" formControlName="lastName" placeholder="Nachname" />
-      </div>
-      <div class="flex-row">
-        <input
-          type="text"
-          formControlName="birthDate"
-          placeholder="Geburtstag"
-        />
-        <input
-          type="text"
-          formControlName="phone"
-          placeholder="Telefonnummer (Optional)"
-        />
-      </div>
-      <div class="flex-row">
-        <input type="text" formControlName="plz" placeholder="PLZ" />
-        <input type="text" formControlName="city" placeholder="Ort" />
-      </div>
-      <div class="flex-row">
-        <input type="text" formControlName="street" placeholder="Straße" />
-        <input
-          type="text"
-          formControlName="houseNumber"
-          placeholder="Hausnummer"
-        />
-      </div>
     </div>
-  </section>
 
-  <section class="card">
-    <label>Wünschen Sie einen Versorgerwechsel oder ziehen Sie um?</label>
-    <label
-      ><input type="radio" formControlName="changeOption" value="wechseln" />
-      Anbieter/Tarif wechseln</label
-    >
-    <label
-      ><input type="radio" formControlName="changeOption" value="umziehen" />
-      Ich ziehe um</label
-    >
-  </section>
+    <div class="form-row">
+      <input type="text" formControlName="firstName" placeholder="Vorname" />
+      <input type="text" formControlName="lastName" placeholder="Nachname" />
+    </div>
 
-  <div class="btn-group">
-    <button type="button" (click)="back.emit()">Zurück</button>
-    <button type="submit" [disabled]="!form.valid">Weiter</button>
+    <div class="form-row">
+      <input type="date" formControlName="birthDate" placeholder="Geburtstag" />
+      <input
+        type="tel"
+        formControlName="phone"
+        placeholder="Telefonnummer (Optional)"
+      />
+    </div>
+
+    <div class="form-row">
+      <input type="text" formControlName="plz" placeholder="PLZ" />
+      <input type="text" formControlName="city" placeholder="Ort" />
+    </div>
+
+    <div class="form-row">
+      <input type="text" formControlName="street" placeholder="Straße" />
+      <input
+        type="text"
+        formControlName="houseNumber"
+        placeholder="Hausnummer"
+      />
+    </div>
+  </fieldset>
+
+  <div class="section">
+    <p>Wünschen Sie einen Versorgerwechsel oder ziehen Sie um?</p>
+    <div class="form-row radio-group">
+      <label>
+        <input type="radio" formControlName="changeOption" value="wechseln" />
+        Anbieter/Tarif wechseln
+      </label>
+      <label>
+        <input type="radio" formControlName="changeOption" value="umziehen" />
+        Ich ziehe um
+      </label>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="btn-back" (click)="onBack()">Zurück</button>
+    <button type="submit" class="btn-next" [disabled]="form.invalid">
+      Weiter
+    </button>
   </div>
 </form>

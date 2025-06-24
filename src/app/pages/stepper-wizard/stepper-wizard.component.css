@@ -1,10 +1,37 @@
+/* Asosiy stepper konteyner */
 .custom-stepper {
   padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
+/* Har bir step tanasi */
 .step-body {
   padding: 20px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 640px;
+  margin: 24px auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .custom-stepper {
+    padding: 0px;
+  }
+
+  .step-body {
+    padding: 16px;
+    margin: 16px auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-body {
+    padding: 12px;
+    border-radius: 8px;
+  }
 }
