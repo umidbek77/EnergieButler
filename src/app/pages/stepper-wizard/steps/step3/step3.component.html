@@ -1,1 +1,83 @@
-<p>step3 works!</p>
+<div class="step3-wrapper">
+  <h2><span class="material-icons">person</span> Aktueller Vertragsinhaber</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onNext()">
+    <!-- Jins tanlash -->
+    <div
+      class="radio-group"
+      [ngClass]="{
+        invalid: form.get('gender')?.invalid && form.get('gender')?.touched
+      }"
+    >
+      <label class="form-label">Anrede</label>
+      <input type="radio" formControlName="gender" value="frau" />
+      <label>Frau</label>
+      <input type="radio" formControlName="gender" value="herr" />
+      <label>Herr</label>
+    </div>
+    <div
+      class="error"
+      *ngIf="form.get('gender')?.touched && form.get('gender')?.invalid"
+    >
+      Bitte wählen Sie eine Anrede.
+    </div>
+
+    <!-- Ism / Familiya -->
+    <div class="input-group">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          placeholder="Vorname"
+          formControlName="firstName"
+          [class.invalid]="isInvalid('firstName')"
+        />
+        <div class="error" *ngIf="isInvalid('firstName')">
+          Vorname ist erforderlich.
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <input
+          type="text"
+          placeholder="Nachname"
+          formControlName="lastName"
+          [class.invalid]="isInvalid('lastName')"
+        />
+        <div class="error" *ngIf="isInvalid('lastName')">
+          Nachname ist erforderlich.
+        </div>
+      </div>
+    </div>
+
+    <!-- Tug‘ilgan sana va telefon -->
+    <div class="input-group">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          placeholder="TT.MM.JJJJ"
+          formControlName="birthDate"
+          [class.invalid]="isInvalid('birthDate')"
+        />
+        <div class="error" *ngIf="isInvalid('birthDate')">
+          Geburtstag ist erforderlich.
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <input
+          type="text"
+          placeholder="(+49) Telefonnummer (Optional)"
+          formControlName="phone"
+        />
+      </div>
+    </div>
+
+    <!-- Tugma -->
+    <div class="button-group">
+      <button type="button" class="back-btn" (click)="onBack()">Zurück</button>
+      <button type="submit" class="next-btn" [disabled]="form.invalid">
+        Weiter
+      </button>
+    </div>
+  </form>
+</div>

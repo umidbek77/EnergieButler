@@ -1,0 +1,123 @@
+.signature-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signature-container h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.signature-container h2 .icon {
+  margin-right: 0.5rem;
+}
+
+.option {
+  margin-bottom: 2rem;
+}
+
+.option label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option input[type="radio"] {
+  transform: scale(1.2);
+}
+
+.desc {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.desc.small {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.canvas-wrapper {
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: crosshair;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.button-group .save {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-group .save:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.button-group .clear {
+  background-color: #f44336;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer .back {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.footer .next {
+  background-color: #1976d2;
+  color: white;
+}
+
+.footer .next:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}

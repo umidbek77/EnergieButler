@@ -1,0 +1,74 @@
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  font-weight: 500;
+  color: #444;
+}
+
+.value {
+  font-weight: 400;
+  color: #000;
+  text-align: right;
+}
+
+.signature-block {
+  margin-top: 24px;
+}
+
+.signature-preview {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.info-box {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 32px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.back-btn,
+.confirm-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+}

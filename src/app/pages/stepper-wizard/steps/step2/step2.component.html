@@ -8,7 +8,12 @@
         >Wo befindet sich ihr aktueller Stromanschluss?</label
       >
       <div class="location-fields">
-        <input type="text" formControlName="plz" placeholder="PLZ" />
+        <input
+          class="location-input"
+          type="text"
+          formControlName="plz"
+          placeholder="PLZ"
+        />
         <select formControlName="city">
           <option value="">Ort</option>
           <option value="Berlin">Berlin</option>
@@ -18,13 +23,14 @@
       </div>
 
       <!-- Provider -->
-      <label class="form-label">Wer ist Ihr bisheriger Anbieter?</label>
+      <label class="form-label">Wer ist Ihr bisheriger Anbieter?</label><br />
       <input
+        class="provider-input"
         type="text"
         formControlName="provider"
         placeholder="Aktuellen Anbieter eintippen..."
       />
-
+      <br />
       <!-- Tarife -->
       <label class="form-label">Welche Tarife wollen Sie vergleichen?</label>
       <div class="tariff-buttons">
@@ -48,15 +54,7 @@
 
       <!-- Buttons -->
       <div class="step-buttons">
-        <button mat-button color="primary" (click)="back.emit()">Zurück</button>
-        <button
-          mat-raised-button
-          color="primary"
-          [disabled]="!form.valid"
-          (click)="goNext()"
-        >
-          Weiter
-        </button>
+        <button [disabled]="!form.valid" (click)="goNext()">Weiter</button>
       </div>
     </form>
   </div>

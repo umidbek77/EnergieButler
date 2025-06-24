@@ -1,1 +1,64 @@
-<p>step7 works!</p>
+<div class="signature-container">
+  <h2><span class="icon">📝</span> Unterschrift</h2>
+
+  <!-- Signature Drawing Option -->
+  <div class="option">
+    <label>
+      <input
+        type="radio"
+        name="signature"
+        value="draw"
+        [checked]="isDrawSelected()"
+        (change)="setSignatureType('draw')"
+      />
+      <strong>Unterschrift zeichnen</strong>
+    </label>
+    <p class="desc">
+      Einige Versorger bestehen bei besonders preiswerten Spezial-Tarifen auf
+      eine Unterschrift.
+    </p>
+
+    <div class="canvas-wrapper" *ngIf="isDrawSelected()">
+      <canvas #canvas width="600" height="150"></canvas>
+    </div>
+
+    <div class="button-group" *ngIf="isDrawSelected()">
+      <button
+        class="save"
+        (click)="saveSignature()"
+        [disabled]="!signatureSaved()"
+      >
+        ✔ Speichern
+      </button>
+      <button class="clear" (click)="clearCanvas()">✖ Löschen</button>
+    </div>
+  </div>
+
+  <!-- Auto Signature Option -->
+  <div class="option">
+    <label>
+      <input
+        type="radio"
+        name="signature"
+        value="auto"
+        [checked]="isAutoSelected()"
+        (change)="setSignatureType('auto')"
+      />
+      <strong>Automatische generierte Unterschrift</strong>
+    </label>
+    <p class="desc small">(Nicht für Spezial-Tarife anwendbar)</p>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="footer">
+    <button type="button" class="back" (click)="onBack()">Zurück</button>
+    <button
+      type="button"
+      class="next"
+      (click)="onStart()"
+      [disabled]="isDisabled()"
+    >
+      Starten
+    </button>
+  </div>
+</div>
