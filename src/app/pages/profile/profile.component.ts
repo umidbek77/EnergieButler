@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { User } from 'firebase/auth';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Firestore, doc, getDoc, setDoc } from '@fire/firestore';
+import { Firestore, doc, getDoc, setDoc } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 

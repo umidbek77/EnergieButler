@@ -37,7 +37,7 @@
         </div>
       </label>
 
-      <label>Email: <input formControlName="email" 9disabled]="true" /></label>
+      <label>Email: <input formControlName="email" [disabled]="true" /></label>
 
       <label>Telefon:
         <div class="inline-fields">
@@ -47,27 +47,30 @@
       </label>
 
       <label>Geburtstag:
-        <div class="inline-fields">
-          <select formGroupName="geburtstag" formControlName="tag">
-            <option value="">Tag</option>
-            <ng-container *ngFor="let t of [].constructor(31); let i = index">
-              <option [value]="i+1">{{ i+1 }}</option>
-            </ng-container>
-          </select>
-          <select formGroupName="geburtstag" formControlName="monat">
-            <option value="">Monat</option>
-            <ng-container *ngFor="let m of [].constructor(12); let i = index">
-              <option [value]="i+1">{{ i+1 }}</option>
-            </ng-container>
-          </select>
-          <select formGroupName="geburtstag" formControlName="jahr">
-            <option value="">Jahr</option>
-            <ng-container *ngFor="let y of [].constructor(100); let i = index">
-              <option [value]="2025 - i">{{ 2025 - i }}</option>
-            </ng-container>
-          </select>
-        </div>
-      </label>
+  <div class="inline-fields" formGroupName="geburtstag">
+    <select formControlName="tag">
+      <option value="">Tag</option>
+      <ng-container *ngFor="let t of [].constructor(31); let i = index">
+        <option [value]="i+1">{{ i+1 }}</option>
+      </ng-container>
+    </select>
+
+    <select formControlName="monat">
+      <option value="">Monat</option>
+      <ng-container *ngFor="let m of [].constructor(12); let i = index">
+        <option [value]="i+1">{{ i+1 }}</option>
+      </ng-container>
+    </select>
+
+    <select formControlName="jahr">
+      <option value="">Jahr</option>
+      <ng-container *ngFor="let y of [].constructor(100); let i = index">
+        <option [value]="2025 - i">{{ 2025 - i }}</option>
+      </ng-container>
+    </select>
+  </div>
+</label>
+
     </div>
     <button type="submit" class="btn btn-success">Speichern</button>
   </form>
