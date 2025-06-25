@@ -89,3 +89,110 @@
 .btn.green:hover {
   background-color: #6495f1;
 }
+
+/* == RESPONSIVE DESIGN == */
+
+/* Telefonlar: 0 - 575px */
+@media (max-width: 575px) {
+  .main-wrapper {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .page-header p {
+    font-size: 0.9rem;
+  }
+
+  .card-box {
+    padding: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .card-box h2 {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-box p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .count {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .count span {
+    font-size: 0.9rem;
+  }
+
+  .btn.green {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Kichik planshet: 576px - 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-wrapper {
+    padding: 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-box {
+    padding: 1.75rem;
+  }
+
+  .btn.green {
+    font-size: 19px;
+    padding: 12px 28px;
+  }
+}
+
+/* Planshet va kichik noutbuk: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-wrapper {
+    padding: 2rem;
+  }
+
+  .dashboard-container {
+    gap: 1.5rem;
+  }
+
+  .card-box {
+    flex: 1 1 250px;
+  }
+
+  .btn.green {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+}
+
+/* Katta ekranlar: 1200px+ */
+@media (min-width: 1200px) {
+  .dashboard-container {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .card-box {
+    max-width: 450px;
+  }
+
+  .btn.green {
+    font-size: 21px;
+  }
+}

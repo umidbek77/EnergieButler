@@ -1,89 +1,92 @@
-.wechselservice{
-    width: 100%;
+.wechselservice {
+  width: 100%;
 }
 
-.wechselservice-container-content{
-    padding: 30px 13px;
+.wechselservice-container-content {
+  padding: 30px 13px;
 }
-.wechselservice-container{
- max-width: 630px;
- width: 100%;
-}
-
-.wechselservice-container p{
-font-size: 16px;
-    margin-bottom: 32px;
-   
-    color: #40424c;
+.wechselservice-container {
+  max-width: 630px;
+  width: 100%;
 }
 
-.wechselservice-container h1{
-        font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: #40424c;
+.wechselservice-container p {
+  font-size: 16px;
+  margin-bottom: 32px;
+
+  color: #40424c;
 }
 
-.button-div{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    
+.wechselservice-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #40424c;
 }
 
-.button-div button{
-        align-items: center;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    font-size: 18px;
-    font-weight: 500;
-    height: 60px;
-    justify-content: center;
-    max-width: 100%;
-    outline: 0;
-    padding: 14px 36px;
-    width: max-content;
-    background-color: #fff ;
-    border: 1px solid #53b741 ;
-    color: #53b741 ;
-    transition: background-color .3s;
-    
+.button-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
-.primary-button{
- background-color: #53b741 !important;
-    color: #fff !important;
-    transition: background-color .3s;
+.button-div button {
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  height: 60px;
+  justify-content: center;
+  max-width: 100%;
+  outline: 0;
+  padding: 14px 36px;
+  width: max-content;
+  background-color: #fff;
+  border: 1px solid #3868eb;
+  color: #3868eb;
+  transition: background-color 0.3s;
 }
 
+.button-div button:hover {
+  background-color: #3868eb;
+  color: #fff;
+}
 
-@media (max-width:900px) {
-.button-div button{
+.primary-button {
+  background-color: #3868eb !important;
+  color: #fff !important;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #fff !important;
+  color: #3868eb !important;
+}
+
+@media (max-width: 900px) {
+  .button-div button {
     border-radius: 8px;
     font-size: 16px;
     padding: 12px 32px;
-    
-}
+  }
 
-.wechselservice-container-content{
+  .wechselservice-container-content {
     padding: 25px 13px;
-}
-    
+  }
 }
 
-@media (max-width:780px) {
-.button-div button{
+@media (max-width: 780px) {
+  .button-div button {
     padding: 9px 28px;
     height: 45px;
-    
-}
+  }
 
-.wechselservice-container-content{
+  .wechselservice-container-content {
     padding: 18px 10px;
-}
-    
+  }
 }
