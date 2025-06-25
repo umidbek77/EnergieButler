@@ -38,9 +38,30 @@
         routerLinkActive="active"
         >Wechselservice</a
       >
-      <a class="sidenav_link" (click)="drawer.close(); goToLogin()">Anmelden</a>
+
+      <!-- Foydalanuvchi login qilganmi tekshiramiz -->
+      <ng-container *ngIf="user; else sidenavLogin">
+        <a
+          class="sidenav_link"
+          mat-list-item
+          (click)="drawer.close(); goToProfile()"
+        >
+          <mat-icon>account_circle</mat-icon>
+          {{ user.displayName }}
+        </a>
+      </ng-container>
+      <ng-template #sidenavLogin>
+        <a
+          class="sidenav_link"
+          mat-list-item
+          (click)="drawer.close(); goToLogin()"
+        >
+          Anmelden
+        </a>
+      </ng-template>
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="toolbar">
       <div class="burger-header">
@@ -59,7 +80,9 @@
               d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
             />
           </svg>
-          <a routerLink="/" class="logo_desc"> <h1>EnergieButler</h1> </a>
+          <a routerLink="/" class="logo_desc">
+            <h1>EnergieButler</h1>
+          </a>
         </div>
 
         <button
@@ -92,15 +115,26 @@
           >Wechselservice</a
         >
 
-        <button class="sidenav_button" (click)="goToLogin()" class="login-btn">
-          Anmelden
-        </button>
+        <!-- Login/Profil tugmasi -->
+        <ng-container *ngIf="user; else loginButton">
+          <button class="login-btn" (click)="goToProfile()">
+            <mat-icon style="margin-right: 4px">account_circle</mat-icon>
+            {{ user.displayName }}
+          </button>
+        </ng-container>
+        <ng-template #loginButton>
+          <button class="login-btn" (click)="goToLogin()">
+            Anmelden
+          </button>
+        </ng-template>
       </div>
     </mat-toolbar>
+
     <br />
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
 <div class="main-content">
   <router-outlet></router-outlet>
 </div>

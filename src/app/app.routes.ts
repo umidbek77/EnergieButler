@@ -12,6 +12,8 @@ import { ObjectUsegeHeizstromwechselComponent } from './pages/object-usege-heizs
 import { ProviderStepComponent } from './pages/provider-step/provider-step.component';
 import { StormStageComponent } from './pages/storm-stage/storm-stage.component';
 import { OfferReadyComponent } from './pages/offer-ready/offer-ready.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,6 +29,7 @@ export const routes: Routes = [
   { path: 'provider-step', component: ProviderStepComponent },
   { path: 'storm-stage', component: StormStageComponent },
   { path: 'offer-ready', component: OfferReadyComponent },
+    { path: 'profile', component: ProfileComponent,  canActivate: [authGuard], },
   {
     path: 'offer-ready',
     loadComponent: () =>

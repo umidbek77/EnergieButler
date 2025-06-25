@@ -1,0 +1,81 @@
+<div class="profil-formular" *ngIf="user; else nichtEingeloggt">
+  <h2>Übersicht über Ihr Profil</h2>
+  <p>Bitte hinterlegen Sie Ihre persönlichen Adress- und Kontaktdaten.</p>
+
+  <form [formGroup]="profileForm" (ngSubmit)="speichern()">
+    <div class="form-grid">
+      <label>
+        Anrede und Titel:
+        <div class="inline-fields">
+          <select formControlName="anrede">
+            <option value="">Anrede (optional)</option>
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+          </select>
+          <select formControlName="titel">
+            <option value="">Titel (optional)</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Prof.">Prof.</option>
+          </select>
+        </div>
+      </label>
+
+      <label>Vorname: <input formControlName="vorname" /></label>
+      <label>Nachname: <input formControlName="nachname" /></label>
+
+      <label>PLZ und Ort:
+        <div class="inline-fields">
+          <input formControlName="plz" placeholder="PLZ" />
+          <input formControlName="ort" placeholder="Ort" />
+        </div>
+      </label>
+
+      <label>Straße und Nr.:
+        <div class="inline-fields">
+          <input formControlName="strasse" placeholder="Straße" />
+          <input formControlName="hausnummer" placeholder="Nr." />
+        </div>
+      </label>
+
+      <label>Email: <input formControlName="email" [disabled]="true" /></label>
+
+      <label>Telefon:
+        <div class="inline-fields">
+          <input value="+49" disabled style="width: 50px" />
+          <input formControlName="telefon" placeholder="Telefon" />
+        </div>
+      </label>
+
+      <label>Geburtstag:
+  <div class="inline-fields" formGroupName="geburtstag">
+    <select formControlName="tag">
+      <option value="">Tag</option>
+      <ng-container *ngFor="let t of [].constructor(31); let i = index">
+        <option [value]="i+1">{{ i+1 }}</option>
+      </ng-container>
+    </select>
+
+    <select formControlName="monat">
+      <option value="">Monat</option>
+      <ng-container *ngFor="let m of [].constructor(12); let i = index">
+        <option [value]="i+1">{{ i+1 }}</option>
+      </ng-container>
+    </select>
+
+    <select formControlName="jahr">
+      <option value="">Jahr</option>
+      <ng-container *ngFor="let y of [].constructor(100); let i = index">
+        <option [value]="2025 - i">{{ 2025 - i }}</option>
+      </ng-container>
+    </select>
+  </div>
+</label>
+
+    </div>
+    <button type="submit" class="btn btn-success">Speichern</button>
+  </form>
+</div>
+
+<ng-template #nichtEingeloggt>
+  <p>Bitte loggen Sie sich ein, um Ihr Profil zu sehen.</p>
+</ng-template>
