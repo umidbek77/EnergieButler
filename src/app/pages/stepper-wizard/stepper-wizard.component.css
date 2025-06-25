@@ -20,6 +20,7 @@
 @media (max-width: 768px) {
   .custom-stepper {
     padding: 0px;
+    width: 90%;
   }
 
   .step-body {
@@ -30,8 +31,14 @@
 }
 
 @media (max-width: 480px) {
+  .custom-stepper {
+    padding: 0px;
+    width: 90%;
+  }
+
   .step-body {
     padding: 12px;
     border-radius: 8px;
+    width: 90%;
   }
 }
