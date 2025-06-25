@@ -79,6 +79,12 @@ input[disabled], select[disabled] {
   transition: background-color 0.3s ease;
 }
 
+.btn-logout{
+  background-color: red;
+}
+.btn-logout:hover{
+  background-color: orange !important;
+}
 .btn:hover {
   background-color: #1b5e20;
 }
@@ -96,4 +102,10 @@ input[disabled], select[disabled] {
   .btn {
     grid-column: span 1;
   }
+}
+
+
+.profile-btns{
+  display: flex;
+  justify-content: space-between;
 }

@@ -32,11 +32,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.authService.user$.subscribe((user) => {
-      this.user = user;
-    });
-  }
+ngOnInit(): void {
+  this.userSub = this.authService.user$.subscribe((user) => {
+    this.user = user;
+  });
+}
 
     ngOnDestroy(): void {
     this.userSub?.unsubscribe();
