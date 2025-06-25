@@ -1,64 +1,43 @@
-<div class="signature-container">
-  <h2><span class="icon">📝</span> Unterschrift</h2>
+<div class="step7-wrapper">
+  <h3><span class="icon">🖊️</span> Unterschrift</h3>
 
-  <!-- Signature Drawing Option -->
-  <div class="option">
+  <div class="signature-option">
     <label>
       <input
         type="radio"
-        name="signature"
-        value="draw"
-        [checked]="isDrawSelected()"
-        (change)="setSignatureType('draw')"
+        name="signOption"
+        [(ngModel)]="drawing"
+        [value]="true"
       />
-      <strong>Unterschrift zeichnen</strong>
+      Unterschrift zeichnen
     </label>
     <p class="desc">
       Einige Versorger bestehen bei besonders preiswerten Spezial-Tarifen auf
       eine Unterschrift.
     </p>
+    <canvas id="signature" class="signature-pad" *ngIf="drawing"></canvas>
 
-    <div class="canvas-wrapper" *ngIf="isDrawSelected()">
-      <canvas #canvas width="600" height="150"></canvas>
-    </div>
-
-    <div class="button-group" *ngIf="isDrawSelected()">
-      <button
-        class="save"
-        (click)="saveSignature()"
-        [disabled]="!signatureSaved()"
-      >
-        ✔ Speichern
-      </button>
-      <button class="clear" (click)="clearCanvas()">✖ Löschen</button>
+    <div class="btn-group">
+      <button class="btn green" (click)="saveSignature()">✔ Speichern</button>
+      <button class="btn outline" (click)="clearSignature()">✖ Löschen</button>
     </div>
   </div>
 
-  <!-- Auto Signature Option -->
-  <div class="option">
+  <div class="signature-option">
     <label>
       <input
         type="radio"
-        name="signature"
-        value="auto"
-        [checked]="isAutoSelected()"
-        (change)="setSignatureType('auto')"
+        name="signOption"
+        [(ngModel)]="drawing"
+        [value]="false"
       />
-      <strong>Automatische generierte Unterschrift</strong>
+      Automatische generierte Unterschrift
     </label>
-    <p class="desc small">(Nicht für Spezial-Tarife anwendbar)</p>
+    <p class="desc"><em>(Nicht für Spezial-Tarife anwendbar)</em></p>
   </div>
 
-  <!-- Navigation Buttons -->
-  <div class="footer">
-    <button type="button" class="back" (click)="onBack()">Zurück</button>
-    <button
-      type="button"
-      class="next"
-      (click)="onStart()"
-      [disabled]="isDisabled()"
-    >
-      Starten
-    </button>
+  <div class="nav-buttons">
+    <button class="btn back" (click)="back.emit()">Zurück</button>
+    <button class="btn next" (click)="next.emit()">Weiter</button>
   </div>
 </div>
