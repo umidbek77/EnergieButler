@@ -1,0 +1,15 @@
+.profil-formular {
+  max-width: 700px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 10px;
+}

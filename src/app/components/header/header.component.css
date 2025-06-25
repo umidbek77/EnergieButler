@@ -100,6 +100,7 @@
   margin-left: 2rem;
   color: white;
   transition: transform 0.24s ease;
+  display: flex;align-items: center;
 }
 
 .header-nav_link.active {
