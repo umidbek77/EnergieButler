@@ -128,3 +128,50 @@ select:focus {
   border: 2px solid #3868eb;
   transition: 0.4s;
 }
+
+@media (max-width: 768px) {
+  .wizard-card {
+    padding: 20px;
+  }
+
+  h3,
+  h4 {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+
+  .consumption-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .consumption-input input,
+  .consumption-input span {
+    width: 92%;
+    border-radius: 6px;
+    border-right: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 11px 40px;
+  }
+
+  .wizard-card {
+    padding: 16px;
+  }
+
+  .people-selection-input select,
+  .address-fields input,
+  .address-fields select {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

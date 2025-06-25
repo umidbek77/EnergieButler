@@ -54,7 +54,7 @@ export class TariffSelectorComponent implements OnInit {
       this.selectedEnergy === 'Gas' &&
       this.selectedProperty === 'Wohnung'
     ) {
-      this.router.navigate(['/consumption-stage']);
+      this.router.navigate(['/consumption-step']);
     } else if (
       this.selectedEnergy === 'Heizstrom' &&
       this.selectedProperty === 'Haus'

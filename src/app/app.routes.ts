@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'wechselservice', component: WechselservicesComponent },
   { path: 'tariff-selector', component: TariffSelectorComponent },
   { path: 'object-usege', component: ObjectUsageComponent },
-  { path: 'consumption-stage', component: ConsumptionStepComponent },
+  { path: 'consumption-step', component: ConsumptionStepComponent },
   { path: 'gaswechsel', component: ObjectUsegeGaswechselComponent },
   { path: 'heizstromwechsel', component: ObjectUsegeHeizstromwechselComponent },
   { path: 'provider-step', component: ProviderStepComponent },
