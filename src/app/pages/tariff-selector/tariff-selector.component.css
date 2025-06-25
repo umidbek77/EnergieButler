@@ -167,7 +167,7 @@
 
 @media (max-width: 480px) {
   .select-card {
-    width: 100%;
+    width: 93%;
     flex-direction: row;
     justify-content: flex-start;
     gap: 10px;
