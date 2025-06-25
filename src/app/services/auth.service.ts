@@ -7,6 +7,7 @@ import {
   User,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  FacebookAuthProvider,
 } from 'firebase/auth';
 import { BehaviorSubject } from 'rxjs';
 import { auth } from '../../firebase.init'; // 👈 initializeApp() bilan yaratilgan auth obyekt
@@ -50,6 +51,11 @@ init(): Promise<void> {
       resolve(); 
     });
   });
+}
+
+loginWithFacebook() {
+  const provider = new FacebookAuthProvider();
+  return signInWithPopup(auth, provider);
 }
 
 
