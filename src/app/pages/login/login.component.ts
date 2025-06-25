@@ -36,4 +36,16 @@ export class LoginComponent {
         alert('Login fehlgeschlagen: ' + error.message); // xatolikni ko'rsatish
       });
   }
+
+  loginWithFacebook() {
+  this.authService.loginWithFacebook()
+    .then(res => {
+      console.log('Facebook bilan login:', res.user);
+      this.router.navigate(['/']);
+    })
+    .catch(err => {
+      console.error('Xatolik:', err.message);
+      alert('Login xatoligi: ' + err.message);
+    });
+}
 }
