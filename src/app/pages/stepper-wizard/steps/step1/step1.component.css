@@ -38,17 +38,17 @@
 /* Iconlar */
 .object-selection svg,
 .consumption-selection svg {
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   margin-right: 8px;
   vertical-align: middle;
   stroke: #4b5563;
-  color: #3868eb;
+  color: #537bea;
 }
 
 /* Tanlangan tugmalar */
 button.selected .icon {
-  stroke: #22c55e;
+  stroke: #3868eb;
 }
 
 .object-selection button,

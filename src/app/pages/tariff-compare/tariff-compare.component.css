@@ -108,6 +108,7 @@ input[type="radio"] {
 
 @media (max-width: 992px) {
   .container {
+    max-width: 450px;
     padding: 24px 20px;
     margin: 16px auto;
   }
@@ -142,6 +143,7 @@ input[type="radio"] {
 
 @media (max-width: 576px) {
   .container {
+    max-width: 400px;
     padding: 20px 14px;
     border-radius: 6px;
   }
