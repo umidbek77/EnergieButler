@@ -42,8 +42,8 @@
   height: 23px;
   margin-right: 8px;
   vertical-align: middle;
-  stroke: #4b5563;
-  color: #537bea;
+  stroke: #8d9baf;
+  color: #628bfc;
 }
 
 /* Tanlangan tugmalar */
@@ -57,8 +57,10 @@ button.selected .icon {
   border: 2px solid transparent;
   border-radius: 20px;
   background: #f2efef;
+  color: #3868eb;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -68,7 +70,7 @@ button.selected .icon {
 .object-selection button.selected,
 .consumption-selection button.selected {
   border-color: #3868eb;
-  background: #d7d9ee;
+  background: #eaeff8;
   color: #3868eb;
   font-weight: 600;
 }

@@ -10,6 +10,14 @@
   font-family: "Inter", sans-serif;
 }
 
+.icon-user {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
+  fill: #333;
+  vertical-align: middle;
+}
+
 /* Inputlar */
 input[type="text"],
 input[type="date"],
@@ -81,18 +89,19 @@ button {
   cursor: pointer;
   border: none;
   transition: background-color 0.2s ease;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Orqaga tugma */
 .back-btn {
   background-color: white;
   color: #3868eb;
-  border: 1.5px solid #3868eb;
+  border: 2px solid #3868eb;
 }
 
 .back-btn:hover {
-  background-color: #f0fdf4;
+  background-color: #3868eb;
+  color: white;
 }
 
 /* Oldinga tugma */
@@ -107,8 +116,8 @@ button {
 
 /* Tugmalar holati */
 .btn-disabled {
-  background-color: #d1d5db;
-  color: #6b7280;
+  background-color: #9cc0f6;
+  color: white;
   cursor: not-allowed;
 }
 

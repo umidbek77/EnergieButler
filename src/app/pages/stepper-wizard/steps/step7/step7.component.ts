@@ -14,8 +14,10 @@ export class Step7Component {
   @Output() back = new EventEmitter<void>();
 
   drawing = true;
+  isSigned = false;
 
   saveSignature() {
+    this.isSigned = true;
     alert('Unterschrift gespeichert ✅');
   }
 
@@ -23,6 +25,11 @@ export class Step7Component {
     const canvas = document.getElementById('signature') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
     if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.isSigned = false;
+  }
+
+  isSignatureValid(): boolean {
+    return this.drawing ? this.isSigned : true;
   }
 
   ngAfterViewInit() {
