@@ -5,6 +5,9 @@ import {
   onAuthStateChanged,
   signOut,
   User,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  FacebookAuthProvider,
 } from 'firebase/auth';
 import { BehaviorSubject } from 'rxjs';
 import { auth } from '../../firebase.init'; // 👈 initializeApp() bilan yaratilgan auth obyekt
@@ -19,6 +22,14 @@ export class AuthService {
       this.userSubject.next(user);
     });
   }
+    registerWithEmail(email: string, password: string) {
+    return createUserWithEmailAndPassword(auth, email, password);
+  }
+
+  // 🔹 2. Email orqali login qilish
+  loginWithEmail(email: string, password: string) {
+    return signInWithEmailAndPassword(auth, email, password);
+  }
 
   loginWithGoogle() {
     const provider = new GoogleAuthProvider();
@@ -32,4 +43,21 @@ export class AuthService {
   get currentUser(): User | null {
     return auth.currentUser;
   }
+
+init(): Promise<void> {
+  return new Promise(resolve => {
+    onAuthStateChanged(auth, user => {
+      this.userSubject.next(user);
+      resolve(); 
+    });
+  });
+}
+
+loginWithFacebook() {
+  const provider = new FacebookAuthProvider();
+  return signInWithPopup(auth, provider);
+}
+
+
+
 }
