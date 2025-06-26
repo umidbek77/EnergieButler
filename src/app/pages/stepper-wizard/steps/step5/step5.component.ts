@@ -25,8 +25,8 @@ export class Step5Component {
       switchDateOption: ['fastest', Validators.required],
       knowsEndDate: [false],
       endDate: [''],
-      meterNumber: [''],
-      customerNumber: [''],
+      meterNumber: ['', Validators.required],
+      customerNumber: ['', Validators.required],
       addLater: [true],
       knowsMarketId: [true],
       marketLocationId: [''],
@@ -38,6 +38,7 @@ export class Step5Component {
         control?.setValidators(Validators.required);
       } else {
         control?.clearValidators();
+        control?.setValue('');
       }
       control?.updateValueAndValidity();
     });
@@ -48,8 +49,27 @@ export class Step5Component {
         control?.setValidators(Validators.required);
       } else {
         control?.clearValidators();
+        control?.setValue('');
       }
       control?.updateValueAndValidity();
+    });
+
+    this.form.get('addLater')?.valueChanges.subscribe((checked) => {
+      const meterCtrl = this.form.get('meterNumber');
+      const customerCtrl = this.form.get('customerNumber');
+
+      if (checked) {
+        meterCtrl?.clearValidators();
+        customerCtrl?.clearValidators();
+        meterCtrl?.setValue('');
+        customerCtrl?.setValue('');
+      } else {
+        meterCtrl?.setValidators(Validators.required);
+        customerCtrl?.setValidators(Validators.required);
+      }
+
+      meterCtrl?.updateValueAndValidity();
+      customerCtrl?.updateValueAndValidity();
     });
   }
 

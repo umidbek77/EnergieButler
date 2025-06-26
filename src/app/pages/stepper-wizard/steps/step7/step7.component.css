@@ -37,7 +37,7 @@ h3 {
 }
 
 .btn {
-  padding: 10px 24px;
+  padding: 12px 26px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
@@ -45,15 +45,37 @@ h3 {
   border: none;
 }
 
+.btn-disabled {
+  background-color: #d1d5db !important;
+  color: #9ebaf2 !important;
+  cursor: not-allowed !important;
+}
+.btn-active {
+  background-color: #3868eb !important;
+  color: white !important;
+  cursor: pointer;
+}
+
 .btn.green {
   background-color: #3868eb;
   color: white;
 }
 
+.btn.green:hover {
+  background-color: white;
+  border: 1px solid #3868eb;
+  color: #3868eb;
+}
+
 .btn.outline {
   background-color: white;
-  border: 2px solid #3868eb;
-  color: #3868eb;
+  border: 1px solid red;
+  color: red;
+}
+
+.btn.outline:hover {
+  background-color: red;
+  color: white;
 }
 
 .nav-buttons {
@@ -63,9 +85,14 @@ h3 {
 }
 
 .btn.back {
-  border: 2px solid #ccc;
+  border: 2px solid #3868eb;
   background-color: white;
-  color: #333;
+  color: #3868eb;
+}
+
+.btn.back:hover {
+  background-color: #3868eb;
+  color: white;
 }
 
 .btn.next {

@@ -22,9 +22,8 @@ h2 {
 
 /* Label */
 .form-label {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
   color: #374151;
 }
 
@@ -103,7 +102,7 @@ input.invalid {
   padding: 12px 28px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s;
@@ -118,7 +117,8 @@ input.invalid {
 }
 
 .back-btn:hover {
-  background-color: #f0fdf4;
+  background-color: #3868eb;
+  color: white;
 }
 
 /* Davom etish tugmasi */
@@ -132,7 +132,7 @@ input.invalid {
 }
 
 .next-btn:disabled {
-  background-color: #c8e6c9;
+  background-color: #bcd2f6;
   color: #f1f5f9;
   cursor: not-allowed;
 }

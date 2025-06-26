@@ -27,12 +27,18 @@
   color: #1f2937;
 }
 
-.icon-home::before {
-  content: "🏠";
+.icon-home {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  vertical-align: middle;
 }
 
-.icon-user::before {
-  content: "👤";
+.icon-user {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  vertical-align: middle;
 }
 
 /* Input qatorda joylashuvi */
@@ -109,7 +115,8 @@ button {
 }
 
 .btn-back:hover {
-  background-color: #e8f5e9;
+  background-color: #3868eb;
+  color: white;
 }
 
 .btn-next {

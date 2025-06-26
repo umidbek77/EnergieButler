@@ -38,6 +38,16 @@
 
   <div class="nav-buttons">
     <button class="btn back" (click)="back.emit()">Zurück</button>
-    <button class="btn next" (click)="next.emit()">Weiter</button>
+    <button
+      class="btn next"
+      [disabled]="!isSignatureValid()"
+      [ngClass]="{
+        'btn-disabled': !isSignatureValid(),
+        'btn-active': isSignatureValid()
+      }"
+      (click)="next.emit()"
+    >
+      Weiter
+    </button>
   </div>
 </div>

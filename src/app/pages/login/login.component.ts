@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
+  standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  imports:[CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule],
 })
 export class LoginComponent {
   email: string = '';
@@ -17,35 +18,51 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   loginWithGoogle() {
-    this.authService.loginWithGoogle()
-      .then(result => {
-        this.router.navigate(['/']);
+    this.authService
+      .loginWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          localStorage.setItem(
+            'user',
+            JSON.stringify({
+              uid: user.uid,
+              displayName: user.displayName,
+              email: user.email,
+              photoURL: user.photoURL,
+            })
+          );
+          console.log('Logged in user:', user);
+          this.router.navigate(['/']);
+        }
       })
-      .catch(error => {
-        console.error('Google login error:', error);
+      .catch((error) => {
+        console.error('Login failed:', error.message);
       });
   }
 
   loginWithEmail() {
-    this.authService.loginWithEmail(this.email, this.password)
-      .then(result => {
+    this.authService
+      .loginWithEmail(this.email, this.password)
+      .then((result) => {
         this.router.navigate(['/']);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Email login error:', error.message);
-        alert('Login fehlgeschlagen: ' + error.message); // xatolikni ko'rsatish
+        alert('Login fehlgeschlagen: ' + error.message);
       });
   }
 
   loginWithFacebook() {
-  this.authService.loginWithFacebook()
-    .then(res => {
-      console.log('Facebook bilan login:', res.user);
-      this.router.navigate(['/']);
-    })
-    .catch(err => {
-      console.error('Xatolik:', err.message);
-      alert('Login xatoligi: ' + err.message);
-    });
-}
+    this.authService
+      .loginWithFacebook()
+      .then((res) => {
+        console.log('Facebook bilan login:', res.user);
+        this.router.navigate(['/']);
+      })
+      .catch((err) => {
+        console.error('Xatolik:', err.message);
+        alert('Login xatoligi: ' + err.message);
+      });
+  }
 }

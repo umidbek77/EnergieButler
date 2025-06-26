@@ -1,6 +1,17 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="step4-form">
   <fieldset formGroupName="delivery" class="section">
-    <legend><i class="icon-home"></i> Liefer- und Rechnungsanschrift</legend>
+    <legend>
+      <svg
+        class="icon-home"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+        />
+      </svg>
+      Liefer- und Rechnungsanschrift
+    </legend>
 
     <div class="form-row">
       <input type="text" formControlName="plz" placeholder="PLZ" />
@@ -31,7 +42,18 @@
     formGroupName="billing"
     class="section"
   >
-    <legend><i class="icon-user"></i> Wer bezahlt die Rechnung?</legend>
+    <legend>
+      <svg
+        class="icon-user"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"
+        />
+      </svg>
+      Wer bezahlt die Rechnung?
+    </legend>
 
     <div class="form-row radio-group">
       <label>Anrede</label>
