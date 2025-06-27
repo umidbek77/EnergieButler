@@ -61,7 +61,7 @@ export class ProfileComponent implements OnInit {
       const userDocRef = doc(this.firestore, `users/${this.user.uid}`);
       const data = this.profileForm.getRawValue();
       await setDoc(userDocRef, data, { merge: true });
-      alert('Profil muvaffaqiyatli saqlandi.');
+      alert('Profil erfolgreich gespeichert.');
     }
   }
 
