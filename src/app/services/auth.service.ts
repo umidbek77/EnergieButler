@@ -58,6 +58,9 @@ loginWithFacebook() {
   return signInWithPopup(auth, provider);
 }
 
+getDisplayName(): string | null {
+  return this.userSubject.value?.displayName || null;
+}
 
 
 }
