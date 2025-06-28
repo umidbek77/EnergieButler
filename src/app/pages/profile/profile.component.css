@@ -49,9 +49,13 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
-  background-color: #fafafa;
+  background-color: #fff;
   transition: border 0.2s ease;
   width: 100%;
+}
+
+.select-option{
+  padding: 500px !important;
 }
 
 input:focus, select:focus {
