@@ -29,11 +29,11 @@ h4 {
 }
 
 .card:hover {
-  border-color: #3868eb;
+  border-color: #04884B;
 }
 
 .card.selected {
-  border-color: #3868eb;
+  border-color: #04884B;
   background-color: #dfeffb;
 }
 
@@ -49,7 +49,7 @@ h4 {
 .card-icon svg {
   width: 100%;
   height: 100%;
-  fill: #3868eb;
+  fill: #04884B;
 }
 
 .card-label {
@@ -63,7 +63,7 @@ h4 {
 }
 
 .input-group input:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884B;
 }
 
 .input-group span {
@@ -93,7 +93,7 @@ h4 {
 }
 
 .input-group select:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884B;
 }
 
 .btn-group {
@@ -103,7 +103,7 @@ h4 {
 }
 
 .btn-primary {
-  background: #3868eb;
+  background: #04884B;
   color: white;
   padding: 17px 70px;
   font-size: 16px;
@@ -114,28 +114,27 @@ h4 {
 
 .btn-primary:hover {
   background: white;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884B;
+  border: 2px solid #04884B;
   font-weight: 500;
 }
 
 .btn-secondary {
   background: white;
-  color: #3868eb;
+  color: #04884B;
   padding: 17px 70px;
   font-size: 16px;
-  border: 2px solid #3868eb;
+  border: 2px solid #04884B;
   border-radius: 5px;
 }
 
 .btn-secondary:hover {
-  background: #3868eb;
+  background: #04884B;
   color: white;
-  border: 2px solid #3868eb;
+  border: 2px solid #04884B;
   font-weight: 500;
 }
 
-/* Planshetlar (≤ 992px) */
 @media (max-width: 992px) {
   .container-form {
     padding: 16px;

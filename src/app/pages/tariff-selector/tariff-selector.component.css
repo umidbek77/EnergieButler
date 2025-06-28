@@ -47,7 +47,7 @@
 }
 
 .step.active {
-  background: #3868eb;
+  background: #04884B;
 }
 
 .form-title {
@@ -90,25 +90,25 @@
 }
 
 .select-card:hover {
-  border-color: #3868eb;
-  outline: 1.5px solid #3868eb;
+  border-color: #04884B;
+  outline: 1.5px solid #04884B;
 }
 
 .select-card.active {
-  border-color: #3868eb;
+  border-color: #04884B;
   background-color: #e7f0f8;
-  outline: 1.5px solid #3868eb;
+  outline: 1.5px solid #04884B;
 }
 
 .select-card svg {
   width: 40px;
   height: 40px;
   margin-bottom: 8px;
-  fill: #3868eb;
+  fill: #04884B;
 }
 
 .submit-btn {
-  background-color: #3868eb;
+  background-color: #04884B;
   color: white;
   padding: 14px 24px;
   font-size: 16px;
@@ -121,7 +121,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #6086ef;
+  background-color: #04884B;
 }
 
 .submit-btn:disabled {

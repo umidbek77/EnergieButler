@@ -1,5 +1,5 @@
 .offer-box {
-  border: 1px solid #3868eb;
+  border: 1px solid #04884B;
   border-radius: 6px;
   padding: 24px;
   max-width: 500px;
@@ -18,11 +18,11 @@
 
 .offer-header .icon {
   font-size: 24px;
-  color: #3868eb;
+  color: #04884B;
 }
 
 .offer-header h3 {
-  color: #3868eb;
+  color: #04884B;
   text-align: start;
   font-size: 18px;
   font-weight: 600;
@@ -37,15 +37,15 @@ p {
 
 strong {
   font-weight: 600;
-  color: #6287eb;
+  color: #04884B;
 }
 
 .btn {
   display: inline-block;
   width: 100%;
-  background-color: #3868eb;
+  background-color: #04884B;
   color: #fff;
-  border: 2px solid #3868eb;
+  border: 2px solid #04884B;
   border-radius: 6px;
   padding: 12px 16px;
   font-size: 16px;
@@ -57,7 +57,7 @@ strong {
 
 .btn:hover {
   background-color: white;
-  color: #3868eb;
+  color: #04884B;
 }
 
 /* Planshetlar (≤ 992px) */
