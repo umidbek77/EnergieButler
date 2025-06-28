@@ -47,25 +47,25 @@
   padding: 14px 36px;
   width: max-content;
   background-color: #fff;
-  border: 1px solid #3868eb;
-  color: #3868eb;
+  border: 1px solid #04884B;
+  color: #05a65d;
   transition: background-color 0.3s;
 }
 
 .button-div button:hover {
-  background-color: #3868eb;
+  background-color: #05a65d;
   color: #fff;
 }
 
 .primary-button {
-  background-color: #3868eb !important;
+  background-color: #04884B !important;
   color: #fff !important;
   transition: background-color 0.3s;
 }
 
 .primary-button:hover {
   background-color: #fff !important;
-  color: #3868eb !important;
+  color: #05a65d !important;
 }
 
 @media (max-width: 900px) {
