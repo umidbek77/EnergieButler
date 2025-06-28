@@ -24,7 +24,7 @@
 }
 
 .step.active {
-  background: #3868eb;
+  background: #04884B;
 }
 
 h3 {
@@ -45,7 +45,7 @@ select {
 }
 
 select:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884B;
 }
 
 .tariff-options {
@@ -84,24 +84,24 @@ input[type="radio"] {
 
 .back-btn {
   background-color: white;
-  border: 2px solid #3868eb;
-  color: #3868eb;
+  border: 2px solid #04884B;
+  color: #04884B;
 }
 
 .back-btn:hover {
-  background-color: #3868eb;
+  background-color: #04884B;
   color: white;
 }
 
 .next-btn {
-  background-color: #3868eb;
+  background-color: #04884B;
   color: white;
 }
 
 .next-btn:hover {
   background-color: white;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884B;
+  border: 2px solid #04884B;
 }
 
 /* Asosiy stil avvalgidek qoladi — faqat responsive qo‘shiladi quyida */
