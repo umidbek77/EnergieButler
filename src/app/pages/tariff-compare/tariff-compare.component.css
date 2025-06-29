@@ -72,36 +72,35 @@ input[type="radio"] {
   gap: 30px;
 }
 
-.back-btn,
+.back-btn {
+  background: white;
+  color: #04884B;
+  padding: 10px 30px;
+  font-size: 18px;
+  border: 2px solid #04884B;
+  border-radius: 5px;
+}
+
 .next-btn {
-  padding: 17px 70px;
-  border: none;
+  padding: 10px 30px;
+  border: 2px;
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #04884B;
+  color: white;
 }
 
-.back-btn {
-  background-color: white;
-  border: 2px solid #04884B;
-  color: #04884B;
-}
 
 .back-btn:hover {
-  background-color: #04884B;
-  color: white;
+   background: #e1e2e1;
+  cursor: pointer;
 }
 
-.next-btn {
-  background-color: #04884B;
-  color: white;
-}
 
 .next-btn:hover {
-  background-color: white;
-  color: #04884B;
-  border: 2px solid #04884B;
+  background: #05a95d;
 }
 
 /* Asosiy stil avvalgidek qoladi — faqat responsive qo‘shiladi quyida */

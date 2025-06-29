@@ -56,8 +56,7 @@ strong {
 }
 
 .btn:hover {
-  background-color: white;
-  color: #04884B;
+  background: #05a95d;
 }
 
 /* Planshetlar (≤ 992px) */
