@@ -5,7 +5,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5e7eb;
   max-width: 720px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -62,7 +61,7 @@ label {
 
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: #3868eb;
+  accent-color: #04884b;
 }
 
 /* Inputlar */
@@ -83,7 +82,7 @@ input.ng-invalid.ng-touched {
 
 /* Fokus */
 input:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884b;
   outline-offset: 2px;
 }
 
@@ -123,33 +122,33 @@ button {
 
 button[type="button"] {
   background-color: white;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884b;
+  border: 2px solid #04884b;
 }
 
 button[type="button"]:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 button[type="submit"]:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
 }
 
 button[type="submit"] {
-  background-color: #9ebaf2; /* Xira holat - default */
-  color: #7097e5;
+  background-color: #a5d6b4; /* Xira holat - default */
+  color: #70e583;
   cursor: not-allowed;
 }
 
 button.btn-active {
-  background-color: #3868eb !important;
+  background-color: #04884b !important;
   color: white !important;
   cursor: pointer;
 }
 
 button.btn-disabled {
-  background-color: #9cc0f6 !important;
+  background-color: #a5d6b4 !important;
   color: white !important;
   cursor: not-allowed;
 }

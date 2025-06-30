@@ -1,6 +1,5 @@
 .step2-wrapper {
   display: flex;
-  justify-content: center;
   padding: 24px;
 }
 
@@ -59,7 +58,7 @@ input[type="text"] {
 
 input:focus,
 select:focus {
-  border-color: #3868eb;
+  border-color: #04884b;
   outline: none;
 }
 
@@ -81,7 +80,7 @@ select:focus {
 }
 
 .tariff-btn.selected {
-  border-color: #3868eb;
+  border-color: #04884b;
   background: #e8f5e9;
 }
 
@@ -93,7 +92,7 @@ select:focus {
 
 .step-buttons button {
   padding: 12px 36px;
-  background: #3868eb;
+  background: #04884b;
   color: white;
   border: none;
   border-radius: 8px;
@@ -106,7 +105,7 @@ select:focus {
 }
 
 .step-buttons button:disabled {
-  background: #a5bfd6;
+  background: #a5d6b4;
   cursor: not-allowed;
 }
 

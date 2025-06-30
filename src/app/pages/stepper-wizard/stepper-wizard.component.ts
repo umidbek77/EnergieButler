@@ -34,14 +34,14 @@ export class StepperWizardComponent {
   currentStepIndex: number = 0;
 
   stepLabels: string[] = [
-    '1. Objektart und Verbrauch',
-    '2. Anschluss',
-    '3. Vertragspartner',
-    '4. Zahlungsart',
-    '5. Identifikation',
-    '6. Boni',
-    '7. Zusammenfassung',
-    '8. Abschluss',
+    'Objektart und Verbrauch',
+    'Ihr Anschluss',
+    'Aktueller Vertragsinhaber',
+    'Lieferstelle',
+    'Wechseltermin/ Kundendaten',
+    'Bankdaten',
+    'Unterschrift',
+    'Daten überprüfen',
   ];
 
   nextStep() {
