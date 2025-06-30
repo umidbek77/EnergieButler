@@ -1,7 +1,6 @@
 /* Umumiy konteyner */
 .step-container {
   display: flex;
-  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
   padding: 24px;
@@ -42,13 +41,12 @@
   height: 23px;
   margin-right: 8px;
   vertical-align: middle;
-  stroke: #8d9baf;
-  color: #628bfc;
+  color: #04884b;
 }
 
 /* Tanlangan tugmalar */
 button.selected .icon {
-  stroke: #3868eb;
+  stroke: #04884b;
 }
 
 .object-selection button,
@@ -57,7 +55,7 @@ button.selected .icon {
   border: 2px solid transparent;
   border-radius: 20px;
   background: #f2efef;
-  color: #3868eb;
+  color: #04884b;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
@@ -69,9 +67,9 @@ button.selected .icon {
 
 .object-selection button.selected,
 .consumption-selection button.selected {
-  border-color: #3868eb;
-  background: #eaeff8;
-  color: #3868eb;
+  border-color: #04884b;
+  background: #fff;
+  color: #04884b;
   font-weight: 600;
 }
 
@@ -86,7 +84,7 @@ input[type="number"] {
 }
 
 input[type="number"]:focus {
-  border-color: #3868eb;
+  border-color: #04884b;
   outline: none;
 }
 
@@ -98,8 +96,8 @@ input[type="number"]:focus {
 }
 
 .start-button button {
-  padding: 12px 36px;
-  background: #3868eb;
+  padding: 10px 34px;
+  background: #04884b;
   color: white;
   border: none;
   border-radius: 7px;
@@ -110,7 +108,7 @@ input[type="number"]:focus {
 }
 
 .start-button button:disabled {
-  background: #a5bfd6;
+  background: #a5d6b4;
   cursor: not-allowed;
 }
 

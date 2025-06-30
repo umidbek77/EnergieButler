@@ -2,11 +2,12 @@
 .section {
   background: #fff;
   padding: 24px;
+  margin-bottom: 24px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5e7eb;
   max-width: 720px;
-  margin: 0 auto 24px auto;
+  gap: 24px;
   font-family: "Inter", sans-serif;
 }
 
@@ -36,7 +37,7 @@ select {
 
 input:focus,
 select:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884b;
   outline-offset: 2px;
 }
 
@@ -78,8 +79,11 @@ input.invalid {
 /* Tugmalar qismi */
 .form-footer {
   display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
+  align-items: end;
+  flex-direction: row-reverse;
+  margin-bottom: 24px;
+  gap: 20px;
+  width: 72.5%;
 }
 
 button {
@@ -95,34 +99,34 @@ button {
 /* Orqaga tugma */
 .back-btn {
   background-color: white;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884b;
+  border: 2px solid #04884b;
 }
 
 .back-btn:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 /* Oldinga tugma */
 .next-btn {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 .next-btn:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
 }
 
 /* Tugmalar holati */
 .btn-disabled {
-  background-color: #9cc0f6;
+  background-color: #a5d6b4;
   color: white;
   cursor: not-allowed;
 }
 
 .btn-active {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 

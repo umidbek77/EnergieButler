@@ -5,7 +5,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   font-family: "Inter", sans-serif;
   max-width: 720px;
-  margin: 0 auto 32px;
+  gap: 24px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -38,7 +38,7 @@ h2 {
 
 .radio-group input[type="radio"] {
   transform: scale(1.2);
-  accent-color: #3868eb;
+  accent-color: #04884b;
 }
 
 /* Inputlar guruhi */
@@ -72,7 +72,7 @@ input[type="tel"] {
 }
 
 input:focus {
-  border-color: #3868eb;
+  border-color: #04884b;
   outline: none;
 }
 
@@ -112,27 +112,27 @@ input.invalid {
 /* Orqaga tugmasi */
 .back-btn {
   background-color: white;
-  color: #3868eb;
-  border: 1.5px solid #3868eb;
+  color: #04884b;
+  border: 1.5px solid #04884b;
 }
 
 .back-btn:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 /* Davom etish tugmasi */
 .next-btn {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 .next-btn:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
 }
 
 .next-btn:disabled {
-  background-color: #bcd2f6;
+  background-color: #a5d6b4;
   color: #f1f5f9;
   cursor: not-allowed;
 }

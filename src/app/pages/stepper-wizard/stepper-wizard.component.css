@@ -1,44 +1,61 @@
-/* Asosiy stepper konteyner */
-.custom-stepper {
-  padding: 0;
-  max-width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+.stepper-container {
+  display: flex;
+  align-items: start;
+  gap: 36px;
 }
 
-/* Har bir step tanasi */
+.vertical-stepper {
+  list-style: none;
+  padding: 0px;
+  margin-top: 20px;
+  width: 260px;
+}
+
+.vertical-stepper li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.vertical-stepper li .step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.vertical-stepper li.active {
+  border: 2px solid #4caf50;
+  background-color: white;
+}
+
+.vertical-stepper li.active .step-circle {
+  border: 2px solid #4caf50;
+  background-color: white;
+  color: #4caf50;
+}
+
+.vertical-stepper li.completed {
+  background-color: #d4f5d1;
+  color: #1b5e20;
+}
+
+.vertical-stepper li.completed .step-circle {
+  background-color: #4caf50;
+  color: white;
+}
+
 .step-body {
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 640px;
-  margin: 24px auto;
-  box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-  .custom-stepper {
-    padding: 0px;
-    width: 90%;
-  }
-
-  .step-body {
-    padding: 16px;
-    margin: 16px auto;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .custom-stepper {
-    padding: 0px;
-    width: 90%;
-  }
-
-  .step-body {
-    padding: 12px;
-    border-radius: 8px;
-    width: 90%;
-  }
+  flex-grow: 1;
 }

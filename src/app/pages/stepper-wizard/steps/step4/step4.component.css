@@ -6,7 +6,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   font-family: "Segoe UI", sans-serif;
   max-width: 700px;
-  margin: auto;
+  gap: 24px;
 }
 
 /* Bo‘lim (fieldset) oraliqlari */
@@ -64,7 +64,7 @@ input[type="tel"] {
 }
 
 input:focus {
-  border-color: #3868eb;
+  border-color: #04884b;
   outline: none;
 }
 
@@ -110,23 +110,23 @@ button {
 
 .btn-back {
   background-color: #fff;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884b;
+  border: 2px solid #04884b;
 }
 
 .btn-back:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 .btn-next {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: #fff;
   border: none;
 }
 
 .btn-next:disabled {
-  background-color: #c7d3f4;
+  background-color: #a5d6b4;
   cursor: not-allowed;
 }
 

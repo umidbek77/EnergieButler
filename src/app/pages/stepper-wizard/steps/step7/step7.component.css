@@ -4,7 +4,7 @@
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   max-width: 600px;
-  margin: auto;
+  gap: 24px;
 }
 
 h3 {
@@ -37,7 +37,7 @@ h3 {
 }
 
 .btn {
-  padding: 12px 26px;
+  padding: 12px 36px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
@@ -47,34 +47,38 @@ h3 {
 
 .btn-disabled {
   background-color: #d1d5db !important;
-  color: #9ebaf2 !important;
+  color: #a5d6b4 !important;
   cursor: not-allowed !important;
 }
 .btn-active {
-  background-color: #3868eb !important;
+  background-color: #04884b !important;
   color: white !important;
   cursor: pointer;
 }
 
 .btn.green {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
+  padding: 6px 14px;
+  border-radius: 25px;
 }
 
 .btn.green:hover {
   background-color: white;
-  border: 1px solid #3868eb;
-  color: #3868eb;
+  border: 1px solid #04884b;
+  color: #04884b;
 }
 
 .btn.outline {
   background-color: white;
-  border: 1px solid red;
-  color: red;
+  border: 2px solid #04884b;
+  color: #04884b;
+  padding: 6px 14px;
+  border-radius: 25px;
 }
 
 .btn.outline:hover {
-  background-color: red;
+  background-color: #04884b;
   color: white;
 }
 
@@ -85,18 +89,18 @@ h3 {
 }
 
 .btn.back {
-  border: 2px solid #3868eb;
+  border: 2px solid #04884b;
   background-color: white;
-  color: #3868eb;
+  color: #04884b;
 }
 
 .btn.back:hover {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
 .btn.next {
-  background-color: #3868eb;
+  background-color: #04884b;
   color: white;
 }
 
