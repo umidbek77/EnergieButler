@@ -6,11 +6,28 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-step5',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+  ],
   templateUrl: './step5.component.html',
   styleUrls: ['./step5.component.css'],
 })
@@ -32,6 +49,7 @@ export class Step5Component {
       marketLocationId: [''],
     });
 
+    // End Date
     this.form.get('knowsEndDate')?.valueChanges.subscribe((checked) => {
       const control = this.form.get('endDate');
       if (checked) {
@@ -43,6 +61,7 @@ export class Step5Component {
       control?.updateValueAndValidity();
     });
 
+    // Market ID
     this.form.get('knowsMarketId')?.valueChanges.subscribe((checked) => {
       const control = this.form.get('marketLocationId');
       if (checked) {
@@ -54,6 +73,7 @@ export class Step5Component {
       control?.updateValueAndValidity();
     });
 
+    // Meter & Customer Number
     this.form.get('addLater')?.valueChanges.subscribe((checked) => {
       const meterCtrl = this.form.get('meterNumber');
       const customerCtrl = this.form.get('customerNumber');
@@ -75,14 +95,13 @@ export class Step5Component {
 
   onBack() {
     this.back.emit();
-    console.log('Back');
   }
 
   onNext() {
     if (this.form.valid) {
-      this.next.emit(this.form.value); // formani parentga yuboramiz
+      this.next.emit(this.form.value);
     } else {
-      this.form.markAllAsTouched(); // xatoliklar ko‘rsatiladi
+      this.form.markAllAsTouched();
     }
   }
 }

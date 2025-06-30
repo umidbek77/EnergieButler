@@ -1,4 +1,3 @@
-/* Asosiy konteyner */
 .step4-form {
   background: #fff;
   padding: 24px;
@@ -6,34 +5,26 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   font-family: "Segoe UI", sans-serif;
   max-width: 700px;
-  gap: 24px;
+  width: 100%;
 }
 
-/* Bo‘lim (fieldset) oraliqlari */
 .section {
   margin-bottom: 24px;
   border: none;
   padding: 0;
 }
 
-/* Bo‘lim sarlavhasi */
 .section legend {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
   color: #1f2937;
 }
 
-.icon-home {
-  width: 24px;
-  height: 24px;
-  fill: #333;
-  vertical-align: middle;
-}
-
+.icon-home,
 .icon-user {
   width: 24px;
   height: 24px;
@@ -41,7 +32,6 @@
   vertical-align: middle;
 }
 
-/* Input qatorda joylashuvi */
 .form-row {
   display: flex;
   gap: 16px;
@@ -49,26 +39,15 @@
   flex-wrap: wrap;
 }
 
-/* Inputlar */
-input[type="text"],
-input[type="date"],
-input[type="tel"] {
-  flex: 1;
-  padding: 12px 14px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
+.form-row .mat-form-field {
+  flex: 1 1 45%;
+  min-width: 240px;
+}
+
+.mat-form-field {
   width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
 }
 
-input:focus {
-  border-color: #04884b;
-  outline: none;
-}
-
-/* Checkbox qatori */
 .checkbox-row {
   display: flex;
   align-items: center;
@@ -77,20 +56,20 @@ input:focus {
   font-size: 14px;
 }
 
-/* Radio qatori */
 .radio-group {
-  gap: 16px;
-  font-size: 14px;
-  align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
 }
 
-/* Radio inputlar */
-.radio-group input[type="radio"] {
-  margin-right: 6px;
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-/* Form oxiridagi harakat tugmalari */
 .form-actions {
   display: flex;
   justify-content: space-between;
@@ -98,7 +77,6 @@ input:focus {
   margin-top: 32px;
 }
 
-/* Tugma dizaynlari */
 button {
   font-weight: 600;
   font-size: 14px;
@@ -130,12 +108,6 @@ button {
   cursor: not-allowed;
 }
 
-/* Placeholder silliqligi */
-input::placeholder {
-  color: #9e9e9e;
-  font-size: 13px;
-}
-
 @media (max-width: 768px) {
   .step4-form {
     padding: 16px;
@@ -160,13 +132,6 @@ input::placeholder {
     font-size: 15px;
   }
 
-  input[type="text"],
-  input[type="date"],
-  input[type="tel"] {
-    font-size: 15px;
-    padding: 14px 16px;
-  }
-
   .section legend {
     font-size: 15px;
     margin-bottom: 10px;
@@ -179,10 +144,9 @@ input::placeholder {
   .radio-group {
     flex-direction: column;
     gap: 8px;
-    font-size: 14px;
   }
 
-  .step4-form {
-    max-width: 100%;
+  .form-row .mat-form-field {
+    min-width: 100%;
   }
 }

@@ -6,13 +6,30 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-step4',
   standalone: true,
   templateUrl: './step4.component.html',
   styleUrls: ['./step4.component.css'],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+  ],
 })
 export class Step4Component {
   @Output() next = new EventEmitter<void>();
@@ -46,10 +63,8 @@ export class Step4Component {
       }),
     });
 
-    // Dastlab billing formni disable qilib qo‘yamiz
     this.billingForm.disable();
 
-    // Checkbox holatiga qarab billing formni yoqamiz yoki o‘chiramiz
     this.form.get('differentBilling')?.valueChanges.subscribe((checked) => {
       if (checked) {
         this.billingForm.enable();

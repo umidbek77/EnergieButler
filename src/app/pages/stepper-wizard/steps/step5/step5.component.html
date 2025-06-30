@@ -17,29 +17,30 @@
     </div>
     <p>Zu welchem Termin möchten Sie automatisch gewechselt werden?</p>
 
-    <label>
-      <input type="radio" formControlName="switchDateOption" value="fastest" />
-      Schnellstmöglich
-    </label>
+    <mat-radio-group formControlName="switchDateOption">
+      <mat-radio-button value="fastest">Schnellstmöglich</mat-radio-button>
+      <mat-radio-button value="desired">Wunschtermin</mat-radio-button>
+      <mat-radio-button value="self">Ich kündige selbst</mat-radio-button>
+    </mat-radio-group>
 
-    <label>
-      <input type="radio" formControlName="switchDateOption" value="desired" />
-      Wunschtermin
-    </label>
-
-    <label>
-      <input type="radio" formControlName="switchDateOption" value="self" />
-      Ich kündige selbst
-    </label>
-
-    <label>
-      <input type="checkbox" formControlName="knowsEndDate" />
+    <mat-checkbox formControlName="knowsEndDate">
       Ich kenne das Datum, an dem mein aktueller Stromvertrag endet (Optional)
-    </label>
+    </mat-checkbox>
 
     <div *ngIf="form.get('knowsEndDate')?.value">
-      <label for="endDate">Datum</label>
-      <input type="date" formControlName="endDate" />
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Datum</mat-label>
+        <input
+          matInput
+          [matDatepicker]="endDatePicker"
+          formControlName="endDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
     </div>
   </section>
 
@@ -48,29 +49,29 @@
     <h3>Kundendaten</h3>
 
     <div class="flex">
-      <div>
-        <label>Zählernummer</label>
-        <input type="text" formControlName="meterNumber" />
-      </div>
-      <div>
-        <label>Kundennummer</label>
-        <input type="text" formControlName="customerNumber" />
-      </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Zählernummer</mat-label>
+        <input matInput type="text" formControlName="meterNumber" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Kundennummer</mat-label>
+        <input matInput type="text" formControlName="customerNumber" />
+      </mat-form-field>
     </div>
 
-    <label>
-      <input type="checkbox" formControlName="addLater" />
+    <mat-checkbox formControlName="addLater">
       Zählernummer und Kundennummer später hinzufügen
-    </label>
+    </mat-checkbox>
 
-    <label>
-      <input type="checkbox" formControlName="knowsMarketId" />
+    <mat-checkbox formControlName="knowsMarketId">
       Ich kenne meine Marktlokations-ID (Optional)
-    </label>
+    </mat-checkbox>
 
     <div *ngIf="form.get('knowsMarketId')?.value">
-      <label>Marktlokations-ID</label>
-      <input type="text" formControlName="marketLocationId" />
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Marktlokations-ID</mat-label>
+        <input matInput type="text" formControlName="marketLocationId" />
+      </mat-form-field>
     </div>
   </section>
 
