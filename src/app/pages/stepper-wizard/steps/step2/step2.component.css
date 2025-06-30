@@ -32,22 +32,39 @@ form .form-label {
   margin-bottom: 14px;
 }
 
-.location-input {
-  flex: 1;
-  padding: 15px;
-  font-size: 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 12px;
-  max-width: 25%;
+.location-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-.location-fields select,
-input[type="text"] {
-  flex: 1;
-  padding: 15px;
-  font-size: 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 14px;
+.half-width {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+mat-form-field.full-width {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+mat-form-field .mat-form-field-outline {
+  border-radius: 8px;
+}
+
+mat-label {
+  font-weight: 500;
+  color: #333;
+}
+
+mat-select {
+  font-size: 14px;
+}
+
+.mat-option {
+  font-size: 14px;
 }
 
 .provider-input {

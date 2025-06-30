@@ -3,79 +3,79 @@
 
   <form [formGroup]="form" (ngSubmit)="onNext()">
     <!-- Jins tanlash -->
-    <div
+    <mat-label class="form-label">Anrede</mat-label>
+    <mat-radio-group
+      formControlName="gender"
       class="radio-group"
-      [ngClass]="{
-        invalid: form.get('gender')?.invalid && form.get('gender')?.touched
-      }"
+      [class.invalid]="isInvalid('gender')"
     >
-      <label class="form-label">Anrede</label>
-      <input type="radio" formControlName="gender" value="frau" />
-      <label>Frau</label>
-      <input type="radio" formControlName="gender" value="herr" />
-      <label>Herr</label>
-    </div>
-    <div
-      class="error"
-      *ngIf="form.get('gender')?.touched && form.get('gender')?.invalid"
-    >
+      <mat-radio-button value="frau">Frau</mat-radio-button>
+      <mat-radio-button value="herr">Herr</mat-radio-button>
+    </mat-radio-group>
+    <div class="error" *ngIf="isInvalid('gender')">
       Bitte wählen Sie eine Anrede.
     </div>
 
     <!-- Ism / Familiya -->
     <div class="input-group">
-      <div class="input-wrapper">
-        <input
-          type="text"
-          placeholder="Vorname"
-          formControlName="firstName"
-          [class.invalid]="isInvalid('firstName')"
-        />
-        <div class="error" *ngIf="isInvalid('firstName')">
+      <mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Vorname</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngIf="isInvalid('firstName')">
           Vorname ist erforderlich.
-        </div>
-      </div>
+        </mat-error>
+      </mat-form-field>
 
-      <div class="input-wrapper">
-        <input
-          type="text"
-          placeholder="Nachname"
-          formControlName="lastName"
-          [class.invalid]="isInvalid('lastName')"
-        />
-        <div class="error" *ngIf="isInvalid('lastName')">
+      <mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Nachname</mat-label>
+        <input matInput formControlName="lastName" />
+        <mat-error *ngIf="isInvalid('lastName')">
           Nachname ist erforderlich.
-        </div>
-      </div>
+        </mat-error>
+      </mat-form-field>
     </div>
 
     <!-- Tug‘ilgan sana va telefon -->
     <div class="input-group">
-      <div class="input-wrapper">
+      <mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Geburtstag</mat-label>
         <input
-          type="text"
-          placeholder="TT.MM.JJJJ"
+          matInput
+          [matDatepicker]="picker"
           formControlName="birthDate"
-          [class.invalid]="isInvalid('birthDate')"
+          placeholder="TT.MM.JJJJ"
         />
-        <div class="error" *ngIf="isInvalid('birthDate')">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+        <mat-error *ngIf="isInvalid('birthDate')">
           Geburtstag ist erforderlich.
-        </div>
-      </div>
+        </mat-error>
+      </mat-form-field>
 
-      <div class="input-wrapper">
-        <input
-          type="text"
-          placeholder="(+49) Telefonnummer (Optional)"
-          formControlName="phone"
-        />
-      </div>
+      <mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Telefonnummer (optional)</mat-label>
+        <input matInput formControlName="phone" />
+      </mat-form-field>
     </div>
 
-    <!-- Tugma -->
+    <!-- Tugmalar -->
     <div class="button-group">
-      <button type="button" class="back-btn" (click)="onBack()">Zurück</button>
-      <button type="submit" class="next-btn" [disabled]="form.invalid">
+      <button
+        mat-stroked-button
+        color="primary"
+        (click)="onBack()"
+        type="button"
+      >
+        Zurück
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="form.invalid"
+        type="submit"
+      >
         Weiter
       </button>
     </div>
