@@ -21,14 +21,15 @@
 }
 
 .form-card {
-  background: white;
-  padding: 20px 10px;
+  background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
   width: 100%;
+  max-width: 450px;
   text-align: center;
-  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+   position: relative;
 }
 
 .progress-line {
