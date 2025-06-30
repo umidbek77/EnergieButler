@@ -1,122 +1,164 @@
-.container-form {
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+.background-overlay {
+  background: url("../../../../public/housebg.jpg") no-repeat center center /
+    cover;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.container-form h3,
-h4 {
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(15px); /* xiralik darajasi */
+  background-color: rgba(5, 5, 5, 0.2); /* ustidagi qoramtir qatlam */
+}
+
+.container-form {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+   position: relative;
+}
+
+h3, h4 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1b4332;
+  margin-bottom: 1rem;
 }
 
 .card-group {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .card {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 15px 20px;
+  flex: 1 1 70px;
+  background-color: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 0.8rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
   text-align: center;
-  transition: all 0.3s;
-  width: 120px;
-}
-
-.card:hover {
-  border-color: #04884B;
-}
-
-.card.selected {
-  border-color: #04884B;
-  background-color: #dfeffb;
+  min-width: 70px;
 }
 
 .card-icon {
-  width: 36px;
-  height: 36px;
-  margin: 0 auto 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: #04884B;
+  color: #2d6a4f;
+  margin-bottom: 4px;
+  svg {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .card-label {
-  font-weight: 500;
   font-size: 14px;
+  color: #000;
+}
+label {
+ font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: 500;
+} 
+
+.card:hover {
+  border-color: #2d6a4f;
+}
+
+.card.selected {
+  border: 2px solid #2d6a4f;
+  background-color: #e6f4ec;
 }
 
 .input-group {
-  width: 100%;
-  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
 }
 
-.input-group input:focus {
-  outline: 2px solid #04884B;
+.input-group-vertical {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1.2rem;
 }
 
-.input-group span {
-  padding: 14.5px;
-  border: 1px solid #ccc;
-  border-radius: 0 6px 6px 0;
-  font-size: 16px;
+.input-group-vertical label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: 500;
 }
+
+.input-group-vertical input,
+.input-group-vertical select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-group-vertical input::placeholder,
+.input-group-vertical select:invalid {
+  color: #aaa;
+}
+
 
 .input-group input,
 .input-group select {
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  padding: 0.3rem 0;
+  font-family: inherit;
 }
 
-.input-group .consp {
-  border-radius: 6px 0 0 6px;
-  border-right: none;
+.input-group input::placeholder,
+.input-group select:invalid {
+  color: #aaa;
 }
 
-.input-group select {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.input-group select:focus {
-  outline: 2px solid #04884B;
+.input-group .item {
+  color: #333;
+  font-weight: 500;
 }
 
 .btn-group {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  margin-top: 1.5rem;
 }
 
-.btn-primary {
-  background: #04884B;
-  color: white;
-  padding: 10px 30px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: #05a95d;
-}
-
-.btn-secondary {
+button.btn-secondary {
   background: white;
   color: #04884B;
   padding: 10px 30px;
@@ -125,74 +167,22 @@ h4 {
   border-radius: 5px;
 }
 
-.btn-secondary:hover {
-  background: #e1e2e1;
+button.btn-secondary:hover {
+  background-color: #e8f5e9;
+}
+
+button.btn-primary {
+  padding: 10px 30px;
+  border: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
   cursor: pointer;
+  background-color: #04884B;
+  color: white;
 }
 
-@media (max-width: 992px) {
-  .container-form {
-    padding: 16px;
-  }
-
-  .card {
-    width: 100px;
-    padding: 12px 16px;
-  }
-
-  .card-label {
-    font-size: 13px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 15px 50px;
-    font-size: 15px;
-  }
-}
-
-/* Telefonlar (≤ 576px) */
-@media (max-width: 576px) {
-  .container-form {
-    padding: 10px;
-  }
-
-  .card-group {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    margin-bottom: 10px;
-  }
-
-  .card-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .card-label {
-    font-size: 13px;
-  }
-
-  .input-group input,
-  .input-group select,
-  .input-group span {
-    font-size: 15px;
-    padding: 13px;
-  }
-
-  .btn-group {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    padding: 14px;
-    font-size: 15px;
-  }
+button.btn-primary:disabled {
+  background-color: #cfcfcf;
+  cursor: not-allowed;
 }
