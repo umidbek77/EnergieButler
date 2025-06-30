@@ -14,17 +14,25 @@
     </legend>
 
     <div class="form-row">
-      <input type="text" formControlName="plz" placeholder="PLZ" />
-      <input type="text" formControlName="city" placeholder="Ort" />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>PLZ</mat-label>
+        <input matInput type="text" formControlName="plz" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Ort</mat-label>
+        <input matInput type="text" formControlName="city" />
+      </mat-form-field>
     </div>
 
     <div class="form-row">
-      <input type="text" formControlName="street" placeholder="Straße" />
-      <input
-        type="text"
-        formControlName="houseNumber"
-        placeholder="Hausnummer"
-      />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Straße</mat-label>
+        <input matInput type="text" formControlName="street" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Hausnummer</mat-label>
+        <input matInput type="text" formControlName="houseNumber" />
+      </mat-form-field>
     </div>
   </fieldset>
 
@@ -68,31 +76,62 @@
     </div>
 
     <div class="form-row">
-      <input type="text" formControlName="firstName" placeholder="Vorname" />
-      <input type="text" formControlName="lastName" placeholder="Nachname" />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Vorname</mat-label>
+        <input matInput type="text" formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Nachname</mat-label>
+        <input matInput type="text" formControlName="lastName" />
+      </mat-form-field>
     </div>
 
     <div class="form-row">
-      <input type="date" formControlName="birthDate" placeholder="Geburtstag" />
-      <input
-        type="tel"
-        formControlName="phone"
-        placeholder="Telefonnummer (Optional)"
-      />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Geburtstag</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="birthDate"
+          placeholder="Geburtstag auswählen"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Telefonnummer (Optional)</mat-label>
+        <input matInput type="tel" formControlName="phone" />
+      </mat-form-field>
     </div>
 
     <div class="form-row">
-      <input type="text" formControlName="plz" placeholder="PLZ" />
-      <input type="text" formControlName="city" placeholder="Ort" />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>PLZ</mat-label>
+        <input matInput type="text" formControlName="plz" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Ort</mat-label>
+        <mat-select formControlName="city">
+          <mat-option *ngFor="let city of cities" [value]="city">
+            {{ city }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
 
     <div class="form-row">
-      <input type="text" formControlName="street" placeholder="Straße" />
-      <input
-        type="text"
-        formControlName="houseNumber"
-        placeholder="Hausnummer"
-      />
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Straße</mat-label>
+        <mat-select formControlName="street">
+          <mat-option *ngFor="let street of streets" [value]="street">
+            {{ street }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-1">
+        <mat-label>Hausnummer</mat-label>
+        <input matInput type="text" formControlName="houseNumber" />
+      </mat-form-field>
     </div>
   </fieldset>
 

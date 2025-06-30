@@ -1,35 +1,53 @@
 <div class="step2-wrapper">
   <div class="step2-card">
-    <h2 class="step-title"><span class="step-icon">⚡</span> Ihr Anschluss</h2>
+    <h2 class="step-title">
+      <span class="step-icon"
+        ><svg
+          class="icon-lightning"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path d="M13 2L3 14h7v8l10-12h-7z" fill="currentColor" /></svg
+      ></span>
+      Ihr Anschluss
+    </h2>
 
     <form [formGroup]="form">
       <!-- PLZ va Ort -->
       <label class="form-label"
         >Wo befindet sich ihr aktueller Stromanschluss?</label
       >
+
       <div class="location-fields">
-        <input
-          class="location-input"
-          type="text"
-          formControlName="plz"
-          placeholder="PLZ"
-        />
-        <select formControlName="city">
-          <option value="">Ort</option>
-          <option value="Berlin">Berlin</option>
-          <option value="Hamburg">Hamburg</option>
-          <option value="München">München</option>
-        </select>
+        <!-- PLZ input -->
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>PLZ</mat-label>
+          <input matInput type="text" formControlName="plz" />
+        </mat-form-field>
+
+        <!-- Ort select -->
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Ort</mat-label>
+          <mat-select formControlName="city">
+            <mat-option value="">Bitte wählen...</mat-option>
+            <mat-option *ngFor="let city of citiesList" [value]="city">
+              {{ city }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <!-- Provider -->
-      <label class="form-label">Wer ist Ihr bisheriger Anbieter?</label><br />
-      <input
-        class="provider-input"
-        type="text"
-        formControlName="provider"
-        placeholder="Aktuellen Anbieter eintippen..."
-      />
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Wer ist Ihr bisheriger Anbieter?</mat-label>
+        <mat-select formControlName="provider">
+          <mat-option value="">Bitte wählen...</mat-option>
+          <mat-option *ngFor="let provider of providersList" [value]="provider">
+            {{ provider }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
       <br />
       <!-- Tarife -->
       <label class="form-label">Welche Tarife wollen Sie vergleichen?</label>
