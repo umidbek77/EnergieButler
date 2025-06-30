@@ -1,12 +1,35 @@
+.background-overlay {
+  background: url("../../../../public/housebg.jpg") no-repeat center center /
+    cover;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(15px); /* xiralik darajasi */
+  background-color: rgba(5, 5, 5, 0.2); /* ustidagi qoramtir qatlam */
+}
+
 .offer-box {
-  border: 1px solid #04884B;
-  border-radius: 6px;
-  padding: 24px;
-  max-width: 500px;
-  background: #fff;
-  color: #333;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+     background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+   position: relative;
 }
 
 .offer-header {

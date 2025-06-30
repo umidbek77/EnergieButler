@@ -1,4 +1,4 @@
-<main>
+<div class="background-overlay">
   <div class="container-form">
     <h3>Wie hoch ist Ihr aktueller Jahresverbrauch?</h3>
 
@@ -37,26 +37,27 @@
 
     <h4>Wo befindet sich Ihr Gasanschluss?</h4>
 
-    <div class="input-group">
-      <label>PLZ</label>
-      <input
-        style="width: 95%"
-        type="text"
-        maxlength="5"
-        [(ngModel)]="plz"
-        placeholder="z.B. 10115"
-      />
-    </div>
+    <div class="input-group-vertical">
+  <label for="plz">PLZ</label>
+  <input
+    id="plz"
+    type="text"
+    maxlength="5"
+    [(ngModel)]="plz"
+    placeholder="z.B. 10115"
+  />
+</div>
 
-    <div class="input-group">
-      <label>Ort</label>
-      <select [(ngModel)]="ort">
-        <option value="">z. B. Berlin</option>
-        <option *ngFor="let option of ortOptions" [value]="option">
-          {{ option }}
-        </option>
-      </select>
-    </div>
+<div class="input-group-vertical">
+  <label for="ort">Ort</label>
+  <select id="ort" [(ngModel)]="ort">
+    <option value="">z. B. Berlin</option>
+    <option *ngFor="let option of ortOptions" [value]="option">
+      {{ option }}
+    </option>
+  </select>
+</div>
+
 
     <div class="btn-group">
       <button class="btn-secondary" (click)="onBack()">Zurück</button>
@@ -70,4 +71,4 @@
       </button>
     </div>
   </div>
-</main>
+</div>

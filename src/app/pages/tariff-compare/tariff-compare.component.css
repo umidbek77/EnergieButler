@@ -1,11 +1,35 @@
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 500px;
-  margin: 20px auto 20px;
+.tariff-compare-container {
+   background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+   position: relative;
+}
+
+.background-overlay {
+  background: url("../../../../public/housebg.jpg") no-repeat center center /
+    cover;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(15px); /* xiralik darajasi */
+  background-color: rgba(5, 5, 5, 0.2); /* ustidagi qoramtir qatlam */
 }
 
 .progress-line {

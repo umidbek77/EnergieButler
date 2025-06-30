@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { StepsComponent } from "../steps/steps.component";
 
 @Component({
   selector: 'app-storm-stage',
   templateUrl: './storm-stage.component.html',
   styleUrls: ['./storm-stage.component.css'],
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, StepsComponent],
 })
 export class StormStageComponent {
   constructor(private router: Router) {}
