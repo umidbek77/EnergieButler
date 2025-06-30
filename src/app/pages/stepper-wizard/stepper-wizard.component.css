@@ -1,15 +1,19 @@
 .stepper-container {
   display: flex;
-  align-items: start;
+  justify-content: center;
   gap: 36px;
+  margin-top: 30px;
+   align-items: center;
+     margin-left: auto;
+  margin-right: auto;
 }
 
 .vertical-stepper {
   list-style: none;
   padding: 0px;
-  margin-top: 20px;
   width: 260px;
 }
+
 
 .vertical-stepper li {
   display: flex;
@@ -58,4 +62,7 @@
 
 .step-body {
   flex-grow: 1;
+  min-width: 0;
+  max-width: 800px;
 }
+
