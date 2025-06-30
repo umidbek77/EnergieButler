@@ -34,6 +34,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 export class Step5Component {
   @Output() next = new EventEmitter<void>();
   @Output() back = new EventEmitter<FormGroup>();
+  @Output() completed = new EventEmitter<any>();
 
   form: FormGroup;
 
@@ -97,11 +98,13 @@ export class Step5Component {
     this.back.emit();
   }
 
-  onNext() {
-    if (this.form.valid) {
-      this.next.emit(this.form.value);
-    } else {
-      this.form.markAllAsTouched();
-    }
+onNext() {
+  if (this.form.valid) {
+    console.log('Step5 Data:', this.form.value);
+    this.completed.emit(this.form.value); // <-- formani uzatamiz
+  } else {
+    this.form.markAllAsTouched();
+
   }
+}
 }

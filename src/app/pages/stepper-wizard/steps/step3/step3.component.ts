@@ -34,6 +34,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class Step3Component {
   @Output() next = new EventEmitter<void>();
   @Output() back = new EventEmitter<void>();
+  @Output() completed = new EventEmitter<any>();
 
   form: FormGroup;
 
@@ -47,14 +48,14 @@ export class Step3Component {
     });
   }
 
-  onNext() {
-    if (this.form.valid) {
-      console.log('Step3 Data:', this.form.value);
-      this.next.emit();
-    } else {
-      this.form.markAllAsTouched();
-    }
+onNext() {
+  if (this.form.valid) {
+    console.log('Step3 Data:', this.form.value);
+    this.completed.emit(this.form.value); // <-- Ma'lumotni uzatamiz
+  } else {
+    this.form.markAllAsTouched();
   }
+}
 
   onBack() {
     this.back.emit();

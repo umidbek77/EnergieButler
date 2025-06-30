@@ -16,6 +16,7 @@ import {
 })
 export class Step1Component {
   @Output() next = new EventEmitter<void>();
+  @Output() completed = new EventEmitter<any>();
 
   form: FormGroup;
 
@@ -41,13 +42,14 @@ export class Step1Component {
   isSelectedConsumption(value: number): boolean {
     return this.form.get('consumption')?.value === value;
   }
-
-  start() {
-    if (this.form.valid) {
-      console.log('Step1 Data:', this.form.value);
-      this.next.emit(); // Stepperga keyingi stepga o‘tish signalini jo‘natadi
-    } else {
-      this.form.markAllAsTouched();
-    }
+start() {
+  if (this.form.valid) {
+    console.log('Step1 valid:', this.form.value);
+    this.completed.emit(this.form.value);
+  } else {
+    this.form.markAllAsTouched();
   }
+}
+
+
 }

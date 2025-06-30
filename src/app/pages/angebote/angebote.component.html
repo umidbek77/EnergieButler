@@ -1,4 +1,3 @@
-
 <main>
     <section class="angebote">
 
@@ -6,8 +5,29 @@
 
             <div class="angebote-container">
 
-             <h1>Ihre angeforderten Angebote</h1>
-                <p>Willkommen in Ihrem persönlichem Angebotsbereich. Hier finden Sie alle Informationen zu Ihren Strom-und Gasangeboten.</p>
+                <h1>Ihre angeforderten Angebote</h1>
+                <p>Willkommen in Ihrem persönlichem Angebotsbereich. Hier finden Sie alle Informationen zu Ihren
+                    Strom-und Gasangeboten.</p>
+
+                <div class="steps-infos">
+                    <div *ngIf="data">
+                        <h2>Kelgan Ma’lumotlar</h2>
+                        <div *ngFor="let item of data">
+                            <h3>{{ item.label | titlecase }}</h3>
+                            <pre *ngIf="isJson(item.value)">
+          {{ parseValue(item.value) | json }}
+        </pre>
+                            <p *ngIf="!isJson(item.value)">
+                                {{ item.value }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div *ngIf="signature">
+                        <h3>Imzo rasmi:</h3>
+                        <img [src]="signature" alt="Imzo" style="max-width: 300px;" />
+                    </div>
+                </div>
 
             </div>
         </div>

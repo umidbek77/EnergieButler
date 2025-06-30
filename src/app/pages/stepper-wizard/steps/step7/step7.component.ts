@@ -1,16 +1,16 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-step7',
-  templateUrl: './step7.component.html',
-  styleUrls: ['./step7.component.css'],
   standalone: true,
   imports: [FormsModule, CommonModule],
+  templateUrl: './step7.component.html',
+  styleUrls: ['./step7.component.css'],
 })
 export class Step7Component {
-  @Output() next = new EventEmitter<void>();
+  @Output() next = new EventEmitter<{ signed: boolean; type: string; image?: string }>();
   @Output() back = new EventEmitter<void>();
 
   drawing = true;
@@ -30,6 +30,21 @@ export class Step7Component {
 
   isSignatureValid(): boolean {
     return this.drawing ? this.isSigned : true;
+  }
+
+  onNext() {
+    let image: string | undefined;
+    if (this.drawing) {
+      const canvas = document.getElementById('signature') as HTMLCanvasElement;
+      image = canvas?.toDataURL('image/png');
+       console.log('Step7 Data:');
+    }
+
+    this.next.emit({
+      signed: this.isSigned,
+      type: this.drawing ? 'drawn' : 'auto',
+      image,
+    });
   }
 
   ngAfterViewInit() {

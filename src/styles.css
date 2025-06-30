@@ -22,7 +22,9 @@ body.modal-open {
 }
 
 .main-content {
-  flex-grow: 1; /* Asosiy kontent bo‘sh joyni egallaydi */
+    flex: 1;
+  padding-bottom: 120px; /* Footer balandligiga qarab */
+  box-sizing: border-box;
 }
 
 html,
@@ -33,7 +35,7 @@ body {
 }
 
 main{
-    height: calc(85vh - 64px);
+    height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,4 +52,10 @@ body {
 
 .fabicon {
   border-radius: 50%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
