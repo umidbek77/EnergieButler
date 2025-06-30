@@ -32,12 +32,12 @@ body {
   padding: 0;
 }
 
-/* main{
-    height: calc(100vh - 64px);
+main{
+    height: calc(85vh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-} */
+}
 
 html,
 body {
