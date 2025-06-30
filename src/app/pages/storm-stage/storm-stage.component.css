@@ -31,7 +31,7 @@ h4 {
 }
 
 .step.active {
-  background: #3868eb;
+  background: #04884B;
 }
 
 .people-selection-input {
@@ -54,7 +54,7 @@ h4 {
 
 input:focus,
 select:focus {
-  outline: 2px solid #3868eb;
+  outline: 2px solid #04884B;
 }
 
 .consumption-input {
@@ -100,32 +100,45 @@ select:focus {
 }
 
 .btn {
-  padding: 17px 70px;
+  padding: 10px 30px;
   font-size: 18px;
   border-radius: 6px;
-  border: 2px solid #3868eb;
+  border: 2px solid #04884B;
   background: #fff;
   cursor: pointer;
 }
 
+.btn-back{
+  background-color: red ;
+    padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-back:hover{
+  background-color: orange !important;
+}
+
 .btn:hover {
-  background-color: #3868eb;
+  background-color: #04884B;
   color: aliceblue;
-  transition: 0.4s;
 }
 
 .btn.green {
-  background: #3868eb;
+  background: #04884B;
   color: white;
-  border: 2px solid #3868eb;
+  border: 2px solid #04884B;
   font-size: 18px;
 }
 
 .btn.green:hover {
   border: none;
   background-color: white;
-  color: #3868eb;
-  border: 2px solid #3868eb;
+  color: #04884B;
+  border: 2px solid #04884B;
   transition: 0.4s;
 }
 
