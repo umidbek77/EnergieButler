@@ -1,11 +1,8 @@
 <div class="stepper-container">
   <div class="vertical-stepper-div">
     <ul class="vertical-stepper">
-      <li
-        *ngFor="let label of stepLabels; let i = index"
-        [class.active]="i === currentStepIndex"
-        [class.completed]="i < currentStepIndex"
-      >
+      <li *ngFor="let label of stepLabels; let i = index" [class.active]="i === currentStepIndex"
+        [class.completed]="i < currentStepIndex">
         <div class="step-circle">{{ i + 1 }}</div>
         <div class="step-label">{{ label }}</div>
       </li>
@@ -14,38 +11,37 @@
 
   <div class="step-body">
     <ng-container [ngSwitch]="currentStepIndex">
-      <app-step1 *ngSwitchCase="0" (next)="nextStep()"></app-step1>
-      <app-step2
-        *ngSwitchCase="1"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step2>
-      <app-step3
-        *ngSwitchCase="2"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step3>
-      <app-step4
-        *ngSwitchCase="3"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step4>
-      <app-step5
-        *ngSwitchCase="4"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step5>
-      <app-step6
-        *ngSwitchCase="5"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step6>
-      <app-step7
-        *ngSwitchCase="6"
-        (next)="nextStep()"
-        (back)="prevStep()"
-      ></app-step7>
-      <app-step8 *ngSwitchCase="7" (back)="prevStep()"></app-step8>
+      <app-step1 *ngIf="currentStepIndex === 0" (completed)="saveStep1Data($event); nextStep()"></app-step1>
+
+      <app-step2 *ngIf="currentStepIndex === 1" (completed)="saveStep2Data($event); nextStep()"
+        (back)="prevStep()"></app-step2>
+
+
+      <app-step3 *ngIf="currentStepIndex === 2" (completed)="saveStep3Data($event); nextStep()"
+        (back)="prevStep()"></app-step3>
+
+      <app-step4 *ngIf="currentStepIndex === 3" (completed)="saveStep4Data($event); nextStep()"
+        (back)="prevStep()"></app-step4>
+
+      <app-step5 *ngIf="currentStepIndex === 4" (back)="prevStep()" (completed)="saveStep5Data($event); nextStep()">
+      </app-step5>
+
+      <app-step6 *ngIf="currentStepIndex === 5" (next)="saveStep6Data($event); nextStep()" (back)="prevStep()">
+      </app-step6>
+
+
+      <app-step7 *ngIf="currentStepIndex === 6" (next)="saveSignature($event); nextStep()" (back)="prevStep()">
+      </app-step7>
+
+
+     <app-step8
+  *ngIf="currentStepIndex === 7"
+  [summaryData]="summaryArray"
+  [signatureUrl]="signatureImage"
+  (back)="prevStep()"
+  (confirm)="goToAngebote()"
+></app-step8>
+
     </ng-container>
   </div>
 </div>

@@ -10,6 +10,7 @@ import { Step5Component } from './steps/step5/step5.component';
 import { Step6Component } from './steps/step6/step6.component';
 import { Step7Component } from './steps/step7/step7.component';
 import { Step8Component } from './steps/step8/step8.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stepper-wizard',
@@ -33,6 +34,8 @@ import { Step8Component } from './steps/step8/step8.component';
 export class StepperWizardComponent {
   currentStepIndex: number = 0;
 
+  constructor(private router: Router) {}
+
   stepLabels: string[] = [
     'Objektart und Verbrauch',
     'Ihr Anschluss',
@@ -43,6 +46,9 @@ export class StepperWizardComponent {
     'Unterschrift',
     'Daten überprüfen',
   ];
+
+  formData: any = {};
+  signatureImage: string = '';
 
   nextStep() {
     if (this.currentStepIndex < this.stepLabels.length - 1) {
@@ -55,4 +61,63 @@ export class StepperWizardComponent {
       this.currentStepIndex--;
     }
   }
+  handleStep5Next(data: any) {
+  this.saveStep5Data(data);
+  this.nextStep();
+}
+
+
+  saveStep1Data(data: any) {
+    this.formData.step1 = data;
+  }
+
+saveStep2Data(data: any) {
+  this.formData.step2 = data;
+}
+
+
+  saveStep3Data(data: any) {
+    this.formData.step3 = data;
+  }
+
+  saveStep4Data(data: any) {
+    this.formData.step4 = data;
+  }
+
+  saveStep5Data(data: any) {
+    this.formData.step5 = data;
+  }
+
+  saveStep6Data(data: any) {
+    this.formData.step6 = data;
+  }
+
+  saveSignature(data: { signed: boolean; type: string; image?: string }) {
+    this.formData.signature = {
+      signed: data.signed,
+      type: data.type,
+    };
+    this.signatureImage = data.image || '';
+  }
+
+  finishWizard() {
+    console.log('All steps complete:', this.formData);
+    // you can optionally navigate or save to server
+  }
+
+  get summaryArray() {
+  return Object.entries(this.formData).map(([key, value]) => ({
+    label: key,
+    value: JSON.stringify(value),
+  }));
+}
+
+
+goToAngebote() {
+  localStorage.setItem('finalData', JSON.stringify(this.formData));
+  localStorage.setItem('signature', this.signatureImage);
+  this.router.navigate(['/angebote']);
+}
+
+
 }

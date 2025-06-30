@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 export class Step5Component {
   @Output() next = new EventEmitter<void>();
   @Output() back = new EventEmitter<FormGroup>();
+  @Output() completed = new EventEmitter<any>();
 
   form: FormGroup;
 
@@ -78,11 +79,12 @@ export class Step5Component {
     console.log('Back');
   }
 
-  onNext() {
-    if (this.form.valid) {
-      this.next.emit(this.form.value); // formani parentga yuboramiz
-    } else {
-      this.form.markAllAsTouched(); // xatoliklar ko‘rsatiladi
-    }
+onNext() {
+  if (this.form.valid) {
+    console.log('Step5 Data:', this.form.value);
+    this.completed.emit(this.form.value); // <-- formani uzatamiz
+  } else {
+    this.form.markAllAsTouched();
   }
+}
 }

@@ -27,8 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class Step2Component {
   @Output() next = new EventEmitter<void>();
-  @Output() back = new EventEmitter<void>();
-
+@Output() completed = new EventEmitter<any>();
+@Output() back = new EventEmitter<void>();
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -48,12 +48,13 @@ export class Step2Component {
     return this.form.get('tariffType')?.value === type;
   }
 
-  goNext() {
-    if (this.form.valid) {
-      console.log('Step2 Data:', this.form.value);
-      this.next.emit();
-    } else {
-      this.form.markAllAsTouched();
-    }
+goNext() {
+  if (this.form.valid) {
+    console.log('Step2 Data:', this.form.value);
+    this.completed.emit(this.form.value); // <-- faqat formani uzatadi
+  } else {
+    this.form.markAllAsTouched();
   }
+}
+
 }

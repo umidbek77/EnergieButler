@@ -50,13 +50,15 @@ export class Step6Component {
     });
   }
 
-  onNext() {
-    if (this.form.valid) {
-      this.next.emit(this.form.value);
-    } else {
-      this.form.markAllAsTouched();
-    }
+onNext() {
+  if (this.form.valid) {
+    this.next.emit(this.form.value); // 👈 Ma’lumotlarni uzatyapti
+     console.log('Step6 Data:', this.form.value);
+  } else {
+    this.form.markAllAsTouched();
   }
+}
+
 
   onBack() {
     this.back.emit(); // orqaga qaytish signali

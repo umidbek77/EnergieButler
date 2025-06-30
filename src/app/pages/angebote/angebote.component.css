@@ -4,9 +4,32 @@
     margin-bottom: 16px;
     color: #40424c;
 }
+.angebote{
+      padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 120px; /* Footer balandligiga mos */
+}
+
+:host {
+  display: block;
+  min-height: 100vh;
+  padding-bottom: 120px; /* Footer balandligi bilan mos */
+  box-sizing: border-box;
+}
+
+.steps-infos {
+  padding-bottom: 120px; /* Footer balandligiga qarab o'zgartiring */
+}
 
 .angebote-container-content{
     padding: 30px 16px;
+}
+
+.signature-preview {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
 }
 
 .angebote-container p{

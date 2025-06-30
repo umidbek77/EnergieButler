@@ -16,7 +16,8 @@ import { CommonModule } from '@angular/common';
 })
 export class Step4Component {
   @Output() next = new EventEmitter<void>();
-  @Output() back = new EventEmitter<void>();
+  @Output() completed = new EventEmitter<any>();
+@Output() back = new EventEmitter<void>();
 
   form: FormGroup;
 
@@ -64,14 +65,14 @@ export class Step4Component {
     return this.form.get('billing') as FormGroup;
   }
 
-  onSubmit(): void {
-    if (this.form.valid) {
-      console.log('Step4 Data:', this.form.value);
-      this.next.emit();
-    } else {
-      this.form.markAllAsTouched();
-    }
+onSubmit(): void {
+  if (this.form.valid) {
+    console.log('Step4 Data:', this.form.value);
+    this.completed.emit(this.form.value); // <-- Ma'lumotni uzatamiz
+  } else {
+    this.form.markAllAsTouched();
   }
+}
 
   onBack(): void {
     this.back.emit();

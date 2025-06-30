@@ -36,4 +36,5 @@ export class Step8Component {
       this.router.navigate(['/main']);
     }
   }
+  
 }
