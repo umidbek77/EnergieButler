@@ -111,14 +111,22 @@
       </mat-form-field>
       <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Ort</mat-label>
-        <input matInput type="text" formControlName="city" />
+        <mat-select formControlName="city">
+          <mat-option *ngFor="let city of cities" [value]="city">
+            {{ city }}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
 
     <div class="form-row">
       <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Straße</mat-label>
-        <input matInput type="text" formControlName="street" />
+        <mat-select formControlName="street">
+          <mat-option *ngFor="let street of streets" [value]="street">
+            {{ street }}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
       <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Hausnummer</mat-label>

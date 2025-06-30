@@ -83,7 +83,7 @@ input.invalid {
   flex-direction: row-reverse;
   margin-bottom: 24px;
   gap: 20px;
-  width: 72.5%;
+  width: 90%;
 }
 
 button {

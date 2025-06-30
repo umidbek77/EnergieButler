@@ -21,6 +21,22 @@
   gap: 8px;
 }
 
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.icon-lightning {
+  width: 20px;
+  height: 20px;
+  fill: #04884b;
+}
+
 .location-fields {
   display: flex;
   gap: 12px;

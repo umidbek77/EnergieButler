@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-step4',
@@ -29,6 +30,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
   ],
 })
 export class Step4Component {
@@ -36,6 +38,9 @@ export class Step4Component {
   @Output() back = new EventEmitter<void>();
 
   form: FormGroup;
+
+  cities = ['Berlin', 'München', 'Hamburg', 'Köln'];
+  streets = ['Hauptstraße', 'Bahnhofstraße', 'Lindenweg', 'Goethestraße'];
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({

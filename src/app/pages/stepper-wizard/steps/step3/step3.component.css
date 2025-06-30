@@ -54,8 +54,43 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
-  gap: 16px;
   flex-wrap: wrap;
+}
+
+.btn-back {
+  background-color: white;
+  color: #04884b;
+  border: 2px solid #04884b;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.btn-back:hover {
+  background-color: #04884b;
+  color: white;
+}
+
+/* DAVOM ETISH */
+.btn-next {
+  background-color: #04884b;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.btn-next:disabled {
+  background-color: #a5d6b4;
+  color: #f1f5f9;
+  cursor: not-allowed;
 }
 
 /* Responsive */

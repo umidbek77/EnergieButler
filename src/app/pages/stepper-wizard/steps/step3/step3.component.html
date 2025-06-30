@@ -62,20 +62,8 @@
 
     <!-- Tugmalar -->
     <div class="button-group">
-      <button
-        mat-stroked-button
-        color="primary"
-        (click)="onBack()"
-        type="button"
-      >
-        Zurück
-      </button>
-      <button
-        mat-raised-button
-        color="primary"
-        [disabled]="form.invalid"
-        type="submit"
-      >
+      <button class="btn-back" (click)="onBack()" type="button">Zurück</button>
+      <button class="btn-next" [disabled]="form.invalid" type="submit">
         Weiter
       </button>
     </div>
