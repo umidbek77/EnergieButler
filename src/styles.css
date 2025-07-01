@@ -23,7 +23,6 @@ body.modal-open {
 
 .main-content {
     flex: 1;
-  padding-bottom: 120px; /* Footer balandligiga qarab */
   box-sizing: border-box;
 }
 

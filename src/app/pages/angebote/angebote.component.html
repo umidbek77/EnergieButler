@@ -1,35 +1,32 @@
 <main>
-    <section class="angebote">
+  <section class="angebote">
+    <div class="angebote-container-content">
+      <div class="angebote-container">
+        <h1>Ihre angeforderten Angebote</h1>
+        <p>
+          Willkommen in Ihrem persönlichem Angebotsbereich. Hier finden Sie alle Informationen zu Ihren Strom- und Gasangeboten.
+        </p>
 
-        <div class="angebote-container-content">
+        <div class="steps-infos">
+          <div *ngIf="summaryArray.length">
+            <h2>Kelgan Ma’lumotlar</h2>
+            <div *ngFor="let item of summaryArray; let i = index">
+              <h3>{{ i }}. {{ item.label | titlecase }}</h3>
 
-            <div class="angebote-container">
+              <pre *ngIf="item.value && item.value | json as parsed">
+{{ parsed }}
+              </pre>
 
-                <h1>Ihre angeforderten Angebote</h1>
-                <p>Willkommen in Ihrem persönlichem Angebotsbereich. Hier finden Sie alle Informationen zu Ihren
-                    Strom-und Gasangeboten.</p>
-
-                <div class="steps-infos">
-                    <div *ngIf="data">
-                        <h2>Kelgan Ma’lumotlar</h2>
-                        <div *ngFor="let item of data">
-                            <h3>{{ item.label | titlecase }}</h3>
-                            <pre *ngIf="isJson(item.value)">
-          {{ parseValue(item.value) | json }}
-        </pre>
-                            <p *ngIf="!isJson(item.value)">
-                                {{ item.value }}
-                            </p>
-                        </div>
-                    </div>
-
-                    <div *ngIf="signature">
-                        <h3>Imzo rasmi:</h3>
-                        <img [src]="signature" alt="Imzo" style="max-width: 300px;" />
-                    </div>
-                </div>
-
+              <p *ngIf="!item.value || typeof item.value === 'string'">{{ item.value }}</p>
             </div>
+          </div>
+
+          <div *ngIf="signature">
+            <h3>Imzo rasmi:</h3>
+            <img [src]="signature" alt="Imzo" style="max-width: 300px; border: 1px solid #ccc;" />
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </main>

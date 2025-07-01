@@ -32,20 +32,30 @@ export class Step7Component {
     return this.drawing ? this.isSigned : true;
   }
 
-  onNext() {
-    let image: string | undefined;
-    if (this.drawing) {
-      const canvas = document.getElementById('signature') as HTMLCanvasElement;
-      image = canvas?.toDataURL('image/png');
-       console.log('Step7 Data:');
-    }
-
-    this.next.emit({
-      signed: this.isSigned,
-      type: this.drawing ? 'drawn' : 'auto',
-      image,
-    });
+onNext() {
+  if (this.drawing && !this.isSigned) {
+    this.saveSignature();
   }
+
+  let image: string | undefined;
+
+  if (this.drawing) {
+    const canvas = document.getElementById('signature') as HTMLCanvasElement;
+    if (canvas) {
+      image = canvas.toDataURL('image/png');
+      console.log('🖼️ Signature image:', image);
+    } else {
+      console.error('❌ Canvas not found when trying to get image');
+    }
+  }
+
+  this.next.emit({
+    signed: this.isSigned,
+    type: this.drawing ? 'drawn' : 'auto',
+    image,
+  });
+}
+
 
   ngAfterViewInit() {
     const canvas = document.getElementById('signature') as HTMLCanvasElement;

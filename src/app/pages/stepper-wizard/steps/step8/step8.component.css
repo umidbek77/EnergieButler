@@ -42,13 +42,15 @@
 /* Imzo blok */
 .signature-block {
   margin-top: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .signature-preview {
-  width: 100%;
-  height: auto;
+  width: 400px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  margin-top: 10px;
 }
 
 /* Qo‘shimcha ma’lumot */
