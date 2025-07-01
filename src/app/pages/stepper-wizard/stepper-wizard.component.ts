@@ -50,6 +50,8 @@ export class StepperWizardComponent {
   formData: any = {};
   signatureImage: string = '';
 
+
+  
   nextStep() {
     if (this.currentStepIndex < this.stepLabels.length - 1) {
       this.currentStepIndex++;
@@ -69,6 +71,7 @@ export class StepperWizardComponent {
 
   saveStep1Data(data: any) {
     this.formData.step1 = data;
+      console.log('✅ Step 1 data saved:', this.formData.step1);
   }
 
 saveStep2Data(data: any) {
@@ -98,6 +101,7 @@ saveStep2Data(data: any) {
       type: data.type,
     };
     this.signatureImage = data.image || '';
+     console.log('📦 signatureImage saved:', this.signatureImage); // SHART!
   }
 
   finishWizard() {
@@ -117,6 +121,13 @@ goToAngebote() {
   localStorage.setItem('finalData', JSON.stringify(this.formData));
   localStorage.setItem('signature', this.signatureImage);
   this.router.navigate(['/angebote']);
+}
+
+ngOnInit() {
+  const savedSignature = localStorage.getItem('signature');
+  if (savedSignature) {
+    this.signatureImage = savedSignature;
+  }
 }
 
 

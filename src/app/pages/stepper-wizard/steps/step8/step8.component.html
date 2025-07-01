@@ -1,34 +1,73 @@
 <div class="summary-card">
-  <h2><i class="icon"></i> Daten überprüfen</h2>
-  <div class="summary-row" *ngFor="let item of summaryData">
-    <div class="label">{{ item.label }}</div>
-    <div class="value">{{ item.value }}</div>
+  <h2>Daten überprüfen</h2>
+
+  <div class="summary-row">
+    <div class="label">Gebäudeart</div>
+    <div class="value">{{ structuredData.step1?.objectType }}</div>
   </div>
 
-  <div class="signature-block">
-    <div class="label">Hinterlegte Unterschrift</div>
-    <img
-      *ngIf="signatureUrl"
-      [src]="signatureUrl"
-      alt="Signature"
-      class="signature-preview"
-    />
+  <div class="summary-row">
+    <div class="label">Jahresverbrauch</div>
+    <div class="value">{{ structuredData.step1?.consumption }} kWh</div>
   </div>
 
-  <div class="info-box">
-    <h3>Wir kümmern uns um Ihren Wechsel</h3>
-    <p>
-      Die Nutzung des remind.me-Wechselservices ist kostenlos. Ihre Vorteile:
-      Wir wechseln und kümmern uns zuverlässig um alle Angelegenheiten und um
-      Ihren neuen Stromvertrag. Mit der Aktivierung sichern Sie Ihre sofortige
-      Ersparnis. ...
-    </p>
+  <div class="summary-row">
+    <div class="label">Tarifart</div>
+    <div class="value">{{ structuredData.step2?.tariffType }}</div>
   </div>
+
+  <div class="summary-row">
+    <div class="label">Anbieter</div>
+    <div class="value">{{ structuredData.step2?.provider }}</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">Name</div>
+    <div class="value">
+      {{ structuredData.step3?.firstName }} {{ structuredData.step3?.lastName }}
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">Geburtsdatum</div>
+    <div class="value">{{ structuredData.step3?.birthDate | date: 'dd.MM.yyyy' }}</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">Lieferanschrift</div>
+    <div class="value">
+      {{ structuredData.step4?.delivery?.street }} {{ structuredData.step4?.delivery?.houseNumber }}<br />
+      {{ structuredData.step4?.delivery?.plz }} {{ structuredData.step4?.delivery?.city }}
+    </div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">Kundennummer</div>
+    <div class="value">{{ structuredData.step5?.customerNumber }}</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">Zählernummer</div>
+    <div class="value">{{ structuredData.step5?.meterNumber }}</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="label">IBAN</div>
+    <div class="value">{{ structuredData.step6?.iban }}</div>
+  </div>
+
+<div class="signature-block">
+  <div class="label">Hinterlegte Unterschrift</div>
+  <img
+    *ngIf="signatureUrl"
+    [src]="signatureUrl"
+    alt="Unterschrift"
+    class="signature-preview"
+  />
+</div>
 
   <div class="btn-group">
-    <button type="button" class="confirm-btn" (click)="onConfirm()">
-      Bestätigen
-    </button>
-    <button type="button" class="back-btn" (click)="onBack()">Zurück</button>
+    <button class="back-btn" (click)="onBack()">Zurück</button>
+    <button class="confirm-btn" (click)="onConfirm()">Bestätigen</button>
   </div>
 </div>

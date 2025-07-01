@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
   templateUrl: './step8.component.html',
   styleUrls: ['./step8.component.css'],
 })
-export class Step8Component {
+export class Step8Component implements OnInit {
   @Input() summaryData: any;
   @Input() signatureUrl: string = '';
   @Output() back = new EventEmitter<void>();
   @Output() confirm = new EventEmitter<void>();
+  structuredData: any = {};
+
 
   constructor(private router: Router) {}
 
@@ -36,5 +38,14 @@ export class Step8Component {
       this.router.navigate(['/main']);
     }
   }
+ngOnInit() {
+  // Arrayni map qilib, label: parsedValue tarzida objectga o‘tkazamiz
+  this.structuredData = this.summaryData.reduce((acc: any, item: any) => {
+    acc[item.label] = JSON.parse(item.value);
+    return acc;
+  }, {});
+}
+
+
   
 }
