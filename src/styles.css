@@ -29,21 +29,15 @@ body.modal-open {
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-main{
+/* main{
     height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
 
-html,
-body {
-  height: 100%;
-}
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
