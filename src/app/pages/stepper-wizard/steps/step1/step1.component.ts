@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core'; // 👈 @Input import qilindi
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -15,6 +15,8 @@ import {
   styleUrls: ['./step1.component.css'],
 })
 export class Step1Component {
+  @Input() wizardType: 'strom' | 'gas' | 'heizstrom' = 'strom'; // ✅ Qo‘shildi
+
   @Output() next = new EventEmitter<void>();
   @Output() completed = new EventEmitter<any>();
 
@@ -24,6 +26,7 @@ export class Step1Component {
     this.form = this.fb.group({
       objectType: ['', Validators.required],
       consumption: ['', [Validators.required, Validators.min(1)]],
+      tarifType: [''], // ✅ Heizstrom uchun qo‘shildi
     });
   }
 
@@ -42,14 +45,13 @@ export class Step1Component {
   isSelectedConsumption(value: number): boolean {
     return this.form.get('consumption')?.value === value;
   }
-start() {
-  if (this.form.valid) {
-    console.log('Step1 valid:', this.form.value);
-    this.completed.emit(this.form.value);
-  } else {
-    this.form.markAllAsTouched();
+
+  start() {
+    if (this.form.valid) {
+      console.log('Step1 valid:', this.form.value);
+      this.completed.emit(this.form.value);
+    } else {
+      this.form.markAllAsTouched();
+    }
   }
-}
-
-
 }

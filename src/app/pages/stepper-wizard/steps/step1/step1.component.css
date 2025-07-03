@@ -25,6 +25,44 @@
   margin: 4px 0 20px 2px;
 }
 
+/* 🔥 Heizstrom tarif tanlash bo‘limi */
+.tarif-selection {
+  display: flex;
+  gap: 24px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.tarif-selection label {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-color: #f2efef;
+  color: #04884b;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tarif-selection input[type="radio"] {
+  accent-color: #04884b;
+  margin-right: 8px;
+}
+
+.tarif-selection input[type="radio"]:checked + span {
+  font-weight: 600;
+}
+
+/* Tanlangan radio holatda border va fonni o‘zgartirish */
+.tarif-selection input[type="radio"]:checked ~ label,
+.tarif-selection label:has(input[type="radio"]:checked) {
+  border-color: #04884b;
+  background-color: #fff;
+}
+
 /* Tugmalar guruhlari */
 .object-selection,
 .consumption-selection {
