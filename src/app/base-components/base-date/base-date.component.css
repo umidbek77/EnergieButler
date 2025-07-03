@@ -1,0 +1,11 @@
+.input-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  flex: 1 1 45%;
+  min-width: 260px;
+}
