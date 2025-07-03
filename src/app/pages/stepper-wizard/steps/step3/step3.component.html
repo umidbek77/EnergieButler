@@ -36,29 +36,7 @@
     </div>
 
     <!-- Tug‘ilgan sana va telefon -->
-    <div class="input-group">
-      <mat-form-field class="input-wrapper" appearance="outline">
-        <mat-label>Geburtstag</mat-label>
-        <input
-          matInput
-          [matDatepicker]="picker"
-          formControlName="birthDate"
-          placeholder="TT.MM.JJJJ"
-        />
-        <mat-datepicker-toggle matSuffix [for]="picker">
-          <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
-        </mat-datepicker-toggle>
-        <mat-datepicker #picker startView="multi-year"></mat-datepicker>
-        <mat-error *ngIf="isInvalid('birthDate')">
-          Geburtstag ist erforderlich.
-        </mat-error>
-      </mat-form-field>
-
-      <mat-form-field class="input-wrapper" appearance="outline">
-        <mat-label>Telefonnummer (optional)</mat-label>
-        <input matInput formControlName="phone" />
-      </mat-form-field>
-    </div>
+    <app-base-date [form]="form"></app-base-date>
 
     <!-- Tugmalar -->
     <div class="button-group">
