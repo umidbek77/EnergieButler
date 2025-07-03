@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalComponent } from '../../modal/modal.component';
 import { CommonModule } from '@angular/common';
+import { BaseButtonComponent } from '../../base-components/base-button/base-button.component';
 
 @Component({
   selector: 'app-hero',
-  imports: [ModalComponent, CommonModule],
+  imports: [ModalComponent, CommonModule, BaseButtonComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })

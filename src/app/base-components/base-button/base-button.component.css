@@ -1,0 +1,119 @@
+.base-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  gap: 9px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.button-text {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Icon styling */
+.button-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/*Button Sizelar uchun*/
+.small {
+  padding: 9px 18px;
+  font-size: 18px;
+}
+
+.medium {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+.large {
+  padding: 15px 33px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*font weight*/
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+
+/*Standart Button*/
+.green:not(:disabled) {
+  background-color: #04884B;
+  color: white;
+}
+
+.soft.green {
+  background-color: #04884B;
+  color: white;
+  border: 1px solid #04884B;
+}
+
+.soft.green:hover {
+  background-color: #06a35a; 
+}
+
+/*Disabled holat uchun*/
+.green:disabled {
+  background-color: #18943e;
+  color: white;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*White button */
+.white{
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  transition: transform 0.4s ease;
+}
+
+.white.default:hover {
+  background-color: aliceblue;
+  color: rgb(18, 143, 245);
+  transform: scale(0.94);
+}
+
+.white.primary:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: scale(0.97);
+}
+
+
+.outline.green {
+  background-color: white;
+  border: 1px solid #04884B;
+  color: #04884B;
+}
+
+.outline.green:hover {
+  background-color: #04884B;
+  color: white;
+  border: 1px solid #04884B;
+}
+
+
+.filled.green {
+  background-color: #04884B;
+  color: white;
+  border: 1px solid #04884B;
+}
+
+.filled.green:hover {
+  background-color: white;
+  color: #04884B;
+  border: 1px solid #04884B;
+}
