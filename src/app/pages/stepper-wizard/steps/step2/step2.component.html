@@ -14,39 +14,46 @@
 
     <form [formGroup]="form">
       <!-- PLZ va Ort -->
-      <label class="form-label"
-        >Wo befindet sich ihr aktueller Stromanschluss?</label
-      >
+<label class="form-label">
+  Wo befindet sich ihr aktueller Stromanschluss?
+</label>
 
-      <div class="location-fields">
-        <!-- PLZ input -->
-        <mat-form-field appearance="outline" class="half-width">
-          <mat-label>PLZ</mat-label>
-          <input matInput type="text" formControlName="plz" />
-        </mat-form-field>
+<!-- PLZ va Ort -->
+<div class="location-fields">
+  <!-- PLZ input -->
+  <div class="field-wrapper">
+    <label class="custom-label" for="plz">PLZ</label>
+    <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
+      <input matInput type="text" id="plz" formControlName="plz" />
+    </mat-form-field>
+  </div>
 
-        <!-- Ort select -->
-        <mat-form-field appearance="outline" class="half-width">
-          <mat-label>Ort</mat-label>
-          <mat-select formControlName="city">
-            <mat-option value="">Bitte wählen...</mat-option>
-            <mat-option *ngFor="let city of citiesList" [value]="city">
-              {{ city }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+  <!-- Ort select -->
+  <div class="field-wrapper">
+    <label class="custom-label" for="city">Ort</label>
+    <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
+      <mat-select id="city" formControlName="city">
+        <mat-option value="">Bitte wählen...</mat-option>
+        <mat-option *ngFor="let city of citiesList" [value]="city">
+          {{ city }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
 
-      <!-- Provider -->
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Wer ist Ihr bisheriger Anbieter?</mat-label>
-        <mat-select formControlName="provider">
-          <mat-option value="">Bitte wählen...</mat-option>
-          <mat-option *ngFor="let provider of providersList" [value]="provider">
-            {{ provider }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+<!-- Provider -->
+<div class="field-wrapper">
+  <label class="custom-label" for="provider">Wer ist Ihr bisheriger Anbieter?</label>
+  <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
+    <mat-select id="provider" formControlName="provider">
+      <mat-option value="">Bitte wählen...</mat-option>
+      <mat-option *ngFor="let provider of providersList" [value]="provider">
+        {{ provider }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
 
       <br />
       <!-- Tarife -->

@@ -6,12 +6,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Firestore, doc, getDoc, setDoc } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { BaseInputComponent } from "../../base-components/base-input/base-input.component";
 
 @Component({
   selector: 'app-profile',
+  standalone: true,
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
-  imports:[ReactiveFormsModule, CommonModule]
+  imports: [ReactiveFormsModule, CommonModule, BaseInputComponent]
 })
 export class ProfileComponent implements OnInit {
   user: User | null = null;
