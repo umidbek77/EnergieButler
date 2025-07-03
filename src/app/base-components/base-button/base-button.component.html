@@ -1,0 +1,18 @@
+<button class="base-button"
+    [ngClass]="[size, color, variant, fontWeight, theme]"
+    [disabled]="disabled"
+    [type]="type">
+
+    <!--icon chapda -->
+    @if(icon && iconPosition === 'left'){
+        <i class="material-icons button-icon">{{ icon }}</i>
+    }
+        <span class="button-text">{{ text }}</span>
+    <!--icon ongda-->
+
+    @if (icon && iconPosition === 'right') {
+        <i class="material-icons button-icon">{{ icon }}</i>
+    }
+
+         
+</button>
