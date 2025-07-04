@@ -1,61 +1,38 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
-import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { LOCALE_ID } from '@angular/core';
-import { NumericInputDirective } from '../../directives/numeric-input.directive'; 
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { DatePickerModule } from 'primeng/datepicker';
+import { NumericInputDirective } from '../../directives/numeric-input.directive';
 import { DateMaskDirective } from '../../directives/date-mask.directive';
-
-export const CUSTOM_DATE_FORMATS = {
-  parse: {
-    dateInput: 'dd.MM.yyyy',
-  },
-  display: {
-    dateInput: 'dd.MM.yyyy',
-    monthYearLabel: 'MMMM yyyy',
-    dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM yyyy',
-  },
-};
 
 @Component({
   selector: 'app-base-date',
+  templateUrl: './base-date.component.html',
+  styleUrls: ['./base-date.component.css'],
   standalone: true,
   imports: [
-    CommonModule,
+    FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatIconModule,
-    MatButtonModule,
-    NumericInputDirective,
-    DateMaskDirective
-  ],
-  templateUrl: './base-date.component.html',
-  styleUrl: './base-date.component.css',
-  providers: [
-    { provide: MAT_DATE_FORMATS, useValue: CUSTOM_DATE_FORMATS },
-    { provide: LOCALE_ID, useValue: 'de-DE' }
+    FloatLabelModule,
+    DatePickerModule,
+    // NumericInputDirective,
+    // DateMaskDirective
   ]
 })
-export class BaseDateComponent  implements OnInit{
+export class BaseDateComponent implements OnInit {
+  value3: Date | undefined;
   @Input() form!: FormGroup;
-  private dateAdapter = inject(DateAdapter);
+
+  formGroup!: FormGroup;
+  birthDateValue: Date | undefined;
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.dateAdapter.setLocale('de-DE');
-  }
-
-  isInvalid(controlName: string): boolean {
-    const control = this.form?.get(controlName);
-    return control ? control.invalid && control.touched : false;
+    this.formGroup = this.fb.group({
+      phone: ['']
+    });
   }
 }
-

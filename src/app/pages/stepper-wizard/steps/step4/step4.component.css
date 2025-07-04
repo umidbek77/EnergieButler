@@ -99,7 +99,7 @@
 /* BUTTON GROUP */
 .form-actions {
   display: flex;
-  justify-content: space-between;
+  width: 45%;
   gap: 20px;
   margin-top: 32px;
 }
