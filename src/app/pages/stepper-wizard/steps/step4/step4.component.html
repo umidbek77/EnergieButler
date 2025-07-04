@@ -1,78 +1,56 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="step4-form">
   <fieldset formGroupName="delivery" class="section">
     <legend>
-      <svg
-        class="icon-home"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
-        />
+      <svg class="icon-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z" />
       </svg>
       Liefer- und Rechnungsanschrift
     </legend>
 
-    <div class="form-row">
-      <mat-form-field appearance="outline" class="flex-1">
-        <mat-label>PLZ</mat-label>
-        <input matInput type="text" formControlName="plz" />
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="flex-1">
-        <mat-label>Ort</mat-label>
-        <input matInput type="text" formControlName="city" />
-      </mat-form-field>
+    <div class="form-row street-form">
+      <div class="field-wrapper">
+        <label class="custom-label" for="plz">PLZ</label>
+        <app-base-input-number [maxlength]="5" id="plz" formControlName="plz" />
+      </div>
+      <div class="field-wrapper">
+        <label class="custom-label" for="ort">Ort</label>
+        <app-base-input-text type="text" id="ort" formControlName="city" />
+      </div>
     </div>
 
-    <div class="form-row">
-      <mat-form-field appearance="outline" class="flex-1">
-        <mat-label>Straße</mat-label>
-        <input matInput type="text" formControlName="street" />
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="flex-1">
-        <mat-label>Hausnummer</mat-label>
-        <input matInput type="text" formControlName="houseNumber" />
-      </mat-form-field>
+    <div class="form-row street-form">
+      <div class="field-wrapper">
+        <label class="custom-label" for="street">Straße</label>
+        <app-base-input-text type="text" formControlName="street" />
+      </div>
+
+      <div class="field-wrapper">
+        <label class="custom-label " for="hausnummer">Hausnummer</label>
+        <app-base-input-number class="hausnummer"  formControlName="houseNumber" />
+      </div>
+
     </div>
   </fieldset>
 
   <div class="checkbox-row">
-    <input
-      type="checkbox"
-      id="diffBilling"
-      formControlName="differentBilling"
-    />
+    <input type="checkbox" id="diffBilling" formControlName="differentBilling" />
     <label for="diffBilling">Abweichende Rechnungsanschrift</label>
   </div>
 
-  <fieldset
-    *ngIf="form.get('differentBilling')?.value"
-    formGroupName="billing"
-    class="section"
-  >
+  <fieldset *ngIf="form.get('differentBilling')?.value" formGroupName="billing" class="section">
     <legend>
-      <svg
-        class="icon-user"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"
-        />
+      <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z" />
       </svg>
       Wer bezahlt die Rechnung?
     </legend>
 
     <div class="form-row radio-group">
       <label>Anrede</label>
-      <label
-        ><input type="radio" formControlName="salutation" value="frau" />
-        Frau</label
-      >
-      <label
-        ><input type="radio" formControlName="salutation" value="herr" />
-        Herr</label
-      >
+      <label><input type="radio" formControlName="salutation" value="frau" />
+        Frau</label>
+      <label><input type="radio" formControlName="salutation" value="herr" />
+        Herr</label>
     </div>
 
     <div class="form-row">
@@ -89,12 +67,7 @@
     <div class="form-row">
       <mat-form-field appearance="outline" class="flex-1">
         <mat-label>Geburtstag</mat-label>
-        <input
-          matInput
-          [matDatepicker]="picker"
-          formControlName="birthDate"
-          placeholder="Geburtstag auswählen"
-        />
+        <input matInput [matDatepicker]="picker" formControlName="birthDate" placeholder="Geburtstag auswählen" />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
