@@ -75,24 +75,6 @@ select {
   transition: border-color 0.2s ease;
 }
 
-mat-form-field.full-width {
-  width: 100%;
-  margin-top: 6px;
-  margin-bottom: 10px;
-}
-
-mat-form-field .mat-form-field-outline {
-  border-radius: 8px;
-}
-
-mat-label {
-  font-weight: 500;
-  color: #333;
-}
-
-mat-select {
-  font-size: 14px;
-}
 .mat-mdc-option.mdc-list-item{
   background-color: white;
 }

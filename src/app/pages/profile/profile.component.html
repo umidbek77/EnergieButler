@@ -12,49 +12,44 @@
     <div class="form-grid-2col">
       <!-- Anrede und Titel -->
       <label for="anrede">Anrede und Titel</label>
-     <div class="input-pair">
-  <!-- Anrede -->
-  <div style="flex: 1;">
-    <p-floatlabel class="w-full md:w-56" variant="on">
-      <p-select
-        formControlName="anrede"
-        inputId="anrede_select"
-        [options]="andrede"
-        optionLabel="name"
-        class="w-full"
-      />
-      <label for="anrede_select">Anrede (optional)</label>
-    </p-floatlabel>
-  </div>
+      <div class="input-pair">
+        <!-- Anrede -->
+        <div style="flex: 1;">
+          <app-base-select formControlName="anrede" inputId="anrede_select" [options]="andrede" optionLabel="name"
+            placeholder="Anrede" labelText="Anrede (optional)" fontSize="16px" labelFontSize="12px" [filter]="false"
+            [editable]="false" class="w-full" />
 
-  <!-- Titel -->
-  <div style="flex: 1;">
-    <p-floatlabel class="w-full md:w-56" variant="on">
-      <p-select
-        formControlName="titel"
-        inputId="titel_select"
-        [options]="titel"
-        optionLabel="name"
-        class="w-full"
-      />
-      <label for="titel_select">Titel (optional)</label>
-    </p-floatlabel>
-  </div>
-</div>
+        </div>
+
+        <!-- Titel -->
+        <div style="flex: 1;">
+          <app-base-select formControlName="titel" inputId="titel_select" [options]="titel" optionLabel="name"
+            class="w-full" placeholder="Titel" labelText="Titel (optional)" labelFontSize="12px" />
+        </div>
+      </div>
 
       <!-- Vorname -->
       <label for="vorname">Vorname</label>
-      <app-base-input-name id="vorname" formControlName="vorname"  />
+      <app-base-input-name placeholder="Vorname" id="vorname" formControlName="vorname" />
 
       <!-- Nachname -->
       <label for="nachname">Nachname</label>
-      <app-base-input-name id="nachname" formControlName="nachname"/>
+      <app-base-input-name placeholder="Nachname" id="nachname" formControlName="nachname" />
 
       <!-- PLZ und Ort -->
       <label>PLZ und Ort</label>
       <div class="input-pair">
-        <app-base-input-number [maxlength]="5" formControlName="plz" placeholder="PLZ"  />
-        <app-base-input-text formControlName="ort" placeholder="Ort" />
+        <div style="flex: 1;">
+          <app-base-input-number [maxlength]="5" formControlName="plz" placeholder="PLZ" />
+        </div>
+
+        <div style="flex: 1;">
+          <app-base-select formControlName="ort" inputId="ort_select" [options]="ort" optionLabel="city"
+            placeholder="Ort" dropdownFontSize="16px" labelText="Ort" fontSize="16px" labelFontSize="14px" [editable]="true" 
+            styleClass="md:w-56 ort-select" />
+
+        </div>
+
       </div>
 
       <!-- Straße und Nr. -->
@@ -78,43 +73,23 @@
       <!-- Geburtstag -->
       <label>Geburtstag</label>
       <div class="input-pair" formGroupName="geburtstag">
-  <p-floatlabel class="w-full md:w-56" variant="on">
-  <p-select
-    formControlName="tag"
-    inputId="tag_select"
-    [options]="days"
-    optionLabel="label"
-    optionValue="value"
-    class="w-full"
-  />
-  <label for="tag_select">Tag</label>
-</p-floatlabel>
+        <p-floatlabel class="w-full md:w-56" variant="on">
+          <p-select formControlName="tag" inputId="tag_select" [options]="days" optionLabel="label" optionValue="value"
+            class="w-full" placeholder="Tag" />
+          <label for="tag_select">Tag</label>
+        </p-floatlabel>
 
-<p-floatlabel class="w-full md:w-56" variant="on">
-  <p-select
-    formControlName="monat"
-    inputId="monat_select"
-    [options]="monate"
-    optionLabel="label"
-    optionValue="value"
-    class="w-full"
-    placeholder="Monat"
-  />
-  <label for="monat_select">Monat</label>
-</p-floatlabel>
+        <p-floatlabel class="w-full md:w-56" variant="on">
+          <p-select formControlName="monat" inputId="monat_select" [options]="monate" optionLabel="label"
+            optionValue="value" class="w-full" placeholder="Monat" />
+          <label for="monat_select">Monat</label>
+        </p-floatlabel>
 
-<p-floatlabel class="w-full md:w-56" variant="on">
-  <p-select
-    formControlName="jahr"
-    inputId="jahr_select"
-    [options]="jahre"
-    optionLabel="label"
-    optionValue="value"
-    class="w-full"
-    placeholder="Jahr"
-  />
-  <label for="jahr_select">Jahr</label>
-</p-floatlabel>
+        <p-floatlabel class="w-full md:w-56" variant="on">
+          <p-select formControlName="jahr" inputId="jahr_select" [options]="jahre" optionLabel="label"
+            optionValue="value" class="w-full" placeholder="Jahr" />
+          <label for="jahr_select">Jahr</label>
+        </p-floatlabel>
 
       </div>
     </div>
@@ -130,9 +105,5 @@
   <p>Bitte loggen Sie sich ein, um Ihr Profil zu sehen.</p>
 </ng-template>
 
-<p-toast
-  [showTransitionOptions]="'250ms'"
-  [showTransformOptions]="'translateX(100%)'"
-  [hideTransitionOptions]="'150ms'"
-  [hideTransformOptions]="'translateX(100%)'"
-></p-toast>
+<p-toast [showTransitionOptions]="'250ms'" [showTransformOptions]="'translateX(100%)'" [hideTransitionOptions]="'150ms'"
+  [hideTransformOptions]="'translateX(100%)'"></p-toast>

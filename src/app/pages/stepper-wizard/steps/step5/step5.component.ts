@@ -49,7 +49,7 @@ export class Step5Component {
       customerNumber: ['', Validators.required],
       addLater: [true],
       knowsMarketId: [true],
-      marketLocationId: [''],
+      marketLocationId: ['', Validators.required],
     });
 
     // End Date
