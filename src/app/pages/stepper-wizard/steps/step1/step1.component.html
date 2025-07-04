@@ -5,6 +5,7 @@
     <form [formGroup]="form" (ngSubmit)="start()">
       <label class="form-label">Für welches Objekt wollen Sie sparen?</label>
       <div class="object-selection">
+        <!-- Wohnung -->
         <button
           type="button"
           [class.selected]="isSelectedObject('wohnung')"
@@ -22,6 +23,7 @@
           Wohnung
         </button>
 
+        <!-- Haus -->
         <button
           type="button"
           [class.selected]="isSelectedObject('haus')"
@@ -39,6 +41,7 @@
           Haus
         </button>
 
+        <!-- Gewerbe -->
         <button
           type="button"
           [class.selected]="isSelectedObject('gewerbe')"
@@ -57,32 +60,35 @@
         </button>
       </div>
 
-      <label class="form-label"
-        >Wie hoch ist Ihr aktueller Jahresverbrauch?</label
-      >
+      <!-- 🔥 Heizstrom uchun tarif tanlash -->
+      <div *ngIf="wizardType === 'heizstrom'" class="form-group">
+        <label class="form-label">Welche Tarife sollen wir vergleichen?</label>
+        <div class="tarif-selection">
+          <label>
+            <input type="radio" formControlName="tarifType" value="ein" />
+            Eintarifzähler
+          </label>
+          <label>
+            <input type="radio" formControlName="tarifType" value="zwei" />
+            Zweitarifzähler
+          </label>
+        </div>
+      </div>
+
+      <!-- Consumption title -->
+      <label class="form-label">
+        Wie hoch ist Ihr aktueller Jahresverbrauch?
+      </label>
+
+      <!-- 📊 Dinamik consumption selection -->
       <div class="consumption-selection">
-        <button
-          type="button"
-          [class.selected]="isSelectedConsumption(5000)"
-          (click)="selectConsumption(5000)"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
+        <!-- STROM & HEIZSTROM iconlar: odamchalar -->
+        <ng-container *ngIf="wizardType === 'strom'">
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(5000)"
+            (click)="selectConsumption(5000)"
           >
-            <path
-              d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
-            ></path>
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          [class.selected]="isSelectedConsumption(10000)"
-          (click)="selectConsumption(10000)"
-        >
-          <ng-container *ngFor="let _ of [0, 1]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -92,44 +98,138 @@
                 d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
               ></path>
             </svg>
-          </ng-container>
-        </button>
+          </button>
 
-        <button
-          type="button"
-          [class.selected]="isSelectedConsumption(15000)"
-          (click)="selectConsumption(15000)"
-        >
-          <ng-container *ngFor="let _ of [0, 1, 2]">
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(10000)"
+            (click)="selectConsumption(10000)"
+          >
+            <ng-container *ngFor="let _ of [0, 1]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
+                ></path>
+              </svg>
+            </ng-container>
+          </button>
+
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(15000)"
+            (click)="selectConsumption(15000)"
+          >
+            <ng-container *ngFor="let _ of [0, 1, 2]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
+                ></path>
+              </svg>
+            </ng-container>
+          </button>
+
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(20000)"
+            (click)="selectConsumption(20000)"
+          >
+            <ng-container *ngFor="let _ of [0, 1, 2, 3]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
+                ></path>
+              </svg>
+            </ng-container>
+            +
+          </button>
+        </ng-container>
+
+        <!-- GAS iconlar: uychalar -->
+        <ng-container *ngIf="wizardType === 'gas'">
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(500)"
+            (click)="selectConsumption(500)"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
+              viewBox="0 0 22 22"
               fill="currentColor"
             >
               <path
-                d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
+                d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM9 9.99998H15V16H9V9.99998ZM11 12V14H13V12H11Z"
               ></path>
             </svg>
-          </ng-container>
-        </button>
+          </button>
 
-        <button
-          type="button"
-          [class.selected]="isSelectedConsumption(20000)"
-          (click)="selectConsumption(20000)"
-        >
-          <ng-container *ngFor="let _ of [0, 1, 2, 3]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"
-              ></path>
-            </svg> </ng-container
-          >+
-        </button>
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(1000)"
+            (click)="selectConsumption(1000)"
+          >
+            <ng-container *ngFor="let _ of [0, 1]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 22 22"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM9 9.99998H15V16H9V9.99998ZM11 12V14H13V12H11Z"
+                ></path>
+              </svg>
+            </ng-container>
+          </button>
+
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(1500)"
+            (click)="selectConsumption(1500)"
+          >
+            <ng-container *ngFor="let _ of [0, 1, 2]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 22 22"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM9 9.99998H15V16H9V9.99998ZM11 12V14H13V12H11Z"
+                ></path>
+              </svg>
+            </ng-container>
+          </button>
+
+          <button
+            type="button"
+            [class.selected]="isSelectedConsumption(2000)"
+            (click)="selectConsumption(2000)"
+          >
+            <ng-container *ngFor="let _ of [0, 1, 2, 3]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 22 22"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM9 9.99998H15V16H9V9.99998ZM11 12V14H13V12H11Z"
+                ></path>
+              </svg>
+            </ng-container>
+          </button>
+
+          <!-- ... Repeat same as above with ngFor and house icon ... -->
+        </ng-container>
       </div>
 
       <input

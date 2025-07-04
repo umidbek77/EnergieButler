@@ -14,13 +14,18 @@ import { StormStageComponent } from './pages/storm-stage/storm-stage.component';
 import { OfferReadyComponent } from './pages/offer-ready/offer-ready.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { authGuard } from './guards/auth.guard';
+import { StepperWizardComponent } from './pages/stepper-wizard/stepper-wizard.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'main', component: MainComponent },
   { path: 'angebote', component: AngeboteComponent },
-  { path: 'wechselservice', component: WechselservicesComponent, canActivate: [authGuard] },
+  {
+    path: 'wechselservice',
+    component: WechselservicesComponent,
+    canActivate: [authGuard],
+  },
   { path: 'tariff-selector', component: TariffSelectorComponent },
   { path: 'object-usege', component: ObjectUsageComponent },
   { path: 'consumption-step', component: ConsumptionStepComponent },
@@ -29,7 +34,7 @@ export const routes: Routes = [
   { path: 'provider-step', component: ProviderStepComponent },
   { path: 'storm-stage', component: StormStageComponent },
   { path: 'offer-ready', component: OfferReadyComponent },
-    { path: 'profile', component: ProfileComponent,  canActivate: [authGuard], },
+  { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
   {
     path: 'offer-ready',
     loadComponent: () =>
@@ -52,4 +57,6 @@ export const routes: Routes = [
         (m) => m.STEP_ROUTER
       ),
   },
+
+  { path: 'wizard/:type', component: StepperWizardComponent },
 ];

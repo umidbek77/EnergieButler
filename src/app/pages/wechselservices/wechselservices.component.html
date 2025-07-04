@@ -13,11 +13,22 @@
       </div>
 
       <div class="button-div">
-        <button class="primary-button" routerLink="/wizard">
+        <button
+          class="primary-button"
+          [routerLink]="['/wizard']"
+          [queryParams]="{ type: 'strom' }"
+        >
           Stromwechsel anlegen
         </button>
-        <button routerLink="/wizard">Gaswechsel anlegen</button>
-        <button routerLink="/wizard">Heizstromwechsel anlegen</button>
+        <button [routerLink]="['/wizard']" [queryParams]="{ type: 'gas' }">
+          Gaswechsel anlegen
+        </button>
+        <button
+          [routerLink]="['/wizard']"
+          [queryParams]="{ type: 'heizstrom' }"
+        >
+          Heizstromwechsel anlegen
+        </button>
       </div>
     </div>
   </section>
