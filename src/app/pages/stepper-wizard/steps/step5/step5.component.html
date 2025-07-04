@@ -48,15 +48,15 @@
   <section class="card">
     <h3>Kundendaten</h3>
 
-    <div class="flex">
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Zählernummer</mat-label>
-        <input matInput type="text" formControlName="meterNumber" />
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Kundennummer</mat-label>
-        <input matInput type="text" formControlName="customerNumber" />
-      </mat-form-field>
+    <div class="flex-container">
+       <div class="input-box"> 
+        <label>Zählernummer</label>
+        <app-base-input-number   formControlName="meterNumber" placeholder="Zählernummer" />
+      </div>
+        <div class="input-box">
+          <label>Kundennummer</label>
+        <app-base-input-number  formControlName="customerNumber" placeholder="Kundennummer" />
+        </div>
     </div>
 
     <mat-checkbox formControlName="addLater">
@@ -68,10 +68,8 @@
     </mat-checkbox>
 
     <div *ngIf="form.get('knowsMarketId')?.value">
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Marktlokations-ID</mat-label>
-        <input matInput type="text" formControlName="marketLocationId" />
-      </mat-form-field>
+        <label>Marktlokations-ID</label>
+        <app-base-input-number [maxlength]="11" formControlName="marketLocationId" placeholder="Marktlokations-ID (optional)* " />
     </div>
   </section>
 

@@ -13,6 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { BaseInputNumberComponent } from "../../../../base-components/base-input-number/base-input-number.component";
 
 @Component({
   selector: 'app-step5',
@@ -27,7 +28,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-  ],
+    BaseInputNumberComponent
+],
   templateUrl: './step5.component.html',
   styleUrls: ['./step5.component.css'],
 })
@@ -47,7 +49,7 @@ export class Step5Component {
       customerNumber: ['', Validators.required],
       addLater: [true],
       knowsMarketId: [true],
-      marketLocationId: [''],
+      marketLocationId: ['', Validators.required],
     });
 
     // End Date

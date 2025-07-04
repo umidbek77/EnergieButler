@@ -15,18 +15,6 @@
       </div>
       <button (click)="openModal()" class="cta">Einsparung berechnen</button>
 
-        <base-button 
-          text="Stromwechsel anlegen"
-          icon="arrow_forward"
-          iconPosition="right"
-          size="medium"
-          color="green"
-          fontWeight="bold"
-          [disabled]="false"
-          variant="outline"
-          theme="primary"
-          type="button"></base-button>
-
       <app-modal *ngIf="showModal" (close)="closeModal()"></app-modal>
       <div class="stats">
         <span>

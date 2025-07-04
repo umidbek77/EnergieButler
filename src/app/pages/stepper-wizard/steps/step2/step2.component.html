@@ -13,7 +13,6 @@
     </h2>
 
     <form [formGroup]="form">
-      <!-- PLZ va Ort -->
 <label class="form-label">
   Wo befindet sich ihr aktueller Stromanschluss?
 </label>
@@ -23,37 +22,39 @@
   <!-- PLZ input -->
   <div class="field-wrapper">
     <label class="custom-label" for="plz">PLZ</label>
-    <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
-      <input matInput type="text" id="plz" formControlName="plz" />
-    </mat-form-field>
+      <app-base-input-number [maxlength]="5" placeholder="Plz"  type="text" id="plz" formControlName="plz" />
   </div>
 
   <!-- Ort select -->
-  <div class="field-wrapper">
-    <label class="custom-label" for="city">Ort</label>
-    <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
-      <mat-select id="city" formControlName="city">
-        <mat-option value="">Bitte wählen...</mat-option>
-        <mat-option *ngFor="let city of citiesList" [value]="city">
-          {{ city }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+<div class="field-wrapper">
+  <label for="city">Ort</label>
+  <p-floatlabel class="w-full">
+    <p-select
+      inputId="city"
+      [options]="citiesList"
+      formControlName="city"
+      placeholder="Bitte wählen..."
+      class="w-full"
+    />
+  </p-floatlabel>
+</div>
+
 </div>
 
 <!-- Provider -->
 <div class="field-wrapper">
   <label class="custom-label" for="provider">Wer ist Ihr bisheriger Anbieter?</label>
-  <mat-form-field appearance="fill" class="full-width custom-rounded no-label">
-    <mat-select id="provider" formControlName="provider">
-      <mat-option value="">Bitte wählen...</mat-option>
-      <mat-option *ngFor="let provider of providersList" [value]="provider">
-        {{ provider }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+  <p-floatlabel class="w-full">
+    <p-dropdown
+      inputId="provider"
+      [options]="providersList"
+      formControlName="provider"
+      placeholder="Bitte wählen..."
+      class="w-full"
+    />
+  </p-floatlabel>
 </div>
+
 
       <br />
       <!-- Tarife -->
