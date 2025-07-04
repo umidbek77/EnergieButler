@@ -5,7 +5,7 @@ import { BaseButtonComponent } from '../../base-components/base-button/base-butt
 
 @Component({
   selector: 'app-hero',
-  imports: [ModalComponent, CommonModule, BaseButtonComponent],
+  imports: [ModalComponent, CommonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })

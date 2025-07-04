@@ -51,11 +51,11 @@
     <div class="flex-container">
        <div class="input-box"> 
         <label>Zählernummer</label>
-        <app-base-input-number   formControlName="meterNumber" />
+        <app-base-input-number   formControlName="meterNumber" placeholder="Zählernummer" />
       </div>
         <div class="input-box">
           <label>Kundennummer</label>
-        <app-base-input-number  formControlName="customerNumber" />
+        <app-base-input-number  formControlName="customerNumber" placeholder="Kundennummer" />
         </div>
     </div>
 
@@ -69,7 +69,7 @@
 
     <div *ngIf="form.get('knowsMarketId')?.value">
         <label>Marktlokations-ID</label>
-        <app-base-input-number [maxlength]="11" formControlName="marketLocationId" />
+        <app-base-input-number [maxlength]="11" formControlName="marketLocationId" placeholder="Marktlokations-ID (optional)* " />
     </div>
   </section>
 

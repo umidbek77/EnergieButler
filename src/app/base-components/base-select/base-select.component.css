@@ -1,0 +1,20 @@
+.p-select {
+  font-size: 16px; /* yoki istalgan o‘lcham */
+  padding: 6px;
+  width: 100%;
+}
+
+.p-select-label {
+  font-size: 12px;
+}
+
+.p-select-item {
+  font-size: 16px;
+}
+p-floatlabel {
+  font-size: 16px;
+}
+
+:host ::ng-deep .p-dropdown-item {
+  font-size: var(--dropdown-font-size, 16px);
+}

@@ -15,12 +15,16 @@ import { Select } from 'primeng/select';
 import { FloatLabel } from 'primeng/floatlabel';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { BaseSelectComponent } from "../../base-components/base-select/base-select.component";
 
 interface Anrede {
   name: string;
 }
 interface Titel {
   name: string;
+}
+interface Ort{
+  city:string;
 }
 
 @Component({
@@ -36,8 +40,9 @@ interface Titel {
     BaseInputNameComponent,
     BaseInputNumberComponent,
     BaseInputTextComponent,
-    ToastModule 
-  ],
+    ToastModule,
+    BaseSelectComponent
+],
     providers: [MessageService]
 })
 export class ProfileComponent implements OnInit {
@@ -53,6 +58,20 @@ export class ProfileComponent implements OnInit {
     { name: 'Dr.' },
     { name: 'Prof.' }
   ];
+  ort: Ort[]=[
+    {city:'Berlin'},
+    {city:'Hamburg'},
+    {city:'Munich'},
+    {city:'Oldenburg'},
+    {city:'Berlin'},
+    {city:'Hamburg'},
+    {city:'Munich'},
+    {city:'Oldenburg'},
+    {city:'Berlin'},
+    {city:'Hamburg'},
+    {city:'Munich'},
+    {city:'Oldenburg'}
+  ]
 
   days = Array.from({ length: 31 }, (_, i) => ({
     label: `${i + 1}`,

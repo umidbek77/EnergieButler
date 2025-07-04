@@ -73,13 +73,15 @@ select[disabled] {
   gap: 10px;
 }
 
-.p-select{
-  width: 100%;
-    padding: 8px;
+
+/* Select uchun kod */
+
+.ort-select{
+  padding: 13px;
 }
-select {
+.p-select {
   width: 100%;
-  padding: 16px 12px;
+  padding: 6px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
@@ -87,6 +89,14 @@ select {
   transition: border-color 0.2s ease;
 }
 
+.p-select-label {
+    font-size: 17px;
+}
+
+::ng-deep input.p-select-label {
+    cursor: default;
+    font-size: 17px;
+}
 .profile-btns {
   margin-top: 30px;
   display: flex;
