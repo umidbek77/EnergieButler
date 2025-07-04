@@ -44,17 +44,30 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-}
-
-.form-row .mat-form-field {
-  flex: 1 1 48%;
-  min-width: 280px;
-}
-
-/* FULL WIDTH FIELDS */
-.mat-form-field {
   width: 100%;
 }
+
+.form-row .street-form {
+  flex: 1 1 48%;
+  min-width: 280px;
+  gap: 10px;
+}
+
+.field-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.street-form:last-of-type .field-wrapper:first-child {
+  flex: 1 1 auto; 
+}
+
+.street-form:last-of-type .field-wrapper:last-child {
+  flex: 0 0 200px; 
+}
+
 
 .checkbox-row {
   display: flex;

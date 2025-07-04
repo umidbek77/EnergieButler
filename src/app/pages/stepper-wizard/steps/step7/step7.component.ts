@@ -1,13 +1,16 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-step7',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, ToastModule],
   templateUrl: './step7.component.html',
   styleUrls: ['./step7.component.css'],
+  providers: [MessageService]
 })
 export class Step7Component {
   @Output() next = new EventEmitter<{ signed: boolean; type: string; image?: string }>();
@@ -16,10 +19,18 @@ export class Step7Component {
   drawing = true;
   isSigned = false;
 
-  saveSignature() {
-    this.isSigned = true;
-    alert('Unterschrift gespeichert ✅');
-  }
+
+  constructor(private messageService: MessageService) {}
+saveSignature() {
+  this.isSigned = true;
+
+  this.messageService.add({
+    severity: 'success',
+    summary: 'Erfolgreich',
+    detail: 'Unterschrift gespeichert',
+    life: 3000
+  });
+}
 
   clearSignature() {
     const canvas = document.getElementById('signature') as HTMLCanvasElement;

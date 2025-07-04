@@ -1,0 +1,9 @@
+<input
+  pInputText
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [value]="value"
+  (input)="onInput($event)"
+  (keypress)="restrictKey($event)"
+  (blur)="onTouched()"
+/>

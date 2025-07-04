@@ -14,6 +14,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { BaseInputNumberComponent } from "../../../../base-components/base-input-number/base-input-number.component";
+import { BaseInputTextComponent } from "../../../../base-components/base-input-text/base-input-text.component";
 
 @Component({
   selector: 'app-step4',
@@ -31,7 +33,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-  ],
+    BaseInputNumberComponent,
+    BaseInputTextComponent
+],
 })
 export class Step4Component {
   @Output() next = new EventEmitter<void>();

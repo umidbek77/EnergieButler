@@ -2,7 +2,8 @@
   <h2>Übersicht über Ihr Profil</h2>
   <p>
     Bitte hinterlegen Sie Ihre persönlichen Adress- und Kontaktdaten.
-    Dadurch können Sie auch schneller und bequemer von einem Deal oder Vertragswechsel profitieren, da Sie Ihre Daten dann nicht noch einmal angeben müssen.
+    Dadurch können Sie auch schneller und bequemer von einem Deal oder Vertragswechsel profitieren, da Sie Ihre Daten
+    dann nicht noch einmal angeben müssen.
   </p>
 
   <h3>PERSÖNLICHE DATEN</h3>
@@ -11,73 +12,110 @@
     <div class="form-grid-2col">
       <!-- Anrede und Titel -->
       <label for="anrede">Anrede und Titel</label>
-      <div class="input-pair">
-        <select formControlName="anrede" id="anrede">
-           <option value="">Anrede (optional)</option>
-          <option value="Herr">Herr</option>
-          <option value="Frau">Frau</option>
-        </select>
-        <select formControlName="titel">
-          <option value="">Titel (optional)</option>
-          <option value="Dr.">Dr.</option>
-          <option value="Prof.">Prof.</option>
-        </select>
-      </div>
+     <div class="input-pair">
+  <!-- Anrede -->
+  <div style="flex: 1;">
+    <p-floatlabel class="w-full md:w-56" variant="on">
+      <p-select
+        formControlName="anrede"
+        inputId="anrede_select"
+        [options]="andrede"
+        optionLabel="name"
+        class="w-full"
+      />
+      <label for="anrede_select">Anrede (optional)</label>
+    </p-floatlabel>
+  </div>
+
+  <!-- Titel -->
+  <div style="flex: 1;">
+    <p-floatlabel class="w-full md:w-56" variant="on">
+      <p-select
+        formControlName="titel"
+        inputId="titel_select"
+        [options]="titel"
+        optionLabel="name"
+        class="w-full"
+      />
+      <label for="titel_select">Titel (optional)</label>
+    </p-floatlabel>
+  </div>
+</div>
 
       <!-- Vorname -->
       <label for="vorname">Vorname</label>
-      <app-base-input id="vorname" formControlName="vorname" [inputTypeRestriction]="'letters'" />
+      <app-base-input-name id="vorname" formControlName="vorname"  />
 
       <!-- Nachname -->
       <label for="nachname">Nachname</label>
-      <app-base-input id="nachname" formControlName="nachname"  [inputTypeRestriction]="'letters'" />
+      <app-base-input-name id="nachname" formControlName="nachname"/>
 
       <!-- PLZ und Ort -->
       <label>PLZ und Ort</label>
       <div class="input-pair">
-        <app-base-input formControlName="plz" placeholder="PLZ"  [inputTypeRestriction]="'numbers'" />
-        <app-base-input formControlName="ort" placeholder="Ort" />
+        <app-base-input-number [maxlength]="5" formControlName="plz" placeholder="PLZ"  />
+        <app-base-input-text formControlName="ort" placeholder="Ort" />
       </div>
 
       <!-- Straße und Nr. -->
       <label>Straße und Nr.</label>
       <div class="input-pair">
-        <app-base-input formControlName="strasse" placeholder="Straße" />
-        <app-base-input formControlName="hausnummer" placeholder="Nr." />
+        <app-base-input-text formControlName="strasse" placeholder="Straße" />
+        <app-base-input-text formControlName="hausnummer" placeholder="Nr." />
       </div>
 
       <!-- Email -->
       <label>Email</label>
-      <app-base-input formControlName="email" [disabled]="true" />
+      <input formControlName="email" [disabled]="true" />
 
       <!-- Telefon -->
       <label>Telefon</label>
       <div class="input-pair">
         <input class="telefon-kod" value="+49" disabled style="width: 50px" />
-        <app-base-input class="telefon-input" formControlName="telefon" placeholder="Telefon"  [inputTypeRestriction]="'numbers'" />
+        <app-base-input-number class="telefon-input" formControlName="telefon" placeholder="Telefon" />
       </div>
 
       <!-- Geburtstag -->
       <label>Geburtstag</label>
       <div class="input-pair" formGroupName="geburtstag">
-        <select formControlName="tag">
-          <option value="">Tag</option>
-          <ng-container *ngFor="let t of [].constructor(31); let i = index">
-            <option [value]="i + 1">{{ i + 1 }}</option>
-          </ng-container>
-        </select>
-        <select formControlName="monat">
-          <option value="">Monat</option>
-          <ng-container *ngFor="let m of [].constructor(12); let i = index">
-            <option [value]="i + 1">{{ i + 1 }}</option>
-          </ng-container>
-        </select>
-        <select formControlName="jahr">
-          <option value="">Jahr</option>
-          <ng-container *ngFor="let y of [].constructor(100); let i = index">
-            <option [value]="2025 - i">{{ 2025 - i }}</option>
-          </ng-container>
-        </select>
+  <p-floatlabel class="w-full md:w-56" variant="on">
+  <p-select
+    formControlName="tag"
+    inputId="on_label"
+    [options]="days"
+    optionLabel="label"
+    optionValue="value"
+    class="w-full"
+  />
+  <label for="on_label">Tag</label>
+</p-floatlabel>
+
+<p-floatlabel class="w-full md:w-56" variant="on">
+  <p-select
+    formControlName="monat"
+    inputId="monat_select"
+    [options]="monate"
+    optionLabel="label"
+    optionValue="value"
+    class="w-full"
+    placeholder="Monat"
+  />
+  <label for="monat_select">Monat</label>
+</p-floatlabel>
+
+<p-floatlabel class="w-full md:w-56" variant="on">
+  <p-select
+    formControlName="jahr"
+    inputId="jahr_select"
+    [options]="jahre"
+    optionLabel="label"
+    optionValue="value"
+    class="w-full"
+    placeholder="Jahr"
+  />
+  <label for="jahr_select">Jahr</label>
+</p-floatlabel>
+
       </div>
     </div>
 
@@ -91,3 +129,10 @@
 <ng-template #nichtEingeloggt>
   <p>Bitte loggen Sie sich ein, um Ihr Profil zu sehen.</p>
 </ng-template>
+
+<p-toast
+  [showTransitionOptions]="'250ms'"
+  [showTransformOptions]="'translateX(100%)'"
+  [hideTransitionOptions]="'150ms'"
+  [hideTransformOptions]="'translateX(100%)'"
+></p-toast>

@@ -1,0 +1,8 @@
+<input
+  pInputText
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [ngModel]="value"
+  (ngModelChange)="onInput($event)"
+  (blur)="onTouched()"
+/>
