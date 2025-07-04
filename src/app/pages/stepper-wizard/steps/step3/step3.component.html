@@ -1,47 +1,67 @@
 <div class="step3-wrapper">
-  <h2><span class="material-icons">person</span> Aktueller Vertragsinhaber</h2>
+  <h2>
+    <i class="pi pi-user" style="font-size: 1.5rem; vertical-align: middle;"></i>
+    Aktueller Vertragsinhaber
+  </h2>
 
   <form [formGroup]="form" (ngSubmit)="onNext()">
     <!-- Jins tanlash -->
-    <mat-label class="form-label">Anrede</mat-label>
-    <mat-radio-group
-      formControlName="gender"
-      class="radio-group"
-      [class.invalid]="isInvalid('gender')"
-    >
-      <mat-radio-button value="frau">Frau</mat-radio-button>
-      <mat-radio-button value="herr">Herr</mat-radio-button>
-    </mat-radio-group>
-    <div class="error" *ngIf="isInvalid('gender')">
-      Bitte wählen Sie eine Anrede.
+    <div class="form-label">Anrede</div>
+    <div class="radio-group" [class.invalid]="isInvalid('gender')">
+      <p-radioButton name="gender" value="frau" formControlName="gender"></p-radioButton>
+      <label for="frau">Frau</label>
+
+      <p-radioButton name="gender" value="herr" formControlName="gender"></p-radioButton>
+      <label for="herr">Herr</label>
     </div>
+    <div class="error" *ngIf="isInvalid('gender')">Bitte wählen Sie eine Anrede.</div>
 
     <!-- Ism / Familiya -->
     <div class="input-group">
-      <mat-form-field class="input-wrapper" appearance="outline">
-        <mat-label>Vorname</mat-label>
-        <input matInput formControlName="firstName" />
-        <mat-error *ngIf="isInvalid('firstName')">
-          Vorname ist erforderlich.
-        </mat-error>
-      </mat-form-field>
+      <p-floatLabel variant="on" class="input-wrapper">
+        <input id="vorname" type="text" pInputText formControlName="firstName" />
+        <label for="vorname">Vorname</label>
+      </p-floatLabel>
 
-      <mat-form-field class="input-wrapper" appearance="outline">
-        <mat-label>Nachname</mat-label>
-        <input matInput formControlName="lastName" />
-        <mat-error *ngIf="isInvalid('lastName')">
-          Nachname ist erforderlich.
-        </mat-error>
-      </mat-form-field>
+      <p-floatLabel variant="on" class="input-wrapper">
+        <input id="nachname" type="text" pInputText formControlName="lastName" />
+        <label for="nachname">Nachname</label>
+      </p-floatLabel>
     </div>
 
-    <!-- Tug‘ilgan sana va telefon -->
-    <app-base-date [form]="form"></app-base-date>
+    <!-- Sana va Telefon -->
+    <div class="input-group">
+      <p-floatLabel variant="on" class="input-wrapper">
+        <p-datepicker 
+          formControlName="birthDate"
+          inputId="birthDate"
+          showIcon
+          appNumericInput="0-9."
+          appDateMask
+        ></p-datepicker>
+        <label for="birthDate">Geburtstag</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="input-wrapper">
+        <input 
+          id="phoneNumber" 
+          type="text" 
+          pInputText 
+          formControlName="phone"
+          appNumericInput="0-9"
+        />
+        <label for="phoneNumber">Telefonnummer (optional)</label>
+      </p-floatLabel>
+    </div>
 
     <!-- Tugmalar -->
-    <div class="button-group">
-      <button class="btn-back" (click)="onBack()" type="button">Zurück</button>
-      <button class="btn-next" [disabled]="form.invalid" type="submit">
+    <div class="btn-group">
+      <button type="button" (click)="onBack()">Zurück</button>
+      <button
+        type="submit"
+        [disabled]="!form.valid"
+        [ngClass]="{ 'btn-disabled': !form.valid, 'btn-active': form.valid }"
+      >
         Weiter
       </button>
     </div>
